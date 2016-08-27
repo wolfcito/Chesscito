@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Modulo_Alfil_lvl2</layout>
+        <layout active="1" order="1">Modulo_Alfil_lvl1</layout>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/enemigos/" />
+        <folder expanded="0" path="object-folder/iconos/" />
+        <folder expanded="0" path="object-folder/label/" />
+        <folder expanded="1" path="object-folder/texbox/" />
+        <folder expanded="0" path="object-folder/mensajes/" />
+        <folder expanded="1" path="object-folder/piezas/" />
+        <folder expanded="0" path="object-folder/buttonImagen/" />
+        <folder expanded="0" path="object-folder/cursor/" />
+        <folder expanded="0" path="object-folder/laberinto/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/Modulos tutor/" />
+        <folder expanded="1" path="layout-folder/Inicio/" />
+        <folder expanded="1" path="layout-folder/Modulos juego/" />
+        <folder expanded="1" path="layout-folder/Records/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/Modulos tutor/" />
+        <folder expanded="0" path="event-folder/Inicio/" />
+        <folder expanded="1" path="event-folder/Modulos juego/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/enemigo_torre/" />
+        <folder expanded="1" path="animation-folder/premioG/" />
+        <folder expanded="1" path="animation-folder/vida1/" />
+        <folder expanded="1" path="animation-folder/vida2/" />
+        <folder expanded="1" path="animation-folder/vida3/" />
+        <folder expanded="1" path="animation-folder/reintentar/" />
+        <folder expanded="1" path="animation-folder/felicidades/" />
+        <folder expanded="1" path="animation-folder/game_over/" />
+        <folder expanded="1" path="animation-folder/p_caballo_blanco/" />
+        <folder expanded="1" path="animation-folder/p_torre_blanco/" />
+        <folder expanded="1" path="animation-folder/p_peon_negro/" />
+        <folder expanded="1" path="animation-folder/p_caballo_negro/" />
+        <folder expanded="1" path="animation-folder/p_peon_blanco/" />
+        <folder expanded="1" path="animation-folder/p_alfil_blanco/" />
+        <folder expanded="1" path="animation-folder/p_alfil_negro/" />
+        <folder expanded="1" path="animation-folder/p_torre_negro/" />
+        <folder expanded="1" path="animation-folder/p_dama_blanco/" />
+        <folder expanded="1" path="animation-folder/btn_pause/" />
+        <folder expanded="1" path="animation-folder/btn_play/" />
+        <folder expanded="1" path="animation-folder/btn_alfil/" />
+        <folder expanded="1" path="animation-folder/btn_caballo/" />
+        <folder expanded="1" path="animation-folder/btn_cerrar/" />
+        <folder expanded="1" path="animation-folder/btn_reiniciar/" />
+        <folder expanded="1" path="animation-folder/btn_menu/" />
+        <folder expanded="1" path="animation-folder/btn_tutorial/" />
+        <folder expanded="1" path="animation-folder/cur_normal/" />
+        <folder expanded="1" path="animation-folder/cur_sobre/" />
+        <folder expanded="1" path="animation-folder/cur_preg/" />
+        <folder expanded="1" path="animation-folder/cur_mover/" />
+        <folder expanded="1" path="animation-folder/borde/" />
+        <folder expanded="1" path="animation-folder/paredes/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Titulo/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Introduccion/" />
+        <folder expanded="1" path="animation-folder/Opcion1/" />
+        <folder expanded="1" path="animation-folder/Opcion2/" />
+        <folder expanded="1" path="animation-folder/Opcion3/" />
+        <folder expanded="1" path="animation-folder/Opcion4/" />
+        <folder expanded="1" path="animation-folder/btn_volver/" />
+        <folder expanded="1" path="animation-folder/pieza_alfil/" />
+        <folder expanded="1" path="animation-folder/tablero/" />
+        <folder expanded="1" path="animation-folder/fondo/" />
+        <folder expanded="1" path="animation-folder/marco_der1/" />
+        <folder expanded="1" path="animation-folder/pieza_torre/" />
+        <folder expanded="1" path="animation-folder/posicion_inicial/" />
+        <folder expanded="1" path="animation-folder/marco_izq1/" />
+        <folder expanded="1" path="animation-folder/marco_top1/" />
+        <folder expanded="1" path="animation-folder/marco_bot1/" />
+        <folder expanded="1" path="animation-folder/btn_dam/" />
+        <folder expanded="1" path="animation-folder/btn_torre/" />
+        <folder expanded="1" path="animation-folder/pieza_dama/" />
+        <folder expanded="1" path="animation-folder/img_fila/" />
+        <folder expanded="1" path="animation-folder/marco_top2/" />
+        <folder expanded="1" path="animation-folder/marco_bot2/" />
+        <folder expanded="1" path="animation-folder/marco_der2/" />
+        <folder expanded="1" path="animation-folder/marco_izq2/" />
+        <folder expanded="1" path="animation-folder/flecha/" />
+        <folder expanded="1" path="animation-folder/marco_top3/" />
+        <folder expanded="1" path="animation-folder/pieza_caballo/" />
+        <folder expanded="1" path="animation-folder/marco_bot3/" />
+        <folder expanded="1" path="animation-folder/marco_der3/" />
+        <folder expanded="1" path="animation-folder/marco_der1_1/" />
+        <folder expanded="1" path="animation-folder/marco_bot1_1/" />
+        <folder expanded="1" path="animation-folder/marco_izq1_1/" />
+        <folder expanded="1" path="animation-folder/marco_izq3/" />
+        <folder expanded="1" path="animation-folder/marco_top1_1/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/btn_salir/" />
+        <folder expanded="1" path="animation-folder/Sprite10/" />
+        <folder expanded="1" path="animation-folder/puntoGuia/" />
+        <folder expanded="1" path="animation-folder/Juegos/" />
+        <folder expanded="1" path="animation-folder/gotoJuegos/" />
+        <folder expanded="1" path="animation-folder/Fondo2/" />
+        <folder expanded="1" path="animation-folder/Volver/" />
+        <folder expanded="1" path="animation-folder/Sprite12/" />
+        <folder expanded="1" path="animation-folder/Sprite13/" />
+        <folder expanded="1" path="animation-folder/Sprite14/" />
+        <folder expanded="1" path="animation-folder/correcto/" />
+        <folder expanded="1" path="animation-folder/incorrecto/" />
+        <folder expanded="1" path="animation-folder/Sprite17/" />
+        <folder expanded="1" path="animation-folder/Sprite18/" />
+        <folder expanded="1" path="animation-folder/btn_sig/" />
+        <folder expanded="1" path="animation-folder/Sprite20/" />
+        <folder expanded="1" path="animation-folder/Sprite21/" />
+        <folder expanded="1" path="animation-folder/Sprite22/" />
+        <folder expanded="1" path="animation-folder/Sprite23/" />
+        <folder expanded="1" path="animation-folder/pieza_peon/" />
+        <folder expanded="1" path="animation-folder/pieza_peon2/" />
+        <folder expanded="1" path="animation-folder/Sprite24/" />
+        <folder expanded="1" path="animation-folder/enConstruccion/" />
+        <folder expanded="1" path="animation-folder/btn_peon/" />
+        <folder expanded="1" path="animation-folder/peon_amarillo/" />
+        <folder expanded="1" path="animation-folder/selector/" />
+        <folder expanded="1" path="animation-folder/estela/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/zonaJuego/" />
+        <folder expanded="1" path="animation-folder/estelaInicio/" />
+        <folder expanded="1" path="animation-folder/fnd_win/" />
+        <folder expanded="1" path="animation-folder/zona_no/" />
+        <folder expanded="1" path="animation-folder/Sprite11/" />
+        <folder expanded="1" path="animation-folder/tubo_derecho/" />
+        <folder expanded="1" path="animation-folder/tubo_final/" />
+        <folder expanded="1" path="animation-folder/pergamino/" />
+        <folder expanded="1" path="animation-folder/bala_alfil/" />
+        <folder expanded="1" path="animation-folder/gameOver/" />
+        <folder expanded="1" path="animation-folder/Felicitaciones/" />
+        <folder expanded="1" path="animation-folder/DemoAlfil/" />
+        <folder expanded="1" path="animation-folder/Democaballo/" />
+        <folder expanded="1" path="animation-folder/Demodama/" />
+        <folder expanded="1" path="animation-folder/Demotorre/" />
+        <folder expanded="1" path="animation-folder/Sprite27/" />
+        <folder expanded="1" path="animation-folder/btn_playPause/" />
+        <folder expanded="1" path="animation-folder/fnd_reint/" />
+        <folder expanded="1" path="animation-folder/Sprite25/" />
+        <folder expanded="1" path="animation-folder/sinVidas/" />
+        <folder expanded="1" path="animation-folder/Sprite26/" />
+        <folder expanded="1" path="animation-folder/Reint_alfil/" />
+        <folder expanded="1" path="animation-folder/nave2/" />
+        <folder expanded="1" path="animation-folder/sig_nivel/" />
+        <folder expanded="1" path="animation-folder/bala2_alfil/" />
+        <folder expanded="1" path="animation-folder/btn_fila/" />
+        <folder expanded="1" path="animation-folder/btn_col/" />
+        <folder expanded="1" path="animation-folder/btn_diag/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/ico_select/" />
+        <folder expanded="1" path="animation-folder/btn_juegos/" />
+        <folder expanded="1" path="animation-folder/btn_tutoriales/" />
+        <folder expanded="1" path="animation-folder/colision/" />
+        <folder expanded="1" path="animation-folder/ico_trofeos/" />
+        <folder expanded="1" path="animation-folder/ico_medallas/" />
+        <folder expanded="1" path="animation-folder/pieza_capt/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/btn_continuar/" />
+        <folder expanded="1" path="animation-folder/btn_reset_score/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/ico_trofeo/" />
+        <folder expanded="1" path="animation-folder/ico_line/" />
+        <folder expanded="1" path="animation-folder/btn_puntuaciones/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/txt_nivel_alfil/" />
+        <folder expanded="1" path="animation-folder/Como_jugar_alfil/" />
+        <folder expanded="1" path="animation-folder/fondo_como_jugar/" />
+        <folder expanded="1" path="animation-folder/teclado_como_jugar/" />
+        <folder expanded="1" path="animation-folder/salir_como_jugar/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/Sprite15/" />
+    </folders-expanded>
+</c2uistate>

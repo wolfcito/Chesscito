@@ -1,0 +1,1023 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Modulo_torre</name>
+    <events>
+        <variable constant="0" name="vidas_torre" sid="393444262717311" static="0" type="number">3</variable>
+        <include>cursor</include>
+        <variable constant="0" name="n_objetivos" sid="9208253609143668" static="0" type="number">5</variable>
+        <variable constant="0" name="puntos_torre" sid="2906016757643378" static="0" type="number">0</variable>
+        <variable constant="0" name="posFinY" sid="5423862911510056" static="0" type="number">0</variable>
+        <variable constant="0" name="posFinX" sid="5477040582599085" static="0" type="number">0</variable>
+        <variable constant="0" name="posInicialY" sid="6703000787382647" static="0" type="number">0</variable>
+        <variable constant="0" name="posInicialX" sid="6092919481258969" static="0" type="number">0</variable>
+        <variable constant="0" name="posicion_x" sid="2529639307187377" static="0" type="number">0</variable>
+        <variable constant="0" name="posicion_y" sid="2924793768163804" static="0" type="number">0</variable>
+        <comment>Torre en movimiento 0 = no ; 1 = si</comment>
+        <variable constant="0" name="torreMov" sid="7501071627151401" static="0" type="number">0</variable>
+        <event-block sid="2589541206437257">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7861452560074227" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="8167975571665369" type="System" />
+                <action id="1" name="Set pause state" sid="8930425899700324" type="Pause">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="8632065728397168" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1747160219231604" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6498011406372385" type="fnd_reint" />
+                <action id="-9" name="Destroy" sid="800851291576136" type="reintentar" />
+                <action id="-9" name="Destroy" sid="9756785347434258" type="datos_torre2" />
+                <action id="-9" name="Destroy" sid="1753908671105143" type="enemigo_torre" />
+                <action id="-9" name="Destroy" sid="1375624618625666" type="p_torre_blanco" />
+                <action id="-3" name="Create object" sid="843723415613883" type="System">
+                    <param id="0" name="Object to create">vida3</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">75</param>
+                    <param id="3" name="Y">285</param>
+                </action>
+                <action id="-3" name="Create object" sid="9940756601282737" type="System">
+                    <param id="0" name="Object to create">vida2</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">120</param>
+                    <param id="3" name="Y">285</param>
+                </action>
+                <action id="-3" name="Create object" sid="7493853108339183" type="System">
+                    <param id="0" name="Object to create">vida1</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">165</param>
+                    <param id="3" name="Y">285</param>
+                </action>
+                <action id="-3" name="Create object" sid="2773916450720206" type="System">
+                    <param id="0" name="Object to create">enemigo_torre</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">int(random(300,750)/60)*60</param>
+                    <param id="3" name="Y">90</param>
+                </action>
+                <action id="-3" name="Create object" sid="2402186254965126" type="System">
+                    <param id="0" name="Object to create">p_torre_blanco</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">int(random(360,660)/60)*60</param>
+                    <param id="3" name="Y">510</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9178155036173246">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="3326811056603324" type="System">
+                    <param id="0" name="First value">distance(p_torre_blanco.X,p_torre_blanco.Y, estela.X,estela.Y)</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="1548476681462826" type="estela">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="1032416396066912" type="p_torre_blanco">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="2218795621210744" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-3" name="Set position" sid="9316931856033539" type="p_torre_blanco">
+                    <param id="0" name="X">posicion_x</param>
+                    <param id="1" name="Y">posicion_y</param>
+                </action>
+                <action id="-9" name="Set value" sid="2105562557165975" type="System">
+                    <param id="0" name="Variable">torreMov</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="3700212794766202" type="Function">
+                    <param id="0" name="Name">&quot;movEstado&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Set text" sid="3197127728419295" type="datos_torre">
+                    <param id="0" name="Text">Function.ReturnValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5266389195196364">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6420061596189566" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">selector</param>
+                </condition>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="7826405986102391" type="selector">
+                    <param id="0" name="Object">zona_no</param>
+                </condition>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="1399834151219048" type="selector">
+                    <param id="0" name="Object">paredes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3917300051984702" type="System">
+                    <param id="0" name="Variable">torreMov</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="1872046616589317" type="estela">
+                    <param id="0" name="X">selector.X</param>
+                    <param id="1" name="Y">selector.Y</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="3584169340069492" type="p_torre_blanco">
+                    <param id="0" name="Speed">100</param>
+                </action>
+                <action id="-8" name="Set angle" sid="8898359223591053" type="p_torre_blanco">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="7429184841299117" type="System">
+                    <param id="0" name="Variable">posicion_x</param>
+                    <param id="1" name="Value">estela.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="4982624764831681" type="System">
+                    <param id="0" name="Variable">posicion_y</param>
+                    <param id="1" name="Value">estela.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3111185014923785" type="estelaInicio" />
+                <action id="0" name="Call function" sid="325197374623017" type="Function">
+                    <param id="0" name="Name">&quot;movEstado&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Set text" sid="5626681483426343" type="datos_torre">
+                    <param id="0" name="Text">Function.ReturnValue</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9433746896853417">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9459320116413451" type="System">
+                            <param id="0" name="First value">p_torre_blanco.X</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">estela.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3127684470507605" type="Function">
+                            <param id="0" name="Name">&quot;movUpDown&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="644094757724933" type="p_torre_blanco">
+                            <param id="0" name="Angle">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4524702900791767" type="estado_juego">
+                            <param id="0" name="Text">Function.ReturnValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2200207070970479">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9834766873395942" type="System">
+                            <param id="0" name="First value">p_torre_blanco.Y</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">estela.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9994985905264721" type="Function">
+                            <param id="0" name="Name">&quot;movDerIzq&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8248453349399639" type="p_torre_blanco">
+                            <param id="0" name="Angle">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8864642688873906" type="estado_juego">
+                            <param id="0" name="Text">Function.ReturnValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4669818002242747">
+            <conditions>
+                <condition id="0" name="On function" sid="4493110898946133" type="Function">
+                    <param id="0" name="Name">&quot;movDerIzq&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="6902049151778047" type="Function">
+                    <param id="0" name="Value">p_torre_blanco.X &lt; Mouse.X ? 0 : 180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7913084995224134">
+            <conditions>
+                <condition id="0" name="On function" sid="8518757613184125" type="Function">
+                    <param id="0" name="Name">&quot;movUpDown&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="1486733090517985" type="Function">
+                    <param id="0" name="Value">p_torre_blanco.Y &lt; Mouse.Y ? 90 : -90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9760563225941729">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7456328727604913" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">p_torre_blanco</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1007588983052851" type="datos_torre">
+                    <param id="0" name="Text">&quot;X: &quot; &amp; p_torre_blanco.X &amp;&quot; Y: &quot; &amp; p_torre_blanco.Y </param>
+                </action>
+                <action id="-9" name="Set value" sid="2118046947143197" type="System">
+                    <param id="0" name="Variable">posInicialX</param>
+                    <param id="1" name="Value">p_torre_blanco.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="817215776622759" type="System">
+                    <param id="0" name="Variable">posInicialY</param>
+                    <param id="1" name="Value">p_torre_blanco.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="680663144916696" type="estelaInicio" />
+                <action id="-9" name="Destroy" sid="4754653041450731" type="selector" />
+                <action id="-3" name="Create object" sid="5718831576797246" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X+60</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="3730525148909254" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X+120</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="460886109912532" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X+180</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="3186883923978966" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X+240</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="1495594320411331" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X+300</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="4536834426048537" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X+360</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="5225587700586858" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X+420</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="8118057004122606" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X-60</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="1772994943271059" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X-120</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="4428897161529185" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X-180</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="2748223942872445" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X-240</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="8806487075800052" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X-300</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="4426414658558366" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X-360</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="6490778154661572" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X-420</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="2342088386712589" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y+60</param>
+                </action>
+                <action id="-3" name="Create object" sid="6778680075891803" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y+120</param>
+                </action>
+                <action id="-3" name="Create object" sid="9250822218851127" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y+180</param>
+                </action>
+                <action id="-3" name="Create object" sid="1218769128762401" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y+240</param>
+                </action>
+                <action id="-3" name="Create object" sid="9443034190429614" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y+300</param>
+                </action>
+                <action id="-3" name="Create object" sid="5069543637941921" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y+360</param>
+                </action>
+                <action id="-3" name="Create object" sid="9662588638008545" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y+420</param>
+                </action>
+                <action id="-3" name="Create object" sid="4166008791809369" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y-60</param>
+                </action>
+                <action id="-3" name="Create object" sid="4307037104774513" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y-120</param>
+                </action>
+                <action id="-3" name="Create object" sid="3251067210026724" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y-180</param>
+                </action>
+                <action id="-3" name="Create object" sid="291006503274253" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y-240</param>
+                </action>
+                <action id="-3" name="Create object" sid="5040712475975129" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y-300</param>
+                </action>
+                <action id="-3" name="Create object" sid="4538145039773349" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y-360</param>
+                </action>
+                <action id="-3" name="Create object" sid="4779066853432199" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y-420</param>
+                </action>
+                <action id="-3" name="Create object" sid="3558386150783843" type="System">
+                    <param id="0" name="Object to create">estelaInicio</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6845700005123993">
+            <conditions>
+                <condition id="0" name="On function" sid="4597466876994042" type="Function">
+                    <param id="0" name="Name">&quot;movEstado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="8278726762095817" type="Function">
+                    <param id="0" name="Value">torreMov = 1 ? &quot;moviendose...&quot; : &quot;esperando...&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1818190554593923">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7879240515220939" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">zona_no</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3702811500176906" type="datos_torre">
+                    <param id="0" name="Text">&quot;Zona prohibida&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1405724147811104">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6761296915449222" type="zona_no">
+                    <param id="0" name="Object">selector</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="2851185906263875" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4644684055489171">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9785864753636658" type="paredes">
+                    <param id="0" name="Object">selector</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="2914542124038896" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1230510527334132">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="8398973734542412" type="System">
+                    <param id="0" name="First value">torreMov</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3640800720269481" type="selector" />
+            </actions>
+        </event-block>
+        <comment>IA - Enemigo</comment>
+        <event-block sid="6400392604511836">
+            <conditions>
+                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="5796086061470195" type="enemigo_torre" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="7817731987389921" type="enemigo_torre">
+                    <param id="0" name="X">p_torre_blanco.X</param>
+                    <param id="1" name="Y">p_torre_blanco.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6581953338439823">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="1754316739748088" type="enemigo_torre" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="4538459970481299" type="enemigo_torre" />
+            </actions>
+        </event-block>
+        <event-block sid="1875754495929499">
+            <conditions>
+                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="8833975455853553" type="enemigo_torre" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="6950037906647448" type="enemigo_torre">
+                    <param id="0" name="X">p_torre_blanco.X</param>
+                    <param id="1" name="Y">p_torre_blanco.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3783407558795795">
+            <conditions>
+                <condition id="-41" name="Is between angles" sid="9316337672534846" type="System">
+                    <param id="0" name="Angle">enemigo_torre.Pathfinding.MovingAngle</param>
+                    <param id="1" name="First angle">0</param>
+                    <param id="2" name="Second angle">45</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="5398966308633572" type="enemigo_torre">
+                    <param id="0" name="Animation">&quot;derecha&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8516590359236588">
+            <conditions>
+                <condition id="-41" name="Is between angles" sid="2411869999646098" type="System">
+                    <param id="0" name="Angle">enemigo_torre.Pathfinding.MovingAngle</param>
+                    <param id="1" name="First angle">45</param>
+                    <param id="2" name="Second angle">125</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="5322454005551149" type="enemigo_torre">
+                    <param id="0" name="Animation">&quot;abajo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9645483004818655">
+            <conditions>
+                <condition id="-41" name="Is between angles" sid="9125662684532848" type="System">
+                    <param id="0" name="Angle">enemigo_torre.Pathfinding.MovingAngle</param>
+                    <param id="1" name="First angle">150</param>
+                    <param id="2" name="Second angle">200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3892585655071164" type="enemigo_torre">
+                    <param id="0" name="Animation">&quot;izquierda&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1034274094131757">
+            <conditions>
+                <condition id="-41" name="Is between angles" sid="7056628123112943" type="System">
+                    <param id="0" name="Angle">enemigo_torre.Pathfinding.MovingAngle</param>
+                    <param id="1" name="First angle">250</param>
+                    <param id="2" name="Second angle">290</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8432366642411741" type="enemigo_torre">
+                    <param id="0" name="Animation">&quot;arriba&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7695000950564287">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6099152681379357" type="enemigo_torre">
+                    <param id="0" name="Object">p_torre_blanco</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="6796461932046807" type="estela">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action id="-3" name="Create object" sid="309825841319405" type="System">
+                    <param id="0" name="Object to create">colision</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">p_torre_blanco.X</param>
+                    <param id="3" name="Y">p_torre_blanco.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="30760053349661" type="System">
+                    <param id="0" name="Variable">torreMov</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="314942939158301" type="Function">
+                    <param id="0" name="Name">&quot;movEstado&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Set text" sid="2199128498066585" type="datos_torre">
+                    <param id="0" name="Text">Function.ReturnValue</param>
+                </action>
+                <action behavior="Pathfinding" id="13" name="Set diagonals enabled" sid="5813511987787936" type="enemigo_torre">
+                    <param id="0" name="Diagonals">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7467024641115268">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7973294869664262" type="System">
+                            <param id="0" name="Variable">vidas_torre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6369290793187856" type="System">
+                            <param id="0" name="Object to create">game_over</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="X">499</param>
+                            <param id="3" name="Y">150</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="3253849902313073" type="enemigo_torre">
+                            <param id="0" name="Object">p_torre_blanco</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1497882535741454" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6262577943237976" type="p_torre_blanco" />
+                        <action id="-4" name="Set layer visible" sid="2217971624050012" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="3216801977245826" type="System">
+                            <param id="0" name="Layer">4</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="7101065077483792" type="Audio">
+                            <param id="0" name="Audio file">Pierde</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4222255210398404" type="System">
+                            <param id="0" name="Object to create">fnd_reint</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="X">512.5</param>
+                            <param id="3" name="Y"> 302.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9017761952397034" type="System">
+                            <param id="0" name="Object to create">reintentar</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="X">510</param>
+                            <param id="3" name="Y">345</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5380626247126845" type="System">
+                            <param id="0" name="Object to create">datos_torre2</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="X">330</param>
+                            <param id="3" name="Y">210</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2152766705745351" type="System">
+                            <param id="0" name="Object to create">btn_menu</param>
+                            <param id="1" name="Layer">6</param>
+                            <param id="2" name="X">375</param>
+                            <param id="3" name="Y">450</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5636600517918137" type="System">
+                            <param id="0" name="Object to create">btn_tutorial</param>
+                            <param id="1" name="Layer">6</param>
+                            <param id="2" name="X">645</param>
+                            <param id="3" name="Y">450</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8508513621645044">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3018927016813603" type="System">
+                            <param id="0" name="Variable">vidas_torre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7062670795007114" type="vida1" />
+                        <action id="-9" name="Destroy" sid="9174391041179587" type="enemigo_torre" />
+                        <action id="-9" name="Destroy" sid="7084343231385181" type="p_torre_blanco" />
+                        <action id="-3" name="Create object" sid="2877039874154361" type="System">
+                            <param id="0" name="Object to create">enemigo_torre</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">int(random(300,750)/60)*60</param>
+                            <param id="3" name="Y">90</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4859388161290956" type="System">
+                            <param id="0" name="Object to create">p_torre_blanco</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">int(random(360,660)/60)*60</param>
+                            <param id="3" name="Y">510</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2324252222934002" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="3677031296043031" type="System">
+                            <param id="0" name="Variable">vidas_torre</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1602016364240824" type="estado_juego">
+                            <param id="0" name="Text">vidas_torre</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5805273637532959">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1397210777788539" type="System">
+                            <param id="0" name="Variable">vidas_torre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6347989307649302" type="vida2" />
+                        <action id="-9" name="Destroy" sid="2942357697739192" type="enemigo_torre" />
+                        <action id="-9" name="Destroy" sid="9304347804284904" type="p_torre_blanco" />
+                        <action id="-3" name="Create object" sid="47118180376802" type="System">
+                            <param id="0" name="Object to create">enemigo_torre</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">int(random(300,750)/60)*60</param>
+                            <param id="3" name="Y">90</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5732044443783843" type="System">
+                            <param id="0" name="Object to create">p_torre_blanco</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">int(random(360,660)/60)*60</param>
+                            <param id="3" name="Y">510</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9789560054097432" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="1603539225552023" type="System">
+                            <param id="0" name="Variable">vidas_torre</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2735891699852495" type="estado_juego">
+                            <param id="0" name="Text">vidas_torre</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6404219675312161">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9528219666453766" type="System">
+                            <param id="0" name="Variable">vidas_torre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8662812778716262" type="vida3" />
+                        <action id="-9" name="Destroy" sid="5944623259876042" type="enemigo_torre" />
+                        <action id="-9" name="Destroy" sid="7596309093353406" type="sinVidas" />
+                        <action id="-9" name="Destroy" sid="640622537114007" type="p_torre_blanco" />
+                        <action id="-3" name="Create object" sid="2776255237822064" type="System">
+                            <param id="0" name="Object to create">enemigo_torre</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">int(random(300,750)/60)*60</param>
+                            <param id="3" name="Y">90</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1688058024793976" type="System">
+                            <param id="0" name="Object to create">p_torre_blanco</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">int(random(360,660)/60)*60</param>
+                            <param id="3" name="Y">510</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4715139345736971" type="System">
+                            <param id="0" name="Object to create">sinVidas</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">105</param>
+                            <param id="3" name="Y">285</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1352575420790131" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="3709774513897378" type="System">
+                            <param id="0" name="Variable">vidas_torre</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9254620702311551" type="estado_juego">
+                            <param id="0" name="Text">vidas_torre</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Enemigos &amp; Premios</comment>
+        <event-block sid="7909304568867531">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1567299015233378" type="p_torre_blanco">
+                    <param id="0" name="Object">p_peon_negro</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="5666171984714425" type="System">
+                    <param id="0" name="Variable">puntos_torre</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="8073456256753197" type="titulos_mensajes">
+                    <param id="0" name="Text">puntos_torre</param>
+                </action>
+                <action id="-3" name="Create object" sid="4658823611779846" type="System">
+                    <param id="0" name="Object to create">colision</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">p_peon_negro.X</param>
+                    <param id="3" name="Y">p_peon_negro.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9819702272387684" type="p_peon_negro" />
+                <action id="-11" name="Subtract from" sid="2025270304432074" type="System">
+                    <param id="0" name="Variable">n_objetivos</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="274021036408633" type="Audio">
+                    <param id="0" name="Audio file">Moneda</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7707003177078773">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4404220671292748" type="System" />
+                <condition id="-10" name="For" sid="4270027967463301" type="System">
+                    <param id="0" name="Name">&quot;x&quot;</param>
+                    <param id="1" name="Start index">1</param>
+                    <param id="2" name="End index">n_objetivos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1198669804210969" type="p_peon_negro" />
+                <action id="-3" name="Create object" sid="9143546013931794" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">int(random(300,750)/60)*60</param>
+                    <param id="3" name="Y">int(random(90,390)/60)*60 +30</param>
+                </action>
+                <action id="33" name="Stop all" sid="4145075683941381" type="Audio" />
+            </actions>
+            <sub-events>
+                <event-block sid="8583998575201294">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="6460714114643288" type="p_peon_negro">
+                            <param id="0" name="Object">paredes</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4793863277880191" type="p_peon_negro" />
+                        <action id="-11" name="Subtract from" sid="6474539637907203" type="System">
+                            <param id="0" name="Variable">n_objetivos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7824003217808737">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6081911641784812" type="System">
+                    <param id="0" name="Variable">n_objetivos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9335267493023965" type="txt_puntosTorre">
+                    <param id="0" name="Text">&quot;Excelente!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="7728672045079535" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="4586624285257218" type="System">
+                    <param id="0" name="Object to create">fnd_reint</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">512.5</param>
+                    <param id="3" name="Y"> 302.5</param>
+                </action>
+                <action id="-3" name="Create object" sid="4078783849388006" type="System">
+                    <param id="0" name="Object to create">Felicitaciones</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">527</param>
+                    <param id="3" name="Y">296</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8673590972559804" type="p_torre_blanco" />
+                <action id="1" name="Set pause state" sid="3606374449236493" type="Pause">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Play" sid="9850856987053857" type="Audio">
+                    <param id="0" name="Audio file">Bandera</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="7844155035151207" type="System">
+                    <param id="0" name="Object to create">btn_reiniciar</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">270</param>
+                    <param id="3" name="Y">480</param>
+                </action>
+                <action id="-3" name="Create object" sid="7763071356666284" type="System">
+                    <param id="0" name="Object to create">btn_menu</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">510</param>
+                    <param id="3" name="Y">480</param>
+                </action>
+                <action id="-3" name="Create object" sid="7996249677203286" type="System">
+                    <param id="0" name="Object to create">btn_tutorial</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">750</param>
+                    <param id="3" name="Y">480</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3150705438748698">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7400872263089237" type="Touch">
+                    <param id="0" name="Object">reintentar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="9653996029203038" type="System" />
+            </actions>
+        </event-block>
+        <comment>Cursor</comment>
+        <event-block any="1" sid="3715588455861972">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="4446940687911347" type="Mouse">
+                    <param id="0" name="Object">p_torre_blanco</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="9742948511842878" type="Mouse">
+                    <param id="0" name="Object">p_peon_negro</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="3755680370599903" type="Mouse">
+                    <param id="0" name="Object">reintentar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="8981318876878033" type="Mouse">
+                    <param id="0" name="Object">btn_reiniciar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="3505327581223177" type="Mouse">
+                    <param id="0" name="Object">btn_menu</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="3948100522526912" type="Mouse">
+                    <param id="0" name="Object">btn_tutorial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="4354992941796047" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5375535161425811">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8501150650399117" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8831188585925559" type="txt_puntosTorre">
+                    <param id="0" name="Text">&quot;Objetivos: &quot; &amp; n_objetivos</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5492025387572948">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8619931609874644" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_reiniciar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="5840691962355495" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="9265592661927732">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4243423004407813" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1979233796109021" type="System">
+                    <param id="0" name="Layout">Menu_tutor_practica</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5536429053799617">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8686368276512534" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_tutorial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="518975061038702" type="System">
+                    <param id="0" name="Layout">Modulo1_CapturaTorre</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5714216114070676">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5237346324710137" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7802686840870223" type="System">
+                    <param id="0" name="Layout">Menu_tutor_practica</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

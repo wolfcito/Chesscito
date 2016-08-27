@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Introduccion</name>
+    <events>
+        <include>cursor</include>
+        <event-block sid="2934483411338922">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8538272438159036" type="Touch">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6468945921234449" type="System">
+                    <param id="0" name="Layout">Inicio_menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9480863451875376">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="6038701546385837" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="9871820542470188" type="Function">
+                    <param id="0" name="Name">&quot;avanzarVertical&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4945409068858067">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5431979570570621" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="3409096705694892" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1046566575778716" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3321341240049859" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9169948755852153">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="3858038363708707" type="Mouse">
+                    <param id="0" name="Object">img_fila</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1854831005628033" type="img_fila">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2722340692580535">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="6331886948134333" type="Mouse">
+                    <param id="0" name="Object">img_fila</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1999669710319278" type="img_fila">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8858751412914291">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="762243765987497" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="6754041298362554" type="btn_volver">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5470413663810428">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="6814861149190574" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="4930191604251213" type="btn_volver">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9178545169849895">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="244817540776457" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_fila</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="3503687082616647" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="8812049328213134" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="4574106726692027" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1108547834082639">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="603874725530995" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_col</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="6284552592378201" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1064861700224733" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="4437256986361738" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="277593569572734">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4304750349601862" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_diag</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="8031467364117318" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="4687746008055651" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3697799286181436" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="9393488104638316">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="4789057121637923" type="Mouse">
+                    <param id="0" name="Object">btn_fila</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="3448375379709139" type="Mouse">
+                    <param id="0" name="Object">btn_col</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="9895581263706869" type="Mouse">
+                    <param id="0" name="Object">btn_diag</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="2320736399323413" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="3342663600717991" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

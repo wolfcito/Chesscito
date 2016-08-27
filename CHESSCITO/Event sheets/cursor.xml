@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>cursor</name>
+    <events>
+        <event-block sid="255330832481112">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="701831489996669" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="8192730749659377" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4913614745615375">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9726076870075651" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="1051063140708088" type="Mouse">
+                    <param id="0" name="Sprite">cur_normal</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="9414465751394954">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="757803652794592" type="Mouse">
+                    <param id="0" name="Object">Sprite10</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="1578086280925679" type="Mouse">
+                    <param id="0" name="Object">btn_cerrar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="2664344611966189" type="Mouse">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="777253056297362" type="Mouse">
+                    <param id="0" name="Object">btn_salir</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="7014002933255554" type="Mouse">
+                    <param id="0" name="Object">Introduccion</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="3056282233033619" type="Mouse">
+                    <param id="0" name="Object">Opcion1</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="7224758009434848" type="Mouse">
+                    <param id="0" name="Object">Opcion2</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="6041617665962499" type="Mouse">
+                    <param id="0" name="Object">Opcion3</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="5705155407879935" type="Mouse">
+                    <param id="0" name="Object">Opcion4</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="5785337450563518" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="3023586880712687" type="Mouse">
+                    <param id="0" name="Object">btn_reset_score</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="3664206490910644" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="4132944607061419">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8995283755339521" type="Mouse">
+                    <param id="0" name="Object">Volver</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="889552421996346" type="Mouse">
+                    <param id="0" name="Object">DemoAlfil</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="1607477199885564" type="Mouse">
+                    <param id="0" name="Object">Democaballo</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="9150177171834378" type="Mouse">
+                    <param id="0" name="Object">Demodama</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="5933070660886699" type="Mouse">
+                    <param id="0" name="Object">Demotorre</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="5349829184664989" type="Mouse">
+                    <param id="0" name="Object">Demodama</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="6333976361710491" type="Mouse">
+                    <param id="0" name="Object">btn_tutoriales</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="3305061022285612" type="Mouse">
+                    <param id="0" name="Object">btn_juegos</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="8948980995258234" type="Mouse">
+                    <param id="0" name="Object">Text6</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="261421020952052" type="Mouse">
+                    <param id="0" name="Object">btn_puntuaciones</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="9010615002973311" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

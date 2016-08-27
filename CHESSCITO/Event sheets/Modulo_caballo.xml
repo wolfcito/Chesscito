@@ -1,0 +1,1331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Modulo_caballo</name>
+    <events>
+        <variable constant="0" name="ayudaCaballo" sid="6458765887851309" static="0" type="number">0</variable>
+        <variable constant="0" name="displaySegundos" sid="6147264038794151" static="0" type="number">0</variable>
+        <variable constant="0" name="displayMinutos" sid="212432507815325" static="0" type="number">0</variable>
+        <variable constant="0" name="score_max_caballo1" sid="240926577201863" static="0" type="number">0</variable>
+        <variable constant="0" name="score_max_caballo2" sid="7581790767487341" static="0" type="number">0</variable>
+        <variable constant="0" name="vidas" sid="1002389242364809" static="0" type="number">3</variable>
+        <variable constant="0" name="pausa" sid="4960827842310668" static="0" type="number">0</variable>
+        <variable constant="0" name="siguienteNivel" sid="3785176021959879" static="0" type="number">0</variable>
+        <variable constant="0" name="nivel" sid="9167037836189169" static="0" type="number">0</variable>
+        <variable constant="0" name="objetivos" sid="7944473968505962" static="0" type="number">5</variable>
+        <variable constant="0" name="timerSegundos" sid="4078876944929914" static="0" type="number">90</variable>
+        <variable constant="0" name="puntos_caballo" sid="5919908613960337" static="0" type="number">0</variable>
+        <variable constant="0" name="cont" sid="2729446412827563" static="0" type="number">0</variable>
+        <variable constant="0" name="cabPosY" sid="5760800890836439" static="0" type="number">0</variable>
+        <variable constant="0" name="cabPosX" sid="9059652849474913" static="0" type="number">0</variable>
+        <variable constant="0" name="cabPosInicialY" sid="7847509650831113" static="0" type="number">0</variable>
+        <variable constant="0" name="cabPosInicialX" sid="6691775808780156" static="0" type="number">0</variable>
+        <variable constant="0" name="sePresiono" sid="4949629722185129" static="0" type="number">0</variable>
+        <comment>Movimiento Caballo 0 = no; 1 = si</comment>
+        <variable constant="0" name="caballoMov" sid="5589555753537898" static="0" type="number">0</variable>
+        <comment>Movimiento</comment>
+        <event-block sid="1030781163237103">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="5679702846288615" type="System">
+                    <param id="0" name="First value">distance(p_caballo_blanco.X,p_caballo_blanco.Y,estela.X,estela.Y)</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="5132122115063608" type="estela">
+                    <param id="0" name="X">-100</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="6579838457756086" type="p_caballo_blanco">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="70800207707365" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-3" name="Set position" sid="9807563749239616" type="p_caballo_blanco">
+                    <param id="0" name="X">cabPosX</param>
+                    <param id="1" name="Y">cabPosY</param>
+                </action>
+                <action id="-9" name="Set value" sid="661218285641987" type="System">
+                    <param id="0" name="Variable">caballoMov</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="5656001469599854" type="Function">
+                    <param id="0" name="Name">&quot;cabMovEstado&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4305590289690132">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1126351246954596" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">selector</param>
+                </condition>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="3915698919154074" type="selector">
+                    <param id="0" name="Object">zona_no</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1270950625132261" type="System">
+                    <param id="0" name="Variable">caballoMov</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="329934209772617" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2957083599259814" type="System">
+                    <param id="0" name="Variable">caballoMov</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="4362427514477416" type="estela">
+                    <param id="0" name="X">selector.X</param>
+                    <param id="1" name="Y">selector.Y</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1008178000080001" type="p_caballo_blanco">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="8147168038914694" type="p_caballo_blanco">
+                    <param id="0" name="Speed">100</param>
+                </action>
+                <action id="-9" name="Set value" sid="6340860523904804" type="System">
+                    <param id="0" name="Variable">cabPosX</param>
+                    <param id="1" name="Value">estela.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="1628915748639254" type="System">
+                    <param id="0" name="Variable">cabPosY</param>
+                    <param id="1" name="Value">estela.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="7496673475563337" type="estelaInicio" />
+                <action id="0" name="Call function" sid="3144186454760314" type="Function">
+                    <param id="0" name="Name">&quot;cabMovEstado&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="90043117891331">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5219039054507253" type="System">
+                            <param id="0" name="First value">estela.Y</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">p_caballo_blanco.Y-120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5987032711954866" type="Function">
+                            <param id="0" name="Name">&quot;cabMovUpDown&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5792722289793365" type="p_caballo_blanco">
+                            <param id="0" name="Angle">Function.ReturnValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6226722374282585">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="247797793095211" type="System">
+                            <param id="0" name="First value">estela.Y</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">p_caballo_blanco.Y+120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="560531920762813" type="Function">
+                            <param id="0" name="Name">&quot;cabMovUpDown&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="1523330378002692" type="p_caballo_blanco">
+                            <param id="0" name="Angle">Function.ReturnValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9028901714781755">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7258419686479051" type="System">
+                            <param id="0" name="First value">estela.X</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">p_caballo_blanco.X+120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6582038282156794" type="Function">
+                            <param id="0" name="Name">&quot;cabMovDerIzq&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="7427250911090177" type="p_caballo_blanco">
+                            <param id="0" name="Angle">Function.ReturnValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4120097270343688">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2569201031325733" type="System">
+                            <param id="0" name="First value">estela.X</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">p_caballo_blanco.X-120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7124399787922053" type="Function">
+                            <param id="0" name="Name">&quot;cabMovDerIzq&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="2405055666395964" type="p_caballo_blanco">
+                            <param id="0" name="Angle">Function.ReturnValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8523436642719121">
+            <conditions>
+                <condition id="0" name="On function" sid="6997330151592139" type="Function">
+                    <param id="0" name="Name">&quot;cabMovDerIzq&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="1573331063464962" type="Function">
+                    <param id="0" name="Value">p_caballo_blanco.X &lt; Mouse.X ? 0 : 180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5414012931300495">
+            <conditions>
+                <condition id="0" name="On function" sid="5131423366452438" type="Function">
+                    <param id="0" name="Name">&quot;cabMovUpDown&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="1536196286815761" type="Function">
+                    <param id="0" name="Value">p_caballo_blanco.Y &lt; Mouse.Y ? 90 : -90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6157581042426204">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1658460928962728" type="System">
+                    <param id="0" name="First value">distance(p_caballo_blanco.X,p_caballo_blanco.Y,estela.X,estela.Y)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">59</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="6200827963326536" type="System">
+                    <param id="0" name="First value">distance(p_caballo_blanco.X,p_caballo_blanco.Y,estela.X,estela.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">60.04</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3693735764735136">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3133594919761052" type="System">
+                            <param id="0" name="First value">estela.X</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">p_caballo_blanco.X+60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="7540329912955104" type="p_caballo_blanco">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7470675469713703">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9900250755717223" type="System">
+                            <param id="0" name="First value">estela.X</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">p_caballo_blanco.X-60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="3691388882971335" type="p_caballo_blanco">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9192785517979921">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1996733067161041" type="System">
+                            <param id="0" name="First value">estela.Y</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">p_caballo_blanco.Y+60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="4547139367527626" type="p_caballo_blanco">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="257522135388343">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9542040684508842" type="System">
+                            <param id="0" name="First value">estela.Y</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">p_caballo_blanco.Y -60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8826514476821119" type="p_caballo_blanco">
+                            <param id="0" name="Angle">-90</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Ayuda para el juego</comment>
+        <event-block sid="9486421674701743">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2205518732110221" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">p_caballo_blanco</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9216066117230757" type="System">
+                    <param id="0" name="Variable">caballoMov</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2146651906660963" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2500724405478206" type="System">
+                    <param id="0" name="Variable">ayudaCaballo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8056907703284108" type="System">
+                    <param id="0" name="Variable">cabPosInicialX</param>
+                    <param id="1" name="Value">p_caballo_blanco.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="1410018363803" type="System">
+                    <param id="0" name="Variable">cabPosInicialY</param>
+                    <param id="1" name="Value">p_caballo_blanco.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9971410168394294" type="estelaInicio" />
+                <action id="-9" name="Destroy" sid="6009401336408311" type="selector" />
+                <action id="-3" name="Create object" sid="4510272958960332" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X+60</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y-120</param>
+                </action>
+                <action id="-3" name="Create object" sid="6377289407930828" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X+120</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y-60</param>
+                </action>
+                <action id="-3" name="Create object" sid="5485422713337941" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X+120</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y+60</param>
+                </action>
+                <action id="-3" name="Create object" sid="4819693599087356" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X+60</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y+120</param>
+                </action>
+                <action id="-3" name="Create object" sid="5751870184102148" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X-60</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y+120</param>
+                </action>
+                <action id="-3" name="Create object" sid="5811003782601376" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X-120</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y+60</param>
+                </action>
+                <action id="-3" name="Create object" sid="3299213033508355" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X-120</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y-60</param>
+                </action>
+                <action id="-3" name="Create object" sid="105415816509493" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X-60</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y-120</param>
+                </action>
+                <action id="-3" name="Create object" sid="5852036830977582" type="System">
+                    <param id="0" name="Object to create">estelaInicio</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="1339685473793694" type="System">
+                    <param id="0" name="Variable">sePresiono</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6583035275873239">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="352888273532745" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">p_caballo_blanco</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="4563956707637304" type="System">
+                    <param id="0" name="Variable">caballoMov</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6357257054193858" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3622914946801137" type="System">
+                    <param id="0" name="Variable">ayudaCaballo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9464532470976301" type="System">
+                    <param id="0" name="Variable">cabPosInicialX</param>
+                    <param id="1" name="Value">p_caballo_blanco.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="7200956875078083" type="System">
+                    <param id="0" name="Variable">cabPosInicialY</param>
+                    <param id="1" name="Value">p_caballo_blanco.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8036330089713235" type="estelaInicio" />
+                <action id="-9" name="Destroy" sid="2933583347845187" type="selector" />
+                <action id="-3" name="Create object" sid="6431840354706215" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X+60</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y-120</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9602779860594245" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="790499880315418" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X+120</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y-60</param>
+                </action>
+                <action id="-15" name="Set visible" sid="705090670108463" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="2896316921982934" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X+120</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y+60</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9683307297500726" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="7549787749474759" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X+60</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y+120</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6599875812725627" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="5116677737266554" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X-60</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y+120</param>
+                </action>
+                <action id="-15" name="Set visible" sid="332768174634795" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="6974089969146662" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X-120</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y+60</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6117924316322661" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="9409482161141425" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X-120</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y-60</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6409084998992817" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="2977324356427581" type="System">
+                    <param id="0" name="Object to create">selector</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X-60</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y-120</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5271446809407586" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="7126250808231574" type="System">
+                    <param id="0" name="Object to create">estelaInicio</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">p_caballo_blanco.X</param>
+                    <param id="3" name="Y">p_caballo_blanco.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="5325052275269504" type="System">
+                    <param id="0" name="Variable">sePresiono</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="653440426517608">
+            <conditions>
+                <condition id="0" name="On function" sid="3091445862429491" type="Function">
+                    <param id="0" name="Name">&quot;cabMovEstado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="2005072048955783" type="Function">
+                    <param id="0" name="Value">caballoMov = 1 ? &quot;moviendose...&quot; : &quot;esperando...&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Doble click quita la ayuda, uno solo la pone</comment>
+        <event-block sid="6315117212349415">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="834798868155346" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">1</param>
+                    <param id="2" name="Object clicked">p_caballo_blanco</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1192792934977407" type="System">
+                    <param id="0" name="Variable">sePresiono</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1607016942275746" type="selector" />
+                <action id="-9" name="Destroy" sid="128042633278743" type="estelaInicio" />
+                <action id="-9" name="Set value" sid="1847400655951512" type="System">
+                    <param id="0" name="Variable">sePresiono</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="224221458401222">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9038722211203778" type="zona_no">
+                    <param id="0" name="Object">selector</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5470639521818086" type="selector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8432238894189084">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9906005263270431" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">zona_no</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="7939885185222227">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="9350242750892477" type="System">
+                    <param id="0" name="First value">caballoMov</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3200906968677756" type="selector" />
+            </actions>
+        </event-block>
+        <comment>Inicio</comment>
+        <event-block sid="5194178936776129">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1324060383246754" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="5966414926267033" type="System" />
+                <action id="-9" name="Set value" sid="9940777072295583" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2775879338819383" type="premioG" />
+                <action id="-9" name="Destroy" sid="3773097929606834" type="p_peon_negro" />
+                <action id="-9" name="Destroy" sid="8610852388001467" type="felicidades" />
+                <action id="-9" name="Destroy" sid="2352774458268365" type="game_over" />
+                <action id="-9" name="Destroy" sid="8339305992805945" type="vida1" />
+                <action id="-9" name="Destroy" sid="5583286451408218" type="vida2" />
+                <action id="-9" name="Destroy" sid="1108662698654372" type="vida3" />
+                <action id="-9" name="Destroy" sid="1332611928667317" type="p_caballo_blanco" />
+                <action id="-9" name="Destroy" sid="7613631658898918" type="fnd_reint" />
+                <action id="-3" name="Create object" sid="2873977371693772" type="System">
+                    <param id="0" name="Object to create">fnd_reint</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">512.5</param>
+                    <param id="3" name="Y">302.5</param>
+                </action>
+                <action id="0" name="Set text" sid="2800121837640147" type="titulos_mensajes">
+                    <param id="0" name="Text">&quot;Nivel 1&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3759244185335342" type="titulos_mensajes">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="3312555419520073" type="estado_juego">
+                    <param id="0" name="Text">&quot;Nivel 1&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="4147823448747012" type="System">
+                    <param id="0" name="Variable">timerSegundos</param>
+                    <param id="1" name="Value">90</param>
+                </action>
+                <action id="0" name="Set text" sid="2778960339799513" type="lblTemporizador">
+                    <param id="0" name="Text">&quot;0&quot;&amp;floor(timerSegundos/60%60)&amp;&quot; : &quot;&amp;floor(timerSegundos%60)</param>
+                </action>
+                <action id="-16" name="Wait" sid="6697976810923607" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="539434459722223" type="titulos_mensajes">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="5901552626019083" type="fnd_reint" />
+                <action id="-3" name="Create object" sid="1087973551897863" type="System">
+                    <param id="0" name="Object to create">vida1</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">75</param>
+                    <param id="3" name="Y">270</param>
+                </action>
+                <action id="-3" name="Create object" sid="7910668105649409" type="System">
+                    <param id="0" name="Object to create">vida2</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">120</param>
+                    <param id="3" name="Y">270</param>
+                </action>
+                <action id="-3" name="Create object" sid="7853691063610908" type="System">
+                    <param id="0" name="Object to create">vida3</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">165</param>
+                    <param id="3" name="Y">270</param>
+                </action>
+                <action id="-3" name="Create object" sid="8895441739963563" type="System">
+                    <param id="0" name="Object to create">p_caballo_blanco</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">480</param>
+                    <param id="3" name="Y">510</param>
+                </action>
+                <action id="-9" name="Set value" sid="652152301277052" type="System">
+                    <param id="0" name="Variable">ayudaCaballo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="603638365135997" type="btn_play">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4142660889586802" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="9961151596675934" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="4882267314716231" type="System">
+                    <param id="0" name="Variable">nivel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="4091514756276245" type="Function">
+                    <param id="0" name="Name">&quot;cargarNivel1&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8799666541142668">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9430452134482539" type="p_peon_negro">
+                    <param id="0" name="Object">p_caballo_blanco</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="5656159030202072" type="System">
+                    <param id="0" name="First value">estela.X</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">p_peon_negro.X</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="5803161347908357" type="System">
+                    <param id="0" name="First value">estela.Y</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">p_peon_negro.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5985967265273894" type="p_peon_negro" />
+                <action id="-10" name="Add to" sid="3917332902601483" type="System">
+                    <param id="0" name="Variable">puntos_caballo</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="0" name="Set text" sid="2601076541789787" type="lblPuntos">
+                    <param id="0" name="Text">puntos_caballo</param>
+                </action>
+                <action id="0" name="Play" sid="2532549170081556" type="Audio">
+                    <param id="0" name="Audio file">positivo1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="5969505437268493" type="System">
+                    <param id="0" name="Seconds">0.8</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="9131625473264644" type="System">
+                    <param id="0" name="Variable">objetivos</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Temporizador</comment>
+        <event-block sid="1998666307503623">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="5066767084056721" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="5103547605612155" type="System">
+                    <param id="0" name="First value">timerSegundos</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5838293183248006" type="System">
+                    <param id="0" name="Variable">siguienteNivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3810017447032172" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="6725907485350338" type="System">
+                    <param id="0" name="Variable">timerSegundos</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="7275227420088741" type="lblTemporizador">
+                    <param id="0" name="Text">&quot;0&quot;&amp;floor(timerSegundos/60%60)&amp;&quot; : &quot;&amp;floor(timerSegundos%60)</param>
+                </action>
+                <action id="-9" name="Set value" sid="4536660834265553" type="System">
+                    <param id="0" name="Variable">displayMinutos</param>
+                    <param id="1" name="Value">floor(timerSegundos/60%60)</param>
+                </action>
+                <action id="-9" name="Set value" sid="5518354539919956" type="System">
+                    <param id="0" name="Variable">displaySegundos</param>
+                    <param id="1" name="Value">floor(timerSegundos%60)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9867330747617197">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5873493178746014" type="System">
+                            <param id="0" name="First value">displaySegundos</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7183267653693321" type="lblTemporizador">
+                            <param id="0" name="Text">&quot;0&quot;&amp;floor(timerSegundos/60%60)&amp;&quot;:0&quot;&amp;floor(timerSegundos%60)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Nivel 1</comment>
+        <event-block sid="1741756215303722">
+            <conditions>
+                <condition id="0" name="On function" sid="2618177307749565" type="Function">
+                    <param id="0" name="Name">&quot;cargarNivel1&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9790752598854864" type="System">
+                    <param id="0" name="Variable">nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="4896346487098012" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">540</param>
+                    <param id="3" name="Y">390</param>
+                </action>
+                <action id="-3" name="Create object" sid="9575952706180781" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">600</param>
+                    <param id="3" name="Y">270</param>
+                </action>
+                <action id="-3" name="Create object" sid="4115626906591805" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">480</param>
+                    <param id="3" name="Y">210</param>
+                </action>
+                <action id="-3" name="Create object" sid="3495086517664731" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">360</param>
+                    <param id="3" name="Y">150</param>
+                </action>
+                <action id="-3" name="Create object" sid="7740959379804104" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">480</param>
+                    <param id="3" name="Y">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6421585525949832">
+            <conditions />
+            <actions />
+        </event-block>
+        <comment>Se completa el nivel cuando los objetivos son cero y el timer es mayor que cero.</comment>
+        <event-block sid="4097587258912109">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4747086881907796" type="System">
+                    <param id="0" name="Variable">objetivos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3289339824568035" type="System">
+                    <param id="0" name="Variable">timerSegundos</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6873407059366776" type="System">
+                    <param id="0" name="Variable">siguienteNivel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="9898336653518323" type="System">
+                    <param id="0" name="Object to create">fnd_reint</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">512.5</param>
+                    <param id="3" name="Y">302.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="3733081258091196" type="System">
+                    <param id="0" name="Variable">objetivos</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3455176008066866" type="titulos_mensajes">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="1039369897049412" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6655909571086338">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="365770422217784" type="System">
+                    <param id="0" name="Variable">siguienteNivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5801479212347998" type="System">
+                    <param id="0" name="Variable">nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="623452988225686" type="titulos_mensajes">
+                    <param id="0" name="Text">&quot;Nivel 2&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="1178287484464119" type="System">
+                    <param id="0" name="Variable">siguienteNivel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="7172388932639602" type="System">
+                    <param id="0" name="Variable">nivel</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="4730199563630704" type="System">
+                    <param id="0" name="Variable">timerSegundos</param>
+                    <param id="1" name="Value">70</param>
+                </action>
+                <action id="0" name="Set text" sid="8675837166001554" type="lblTemporizador">
+                    <param id="0" name="Text">&quot;0&quot;&amp;floor(timerSegundos/60%60)&amp;&quot; : &quot;&amp;floor(timerSegundos%60)</param>
+                </action>
+                <action id="0" name="Set text" sid="1956074423567915" type="estado_juego">
+                    <param id="0" name="Text">&quot;Nivel 2&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="433267898616755" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3846140521178116" type="fnd_reint" />
+                <action id="-15" name="Set visible" sid="3693465510278139" type="titulos_mensajes">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="4264192927714985" type="p_caballo_blanco">
+                    <param id="0" name="X">480</param>
+                    <param id="1" name="Y">510</param>
+                </action>
+                <action id="0" name="Call function" sid="3514950270653192" type="Function">
+                    <param id="0" name="Name">&quot;crearMonedas&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="1043552847128649" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Set value" sid="7856711529690512" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8314174503242573">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1285052512076108" type="System">
+                    <param id="0" name="Variable">siguienteNivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="221581917889247" type="System">
+                    <param id="0" name="Variable">nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8734441735810562" type="titulos_mensajes">
+                    <param id="0" name="Text">&quot;Nivel 3&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="665789944383123" type="System">
+                    <param id="0" name="Variable">siguienteNivel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="9938853561192063" type="System">
+                    <param id="0" name="Variable">nivel</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="5409676429312259" type="System">
+                    <param id="0" name="Variable">timerSegundos</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+                <action id="0" name="Set text" sid="7355241293796783" type="lblTemporizador">
+                    <param id="0" name="Text">&quot;0&quot;&amp;floor(timerSegundos/60%60)&amp;&quot; : &quot;&amp;floor(timerSegundos%60)</param>
+                </action>
+                <action id="0" name="Set text" sid="5081487581605941" type="estado_juego">
+                    <param id="0" name="Text">&quot;Nivel 3&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="5916479157914188" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="1943931689926861" type="fnd_reint" />
+                <action id="-15" name="Set visible" sid="1491216819949754" type="titulos_mensajes">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="3560614770895727" type="p_caballo_blanco">
+                    <param id="0" name="X">480</param>
+                    <param id="1" name="Y">510</param>
+                </action>
+                <action id="0" name="Call function" sid="8644686107645482" type="Function">
+                    <param id="0" name="Name">&quot;crearMonedas&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="5896338319588936" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Set value" sid="6406624991264609" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="579900238277526" type="System">
+                    <param id="0" name="Variable">ayudaCaballo</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4266241452517725">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5092750237622175" type="System">
+                    <param id="0" name="Variable">siguienteNivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1082839230042993" type="System">
+                    <param id="0" name="Variable">nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="1245381714737845" type="System">
+                    <param id="0" name="Object to create">felicidades</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">510</param>
+                    <param id="3" name="Y">120</param>
+                </action>
+                <action id="0" name="Set text" sid="5931205915577355" type="titulos_mensajes">
+                    <param id="0" name="Text">&quot;Terminaste el juego&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="6968660911577031" type="System">
+                    <param id="0" name="Variable">siguienteNivel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5307218936574541" type="System">
+                    <param id="0" name="Variable">nivel</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-3" name="Create object" sid="2990990572639678" type="System">
+                    <param id="0" name="Object to create">btn_reiniciar</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">270</param>
+                    <param id="3" name="Y">480</param>
+                </action>
+                <action id="-3" name="Create object" sid="2987900698879469" type="System">
+                    <param id="0" name="Object to create">btn_menu</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">510</param>
+                    <param id="3" name="Y">480</param>
+                </action>
+                <action id="-3" name="Create object" sid="477842306776315" type="System">
+                    <param id="0" name="Object to create">btn_tutorial</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">750</param>
+                    <param id="3" name="Y">480</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Pierde una vida</comment>
+        <event-block sid="6931599812476928">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4607147836318527" type="System">
+                    <param id="0" name="Variable">timerSegundos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="576096953481395" type="System">
+                    <param id="0" name="Variable">objetivos</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3468204008987547" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="43392466145544" type="System">
+                    <param id="0" name="Variable">vidas</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="525960605444771" type="Audio">
+                    <param id="0" name="Audio file">bayVida</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="588712132607925">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="470080100606841" type="System">
+                            <param id="0" name="Variable">nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1872892031626689" type="System">
+                            <param id="0" name="Variable">timerSegundos</param>
+                            <param id="1" name="Value">90</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2182570500284061" type="vida1" />
+                    </actions>
+                </event-block>
+                <event-block sid="8207145585070615">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9075111368131693" type="System">
+                            <param id="0" name="Variable">nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2785725976421214" type="System">
+                            <param id="0" name="Variable">timerSegundos</param>
+                            <param id="1" name="Value">70</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1082120262007192" type="vida2" />
+                    </actions>
+                </event-block>
+                <event-block sid="6646295829745981">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9342955550117742" type="System">
+                            <param id="0" name="Variable">nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5609368951691891" type="System">
+                            <param id="0" name="Variable">timerSegundos</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4096811753573931" type="vida3" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Pausa del Juego</comment>
+        <event-block sid="8297070129125845">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7306450217621824" type="Touch">
+                    <param id="0" name="Object">btn_playPause</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1632656330023188" type="System">
+                    <param id="0" name="Variable">siguienteNivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Toggle pause" sid="9906950828765681" type="Pause" />
+            </actions>
+        </event-block>
+        <event-block sid="6098320112721037">
+            <conditions>
+                <condition id="1" name="On resume" sid="6315998823638389" type="Pause" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="5544160025542358" type="btn_playPause">
+                    <param id="0" name="Animation">&quot;pausa&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="3574014558958677" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7229826906392359">
+            <conditions>
+                <condition id="0" name="On pause" sid="3402617216303217" type="Pause" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6586652555968594" type="btn_playPause">
+                    <param id="0" name="Animation">&quot;play&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="8098748612398692" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1579050174195701">
+            <conditions>
+                <condition id="0" name="On function" sid="9114261209550755" type="Function">
+                    <param id="0" name="Name">&quot;crearMonedas&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1827982307547999">
+                    <conditions>
+                        <condition id="-10" name="For" sid="6504221755205394" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4944868073882284" type="System">
+                            <param id="0" name="Object to create">p_peon_negro</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">int(random(300,750)/60)*60</param>
+                            <param id="3" name="Y">int(random(90,390)/60)*60 +30</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="395149882800143">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5792314693785792" type="Touch">
+                    <param id="0" name="Object">btn_reiniciar</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3031313953670747" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="9209725808513186" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="2147773057325174">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4341908674043969" type="Touch">
+                    <param id="0" name="Object">btn_menu</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6841024015877979" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4362650535655904" type="System">
+                    <param id="0" name="Layout">Menu_tutor_practica</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4971333691534249">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5298769023950935" type="Touch">
+                    <param id="0" name="Object">btn_tutorial</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="4525788256687513" type="System">
+                    <param id="0" name="Variable">pausa</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6301604237595794" type="System">
+                    <param id="0" name="Layout">Modulo2_CapturaCaballo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5640777906572088">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7081855720433965" type="System">
+                    <param id="0" name="Variable">vidas</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="2228462752542135" type="System">
+                    <param id="0" name="Object to create">fnd_reint</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">512.5</param>
+                    <param id="3" name="Y">302.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="611805910946687" type="Text2">
+                    <param id="0" name="X">185</param>
+                    <param id="1" name="Y">255</param>
+                </action>
+                <action id="-3" name="Set position" sid="3599867840252948" type="reintentar">
+                    <param id="0" name="X">495</param>
+                    <param id="1" name="Y">405</param>
+                </action>
+                <action id="-3" name="Create object" sid="6092763749752138" type="System">
+                    <param id="0" name="Object to create">game_over</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">510</param>
+                    <param id="3" name="Y">165</param>
+                </action>
+                <action id="-16" name="Wait" sid="8613300874389607" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="5947933447192524" type="System" />
+                <action id="-21" name="Reset global variables" sid="8098723940073088" type="System" />
+            </actions>
+        </event-block>
+        <comment>Cursor</comment>
+        <event-block any="1" sid="6765122429936407">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2917858190749662" type="Mouse">
+                    <param id="0" name="Object">reintentar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="8764270167412638" type="Mouse">
+                    <param id="0" name="Object">btn_reiniciar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="8907158426599915" type="Mouse">
+                    <param id="0" name="Object">btn_menu</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="1374388190723186" type="Mouse">
+                    <param id="0" name="Object">btn_tutorial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="4433134460006499" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="1461244404244712">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="9125866792434578" type="Mouse">
+                    <param id="0" name="Object">reintentar</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="235143833048686" type="Mouse">
+                    <param id="0" name="Object">btn_reiniciar</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="7744706534271689" type="Mouse">
+                    <param id="0" name="Object">btn_menu</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="3491865581941325" type="Mouse">
+                    <param id="0" name="Object">btn_tutorial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="473658200476631" type="Mouse">
+                    <param id="0" name="Sprite">cur_normal</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4087664369681439">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6753303802470807" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="602281571743881" type="System">
+                    <param id="0" name="Layout">Submenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>ESTO ACOMODALE A TUS VARIABLES QUE NO ENTIENDO BIEN PARA EL LVL1 Y 2</comment>
+        <event-block sid="1666584532058404">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="7915546036933477" type="System">
+                    <param id="0" name="First value">puntos_caballo</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">score_max_caballo1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="1952083920675214" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo1&quot;</param>
+                    <param id="1" name="Value">puntos_caballo</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

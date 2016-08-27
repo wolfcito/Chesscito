@@ -1,0 +1,24 @@
+Personajes:
+
+1.- Atahualpa (Prisionero).
+2.- Rumi~ahui (Jugador con mision de liberar a prisionero).
+3.- General Pizarro (A vencer en el ultimo nivel).
+4.- Capitan Requellme.
+5.- Soldado Hernando de Zoto.
+
+Armas de Rumi~ahui:
+
+1.- Flechas: Solo dispara diagonales.
+2.- Lanza: Dispara en horizontal y vertical.
+3.- Honda: Dispara en "L" como el movimiento del caballo.
+4.- Pistola: Disparan los espa~oles hacia Rumi�ahui.
+
+Valor de las piezas:
+
+1.- La captura de los personajes espa~oles son a traves de botones que toman las
+formas de las piezas de ajedrez y sus valores de puntaje son los valores de las 
+piezas en la realidad: Dama 9: Alfil y caballo 3 Torre 5.
+
+Torre captura a todos.
+Alfil y Caballo captura Requelme.
+La dama solo puede capturar a Pizarro y Hernando de Soto.

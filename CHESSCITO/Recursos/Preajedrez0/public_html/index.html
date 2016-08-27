@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Juego Preajedrecistico 0</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/css.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="js/fullscreen.js"></script>
+        <script src="js/modernizr.custom.27150.js"></script>
+
+    </head>
+    <body>
+           
+        <div id="iniciaTutor" class="pantalla">
+            <div class="titulo">
+            <p>- * IMPERIO RUMIÑAHUI * -</p>
+            </div>
+            <div class="cuerpo">
+<!--            <img  id="logo"/>-->
+<img style="margin: 10px auto; padding: 10px" width="150" height="150" id="inicia_lvl1" src="img/fuego.gif" onmouseover="setCursorByID('inicia_lvl1');return false;"/>
+            <br><h1 id="e1"><a onclick="setCursorByID('e1','help');return false;">¡¡¡Acabalos a todos!!!</a></h1>
+                <p id="puntaje"></p>
+            </div>
+            <div class="menu_inf_izq" style="display: none;">
+                <div id="inicia_lvl1" class="wrapper">
+                    <div class="item">
+                        <img src="img/btn_iniciar.png" onmouseover="this.src='img/btn_reinicio.png';" onmouseout="this.src='img/btn_iniciar.png';"/>
+                        <!--<img src="img/btn_iniciar.png" />-->
+                    <span class="information">
+                        <strong>Inicio</strong> Has clic para empezar.
+                    </span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="perdedor" class="pantalla lose">
+            <p>CHESSITO</p><br>
+            <img src="img/loader.png" id="logo"/>
+            <div class="menu">
+                <h1>No te preocupes, Inténtalo de nuevo.</h1>
+                <p id="puntaje"></p><br>
+                <div id="reiniciar" class="wrapper">
+                    <div class="item">
+                        <img src="img/btn_reinicio.png" />
+                    <span class="information">
+                        <strong>Reiniciar</strong> Juega nuevamente.
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="iniciaTutor2" class="pantalla winner">
+            <p>CHESSITO</p><br>
+            <img  id="logo"/>
+            <div class="menu">
+                <h1>Nivel 1 Superado</h1><br>
+                <div id="inicia_lvl2" class="wrapper">
+                    <div class="item">
+                        <img src="img/btn_avanza.png" />
+                    <span class="information">
+                        <strong>Nivel Superado</strong> continuar nivel 2.
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="winner" class="pantalla winner">
+            <p>CHESSITO</p><br>
+            <img src="" id="logo"/>
+            <div class="menu">
+                <h2>Nivel 2 Superado</h2><br>
+                <h1>¡¡¡ERES EL CAMPEÓN!!!</h1>
+<!--                <div id="lvl2" class="wrapper">
+                    <div class="item">
+                        <img src="img/btn_avanza.png" />
+                    <span class="information">
+                        <strong>Nivel Superado</strong> Nivel 3 en construcción.
+                    </span>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div id="tutor0" >
+        </div>
+        
+        
+        
+        
+        <script src="js/preloadjs-0.1.0.min.js"></script>
+        <!--<script src="js/kinetic-v4.3.2.min.js"></script>-->
+        <script src="js/kinetic-v4.4.3.min.js"></script>
+        <script src="js/campeon.js"></script>
+        <script src="js/enemigo.js"></script>
+        <script src="js/enemigoFuerte.js"></script>
+        <script src="js/fond_escenario.js"></script>
+        <script src="js/plataforma.js"></script>
+        <script src="js/avatar.js"></script>
+        <script src="js/juego.js"></script>
+        <script src="js/sucre.js"></script>
+        <script src="js/pasadizo.js"></script>
+        <script src="js/panel.js"></script>
+        <script src="js/piezalvl.js"></script>
+        <script src="js/llave.js"></script>
+        <script src="js/municion.js"></script>
+        <script src="js/main.js"></script>
+        
+        <script >
+            var Preloader;
+            var grupoImagenes = ['img/campeon.png','img/enemigo.png',
+                'img/premio.png','img/puerta.png','img/sucre.png',
+                'img/piso.png','img/panel_estado.jpg'];
+ 
+            window.addEventListener('load', function(){
+                Preloader = new PreloadJS();
+                Preloader.onProgress = progresoCarga;
+                cargar();
+               document.body.style.cursor = "url(img/cursor_game/sobre.cur), auto";
+//               $('div#iniciaTutor').css('cursor', 'url(img/cursor.cur)');
+               
+                var btn_1 = document.getElementById('inicia_lvl1');
+                var btn_2 = document.getElementById('inicia_lvl2');
+                var btn_3 = document.getElementById('reiniciar');
+                btn_1.addEventListener('click', iniciarJuego);
+                btn_2.addEventListener('click', iniciarJuego2);
+                btn_3.addEventListener('click', reiniciarJuego);
+
+            });
+            
+            function setCursorByID(id) 
+            {
+                var elem;
+                if (document.getElementById && (elem=document.getElementById(id)) ) 
+                {
+                    if (elem.style) elem.style.cursor = "url(img/cursor_game/apretado.cur), auto";
+                }
+            }
+            
+            function cargar()
+            {
+                while(grupoImagenes.length > 0)
+                {
+                    var url = grupoImagenes.shift();
+                    Preloader.loadFile(url);
+                }
+            }
+            function progresoCarga()
+            {
+                if(Preloader.progress === 1)
+                {
+                     //nivelUno();
+                     document.querySelector('#iniciaTutor').style.display = 'block';
+                }
+            }
+            function iniciarJuego()
+            {
+//                launchFullScreen(document.documentElement);
+                document.querySelector('#iniciaTutor').style.display = 'none';
+                document.querySelector('#perdedor').style.display = 'none';
+                document.querySelector('#iniciaTutor2').style.display = 'none';
+                document.querySelector('#winner').style.display = 'none';
+                document.querySelector('#tutor0').style.display = 'block';
+                document.body.style.cursor = "url(img/cursor_game/sobre.cur), auto";
+                nivelUno(); 
+
+            }
+            function iniciarJuego2()
+            {
+                document.querySelector('#iniciaTutor').style.display = 'none';
+                document.querySelector('#perdedor').style.display = 'none';
+                document.querySelector('#iniciaTutor2').style.display = 'none';
+                document.querySelector('#winner').style.display = 'none';
+                document.querySelector('#tutor0').style.display = 'block';
+                nivelDos(); 
+            }
+            function reiniciarJuego()
+            {
+                location.reload(true);
+            }
+        </script>
+    </body>
+</html>

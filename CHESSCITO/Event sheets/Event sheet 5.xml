@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 5</name>
+    <events>
+        <include>cursor</include>
+        <event-block any="1" sid="1930922725306537">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="1517253722753791" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="4390806723143206" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="objetivos3" sid="3489053930543709" static="0" type="number">20</variable>
+        <variable constant="0" name="Puntaje3" sid="6956008179352295" static="0" type="number">0</variable>
+        <event-block sid="5537063377398208">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1433610474618871" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="5546760578034899" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4378496528993275" type="Space_continuar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="4069266677861231" type="Sprite11">
+                    <param id="0" name="Object">bala_alfil</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">&quot;CreaPieza&quot;</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7624986442621151" type="bala_alfil">
+                    <param id="0" name="Angle">-45</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="323548770817642">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6903674284218969" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1324126506887522" type="puntaje">
+                    <param id="0" name="Text">&quot;&quot;&amp;Puntaje</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="7670927440560034" type="bala_alfil">
+                    <param id="0" name="Speed">250</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4205352728383914">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7013027981795833" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="9450805332292398" type="bala_alfil">
+                    <param id="0" name="Degrees">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="7475285673903388" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="727701087576937" type="Space_continuar">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8290230878970469">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1921381226973137" type="bala_alfil">
+                    <param id="0" name="Object">pieza_peon2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1358601966927626" type="pieza_peon2" />
+                <action id="0" name="Play" sid="2914481939693856" type="Audio">
+                    <param id="0" name="Audio file">Golpe_obj</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2460256708720283">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="7550097312315158" type="pieza_peon2" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="2264440250707036" type="System">
+                    <param id="0" name="Variable">puntaje</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="5909201244493418" type="System">
+                    <param id="0" name="Variable">objetivos3</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3499060365775827">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1926766357738323" type="bala_alfil">
+                    <param id="0" name="Object">Sprite11</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="8400486554651482" type="Audio">
+                    <param id="0" name="Audio file">Golpe_nave</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2218460037922484">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2409565779316622" type="bala_alfil">
+                    <param id="0" name="Object">tubo_final</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4266419951638999" type="bala_alfil" />
+                <action id="0" name="Play" sid="6092214626691972" type="Audio">
+                    <param id="0" name="Audio file">bayVida</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="7457997565659424" type="Sprite11">
+                    <param id="0" name="Object">bala_alfil</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8572319617042714" type="bala_alfil">
+                    <param id="0" name="Angle">-45</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="124250335446116" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2226258274578734" type="Space_continuar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-5" name="Set width" sid="5617232379139291" type="VidasJugador">
+                    <param id="0" name="Width">VidasJugador.Width-29</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2682656535055715">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="3067166919732076" type="VidasJugador">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Width">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="9036285597508438" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="7495927368500731" type="System">
+                    <param id="0" name="Object to create">fnd_reint</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">512</param>
+                    <param id="3" name="Y">300</param>
+                </action>
+                <action id="-3" name="Create object" sid="3767883435505463" type="System">
+                    <param id="0" name="Object to create">gameOver</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">539</param>
+                    <param id="3" name="Y">225</param>
+                </action>
+                <action id="-3" name="Create object" sid="9592569983432732" type="System">
+                    <param id="0" name="Object to create">Reint_alfil</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">533</param>
+                    <param id="3" name="Y">381</param>
+                </action>
+                <action id="-3" name="Create object" sid="3333812661431087" type="System">
+                    <param id="0" name="Object to create">Jugar_nuevo_alfil</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">355</param>
+                    <param id="3" name="Y">280</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3755820642776778" type="Space_continuar">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4544689954455288">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7172143793530469" type="System">
+                    <param id="0" name="Variable">objetivos3</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="8056302983979908" type="System">
+                    <param id="0" name="Object to create">fnd_reint</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">512</param>
+                    <param id="3" name="Y">300</param>
+                </action>
+                <action id="-3" name="Create object" sid="7965629987912191" type="System">
+                    <param id="0" name="Object to create">Felicitaciones</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">539</param>
+                    <param id="3" name="Y">225</param>
+                </action>
+                <action id="-3" name="Create object" sid="7483919938762122" type="System">
+                    <param id="0" name="Object to create">btn_menu</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">373</param>
+                    <param id="3" name="Y">459</param>
+                </action>
+                <action id="-3" name="Create object" sid="7893974105794854" type="System">
+                    <param id="0" name="Object to create">btn_tutorial</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">654</param>
+                    <param id="3" name="Y">459</param>
+                </action>
+                <action id="-3" name="Create object" sid="7386226073342724" type="System">
+                    <param id="0" name="Object to create">Reint_alfil</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">533</param>
+                    <param id="3" name="Y">381</param>
+                </action>
+                <action id="-3" name="Create object" sid="7157596717462853" type="System">
+                    <param id="0" name="Object to create">Jugar_nuevo_alfil</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">355</param>
+                    <param id="3" name="Y">280</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="5091289025730989" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="9903313503934908" type="System" />
+                <action id="0" name="Play" sid="2968725725499148" type="Audio">
+                    <param id="0" name="Audio file">gana</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8410168536144792">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4591303946165568" type="Touch">
+                    <param id="0" name="Object">Reint_alfil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="939026688739636" type="System">
+                    <param id="0" name="Layout">Modulo_Alfil_lvl2</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="2757438452126776" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="4537189877405607">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5847800388511562" type="Touch">
+                    <param id="0" name="Object">btn_menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7931877909383165" type="System">
+                    <param id="0" name="Layout">Menu_tutor_practica</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9565061176014963">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9293568116255002" type="Touch">
+                    <param id="0" name="Object">btn_tutorial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5353111327708339" type="System">
+                    <param id="0" name="Layout">Modulo1_Tutorial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4980972548874795">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9879172597891588" type="Touch">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5168798073226703" type="System">
+                    <param id="0" name="Layout">Modulo_Alfil_lvl1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

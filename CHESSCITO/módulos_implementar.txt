@@ -1,0 +1,12 @@
+Todos los módulos DEBEN tener 3 niveles
+- Rediseñar módulos tutorial
+- Reidear sección David J.(Alfil)	-> Niveles
+- Corregir bugs Luis (torre)		-> 
+- Corregir bugs Byron (Caballo) 	-> Añadir Caballo errante (lvl3)
+- Agregar piezas Jahir (Dama)		-> Idear juego
+- Agregar piezas David P.(peón)		-> Batalla de los peones
+
+- Sección de rankin -> online
+- Rediseñar gráficos e innovar la interfaz
+
+- Apuntar nuevas mejoras a medida que se lo vaya desarrollando.

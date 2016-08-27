@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Modulo4_tutorial</name>
+    <events>
+        <include>cursor</include>
+        <event-block sid="4021739127739138">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7474202296491069" type="Touch">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1634558341436249" type="System">
+                    <param id="0" name="Layout">Inicio_menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8028457889103326">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="4808445304760307" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="8335704383015399" type="btn_volver">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6929416039415238">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="7268265714246101" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="2550423910244988" type="btn_volver">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="653167322257003">
+            <conditions>
+                <condition id="3" name="On touched object" sid="975084037015881" type="Touch">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6406416674239336" type="System">
+                    <param id="0" name="Layout">Modulo4_Captura</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4598800265227858">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2630172438713223" type="Mouse">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="7106469323489038" type="gotoJuegos">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8501318839351766">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="5456749430791475" type="Mouse">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="5378905113824371" type="gotoJuegos">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4981958768437632">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3360582115923422" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1450118503617706" type="Text5">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="numMovimiento" sid="7453859730804825" static="0" type="number">0</variable>
+        <event-block sid="7018424280348265">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6966400578228455" type="Touch">
+                    <param id="0" name="Object">btn_peon</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8840333647596793" type="peon_amarillo" />
+                <action id="-9" name="Destroy" sid="2600213785194375" type="Text5" />
+                <action id="-9" name="Set value" sid="2849835059732884" type="System">
+                    <param id="0" name="Variable">numMovimiento</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="8485469633590754" type="System">
+                    <param id="0" name="Object to create">peon_amarillo</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">481</param>
+                    <param id="3" name="Y">380</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="6755909888539729" type="peon_amarillo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="8544151185136161" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7969628115974075" type="peon_amarillo">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2211908073938496" type="peon_amarillo">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+                <action id="-3" name="Create object" sid="3541914639182481" type="System">
+                    <param id="0" name="Object to create">marco_top1</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">481</param>
+                    <param id="3" name="Y">220</param>
+                </action>
+                <action id="-7" name="Set size" sid="7340002982560748" type="marco_top1">
+                    <param id="0" name="Width">60</param>
+                    <param id="1" name="Height">60</param>
+                </action>
+                <action id="-3" name="Create object" sid="1432260464244306" type="System">
+                    <param id="0" name="Object to create">marco_top2</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">481</param>
+                    <param id="3" name="Y">275</param>
+                </action>
+                <action id="-7" name="Set size" sid="8597260444165071" type="marco_top2">
+                    <param id="0" name="Width">60</param>
+                    <param id="1" name="Height">60</param>
+                </action>
+                <action id="-3" name="Create object" sid="1894436611046008" type="System">
+                    <param id="0" name="Object to create">Text5</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">271</param>
+                    <param id="3" name="Y">308</param>
+                </action>
+                <action id="2" name="Set font face" sid="9152072721139698" type="Text5">
+                    <param id="0" name="Font face">&quot;Cooper Black&quot;</param>
+                    <param id="1" name="Style">1</param>
+                </action>
+                <action id="4" name="Set font color" sid="2282414727673237" type="Text5">
+                    <param id="0" name="Color">rgb(255,255,255)</param>
+                </action>
+                <action id="3" name="Set font size" sid="8829734822893819" type="Text5">
+                    <param id="0" name="Size (pt)">16</param>
+                </action>
+                <action id="-15" name="Set visible" sid="467352033216594" type="Text5">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>MOVIMIENTO INICIAL</comment>
+        <event-block sid="4617162721150449">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="619641164974093" type="peon_amarillo">
+                    <param id="0" name="Object">marco_top1</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="9504770555578243" type="System">
+                    <param id="0" name="First value">numMovimiento</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="6548365645220663" type="peon_amarillo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Set text" sid="8416170102250542" type="Text5">
+                    <param id="0" name="Text">&quot;Movimiento inicial opcional&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="6279543202515746" type="Text5">
+                    <param id="0" name="X">278</param>
+                    <param id="1" name="Y">301</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3305626994014003" type="Text5">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="5441862722719356" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3883314461842918" type="Text5">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="8801878564898342" type="peon_amarillo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="4219795144266471" type="peon_amarillo">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="8569664071946594" type="System">
+                    <param id="0" name="Variable">numMovimiento</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>MOVIMIENTO NORMAL</comment>
+        <event-block sid="9431396820282827">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2430354969825269" type="peon_amarillo">
+                    <param id="0" name="Object">marco_top2</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="8530848972184458" type="System">
+                    <param id="0" name="First value">numMovimiento</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="5949764936960197" type="peon_amarillo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Set text" sid="8615926685148272" type="Text5">
+                    <param id="0" name="Text">&quot;Movimiento normal&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="1923767060725987" type="Text5">
+                    <param id="0" name="X">520</param>
+                    <param id="1" name="Y">301</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2345421213613409" type="Text5">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="2996060001315726" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2243720917084251" type="Text5">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="5269571733887084" type="peon_amarillo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="1700188396516339" type="System">
+                    <param id="0" name="Variable">numMovimiento</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="5883994288054713">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="6884935098722496" type="Mouse">
+                    <param id="0" name="Object">btn_peon</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="9228854180503214" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="7012361153873815" type="Mouse">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="993699374640242" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9800910728321342">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1720420133413726" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="0" name="Stop" sid="8852261707407548" type="peon_amarillo" />
+                <action behavior="Bullet" id="0" name="Set speed" sid="5288926667416743" type="peon_amarillo">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="8Direction" id="3" name="Set speed" sid="7039038511309482" type="peon_amarillo">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

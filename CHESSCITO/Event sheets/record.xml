@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>record</name>
+    <events>
+        <include>cursor</include>
+        <event-block sid="6963811996113625">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1603809797369362" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="2909172447407142" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre1&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="6402477355443201" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre2&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="1245181256199816" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil1&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="8269993711777816" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil2&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="3952292882543485" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo1&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="1098323400148019" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo2&quot;</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="4039515852380531" type="pieza_alfil">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8873434051460399" type="pieza_caballo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3844039859480188" type="pieza_torre">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9614077364429926">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8629728227874383" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8533641577858866" type="txt_score_max">
+                    <param id="0" name="Text">&quot;NIVEL 1   ...&quot; &amp; zeropad(score_max_alfil1, 2) &amp; newline  &amp; &quot;NIVEL 2   ...&quot; &amp; zeropad(score_max_alfil2, 2) &amp; newline  &amp; newline  &amp; &#x0D;&#x0A; newline  &amp; &quot;NIVEL 1   ...&quot; &amp; zeropad(score_max_caballo1, 2) &amp; newline  &amp; &quot;NIVEL 2   ...&quot; &amp; zeropad(score_max_caballo2, 2) &amp; newline  &amp; newline  &amp; &#x0D;&#x0A;newline  &amp; &quot;NIVEL 1   ...&quot; &amp; zeropad(score_max_torre1, 2) &amp; newline  &amp; &quot;NIVEL 2   ...&quot; &amp; zeropad(score_max_torre2, 2) &amp; newline  &amp; newline  </param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Score Torre1</comment>
+        <event-block sid="8561774909274942">
+            <conditions>
+                <condition id="9" name="On item exists" sid="5643865559821495" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="3994482276122902" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5594282221211852">
+            <conditions>
+                <condition id="1" name="On item get" sid="3009187872489394" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4951271606435744" type="System">
+                    <param id="0" name="Variable">score_max_torre1</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8886297335572762">
+            <conditions>
+                <condition id="10" name="On item missing" sid="4070066540874995" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4390040099110204" type="System">
+                    <param id="0" name="Variable">score_max_torre1</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Score Torre2</comment>
+        <event-block sid="5259383113545912">
+            <conditions>
+                <condition id="9" name="On item exists" sid="6820575163169166" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="864356979891927" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6316551444450948">
+            <conditions>
+                <condition id="1" name="On item get" sid="5619321569817279" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7705785098067576" type="System">
+                    <param id="0" name="Variable">score_max_torre2</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2769923393532983">
+            <conditions>
+                <condition id="10" name="On item missing" sid="8974455026304786" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_torre2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1413992984714923" type="System">
+                    <param id="0" name="Variable">score_max_torre2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Score Alfil1</comment>
+        <event-block sid="6454982581231039">
+            <conditions>
+                <condition id="9" name="On item exists" sid="6763353508080168" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="8279998716542126" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5068772541746625">
+            <conditions>
+                <condition id="1" name="On item get" sid="3301621137526886" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8575257473971894" type="System">
+                    <param id="0" name="Variable">score_max_alfil1</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6919134509076279">
+            <conditions>
+                <condition id="10" name="On item missing" sid="2502029613059517" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6393361894581266" type="System">
+                    <param id="0" name="Variable">score_max_alfil1</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Score Alfil2</comment>
+        <event-block sid="954035409912541">
+            <conditions>
+                <condition id="9" name="On item exists" sid="8516606563353722" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="3004474504528874" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5180456738387146">
+            <conditions>
+                <condition id="1" name="On item get" sid="5802481756231332" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4291617582041288" type="System">
+                    <param id="0" name="Variable">score_max_alfil2</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7811716715203108">
+            <conditions>
+                <condition id="10" name="On item missing" sid="8810986538375558" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_alfil2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5893184416640986" type="System">
+                    <param id="0" name="Variable">score_max_alfil2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Score Caballo1</comment>
+        <event-block sid="1111673883498123">
+            <conditions>
+                <condition id="9" name="On item exists" sid="2056506959100726" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="5973013817668595" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6638954669426157">
+            <conditions>
+                <condition id="1" name="On item get" sid="1208967019345658" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7330597249480564" type="System">
+                    <param id="0" name="Variable">score_max_caballo1</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3095536130642198">
+            <conditions>
+                <condition id="10" name="On item missing" sid="5573259238842631" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4880440581800133" type="System">
+                    <param id="0" name="Variable">score_max_caballo1</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Score Caballo2</comment>
+        <event-block sid="184078881612681">
+            <conditions>
+                <condition id="9" name="On item exists" sid="4845760539080787" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="6327531156577188" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1559506329776187">
+            <conditions>
+                <condition id="1" name="On item get" sid="4603870958492878" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8901148414953703" type="System">
+                    <param id="0" name="Variable">score_max_caballo2</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9805666142916162">
+            <conditions>
+                <condition id="10" name="On item missing" sid="6892945126589946" type="LocalStorage">
+                    <param id="0" name="Key">&quot;score_caballo2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5938893533285203" type="System">
+                    <param id="0" name="Variable">score_max_caballo2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Funciones Mouse</comment>
+        <event-block sid="1301062998416373">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8194596527583976" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_reset_score</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Clear storage" sid="7551793627948208" type="LocalStorage" />
+                <action id="-2" name="Go to layout" sid="3972124694227518" type="System">
+                    <param id="0" name="Layout">record</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2200706518467057">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9168394938210626" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4934079942789795" type="System">
+                    <param id="0" name="Layout">Submenu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

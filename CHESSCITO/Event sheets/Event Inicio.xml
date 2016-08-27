@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Inicio</name>
+    <events>
+        <include>cursor</include>
+        <event-block sid="6520310083171826">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="9674228769918158" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="3371812980400872" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="6501079247942546" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="513422674727106" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3138147221475895" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2556686231307805">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2263851160295211" type="Touch">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4989579295468164" type="System">
+                    <param id="0" name="Layout">Menu_tutor_practica</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3436283505549174">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6760220890048124" type="Touch">
+                    <param id="0" name="Object">Introduccion</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4381507598425708" type="System">
+                    <param id="0" name="Layout">Introduccion</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1044809015532444">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2708395910379296" type="Touch">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5299368718110401" type="System">
+                    <param id="0" name="Layout">Menu_tutor_practica</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5759404740234129">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5365842018453393" type="Touch">
+                    <param id="0" name="Object">Opcion1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7453846338821484" type="System">
+                    <param id="0" name="Layout">Introduccion</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2880738069636634">
+            <conditions>
+                <condition id="3" name="On touched object" sid="425831745297208" type="Touch">
+                    <param id="0" name="Object">Opcion2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1895826626957727" type="System">
+                    <param id="0" name="Layout">Modulo1_Tutorial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4862300510843107">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5515972745032942" type="Touch">
+                    <param id="0" name="Object">Opcion3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8142151312756133" type="System">
+                    <param id="0" name="Layout">Modulo2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8634381112909774">
+            <conditions>
+                <condition id="3" name="On touched object" sid="543369284088545" type="Touch">
+                    <param id="0" name="Object">Opcion4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7883130261320356" type="System">
+                    <param id="0" name="Layout">Modulo4_tutorial</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Efectos</comment>
+        <event-block sid="9884803748398469">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5338582872508664" type="Mouse">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="7670031526399943" type="Sprite">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="9509507086771759" type="Sprite">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="546847915496124">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="1984039857845111" type="Mouse">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="7760034787670803" type="Sprite">
+                    <param id="0" name="Scale">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="726009176473009" type="Sprite">
+                    <param id="0" name="Opacity">70</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5686444245564069">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="4286086283368233" type="Mouse">
+                    <param id="0" name="Object">Opcion1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6117357613527266" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1012978695589722">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="7495740052789013" type="Mouse">
+                    <param id="0" name="Object">Opcion2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2110774217324784" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2179287944004729">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="3837236367680465" type="Mouse">
+                    <param id="0" name="Object">Opcion3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1791460909157381" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3180435744483345">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="549865579606024" type="Mouse">
+                    <param id="0" name="Object">Opcion4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1919480361775284" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4317238073946979">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8096079812410492" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="6309569094102178" type="btn_volver">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="729604406129964">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="5376646589542119" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="9369721271632554" type="btn_volver">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2621019377621512">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="9638126803114085" type="Mouse">
+                    <param id="0" name="Object">Introduccion</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="5693780037371742" type="Introduccion">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1339220449865949">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="2816384139275063" type="Mouse">
+                    <param id="0" name="Object">Introduccion</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="3434385040420092" type="Introduccion">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7111778711316929">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="444282477665396" type="Mouse">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="5008195944052413" type="Sprite8">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3040622636448615">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="4106592820135026" type="Mouse">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1999807406850787" type="Sprite8">
+                    <param id="0" name="Opacity">70</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3322050221142681">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4619658834575509" type="Touch">
+                    <param id="0" name="Object">btn_salir</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="2229312775479271" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="9659711903968573">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8757907436226862" type="Mouse">
+                    <param id="0" name="Object">btn_salir</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="3497392672323995" type="btn_salir">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8835545811742267">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="370749232270633" type="Mouse">
+                    <param id="0" name="Object">btn_salir</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1808402651783131" type="btn_salir">
+                    <param id="0" name="Opacity">80</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="984587297965628">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5601440454844786" type="Mouse">
+                    <param id="0" name="Object">Sprite10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="7053279003079823" type="Sprite10">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4180249886033293">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="6266246047000391" type="Mouse">
+                    <param id="0" name="Object">Sprite10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="6012588493166991" type="Sprite10">
+                    <param id="0" name="Opacity">80</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8742383995082581">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8669240114991128" type="Touch">
+                    <param id="0" name="Object">Sprite10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="6081986792643611" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="9883628279520802" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3619794545744398" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3968469891834118" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="396027730753972">
+            <conditions>
+                <condition id="3" name="On touched object" sid="214320971320253" type="Touch">
+                    <param id="0" name="Object">btn_cerrar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="4443321581135467" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="6562958932252945" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="2670058957745783" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="4258868770989925" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7772590907065154">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6128865512143321" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="6923802561057417" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;MENU&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8465854446090186">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9929079334095442" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3090450883352347" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;FILAS - COLUMNAS - DIAGONALES&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5516689253476986">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3686695979919692" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="6867582696145627" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;TORRE - ALFIL - DAMA&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1921659400876399">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5756631831846813" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1115423259673589" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;CABALLO&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4422624997764256">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="61334726327288" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5087856245450028" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;PEON&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

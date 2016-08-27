@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>sub_menu</name>
+    <events>
+        <include>cursor</include>
+        <event-block sid="4614510834027939">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6939422771901246" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="8337699388528799" type="Audio" />
+                <action id="1" name="Set pause state" sid="2357581849917685" type="Pause">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2640482193255092">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1568950328070433" type="Touch">
+                    <param id="0" name="Object">DemoAlfil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1802829221422505" type="System">
+                    <param id="0" name="Layout">Modulo_Alfil_lvl1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4266967657213488">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2995224304484943" type="Touch">
+                    <param id="0" name="Object">Democaballo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5117104277090316" type="System">
+                    <param id="0" name="Layout">Modulo_caballo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7980251805979727">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5379466403479653" type="Touch">
+                    <param id="0" name="Object">Demotorre</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="240842179675211" type="System">
+                    <param id="0" name="Layout">Modulo_torrelvl1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8254177119370612">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9042316268703685" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_tutoriales</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="563604946111332" type="System">
+                    <param id="0" name="Layout">Inicio_menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2505358066950142">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8520987770800052" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_juegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="28612177458665" type="System">
+                    <param id="0" name="Layout">Submenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2125822143346959">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1582693286055907" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8541883037719936" type="System">
+                    <param id="0" name="Layout">Inicio</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7377368579123362">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7954248543855268" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3215930901363063" type="System">
+                    <param id="0" name="Layout">Menu_tutor_practica</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="273118091583317">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1850996967705348" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9351994805216069" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;MENU&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4833968799977245">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="269065716066225" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8392342602690048" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;VER PUNTAJES&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8954219800173336">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9211775333158172" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1802679066804784" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;JUGAR CON EL ALFIL&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="351575857117288">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3414580704436027" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1844968251734145" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;JUGAR CON EL CABALLO&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="350065556138075">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2937919553330951" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7779983774562798" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;JUGAR CON LA TORRE&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9503101760096288">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="680992431733531" type="Mouse">
+                    <param id="0" name="Object">btn_puntuaciones</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9935390818399042" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8225566033943129">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="9287021420602403" type="Mouse">
+                    <param id="0" name="Object">DemoAlfil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6141984914725307" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7273308349945575">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5992124524349336" type="Mouse">
+                    <param id="0" name="Object">Democaballo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8396436623586537" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9839640420528407">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="6585584762875433" type="Mouse">
+                    <param id="0" name="Object">Demotorre</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8407447758988412" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="885731457444157">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9791380812299294" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_puntuaciones</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6166667841519756" type="System">
+                    <param id="0" name="Layout">record</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Captura_Dama</name>
+    <events>
+        <include>cursor</include>
+        <event-block sid="2470071157722188">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4793727716727706" type="Touch">
+                    <param id="0" name="Object">Volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="892883854202459" type="System">
+                    <param id="0" name="Layout">Modulo1_CapturaAlfil</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3508360746200579">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4178213717614984" type="Touch">
+                    <param id="0" name="Object">btn_sig</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8661343651995314" type="System">
+                    <param id="0" name="Layout">Inicio_menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1839573929005742">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="324135034015718" type="Mouse">
+                    <param id="0" name="Object">Volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="1331827624695466" type="Volver">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1191398049404309">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="2271186116074507" type="Mouse">
+                    <param id="0" name="Object">Volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="6909486022391579" type="Volver">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4769453427826798">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3800265448145217" type="Touch">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2410304976034322" type="System">
+                    <param id="0" name="Layout">Modulo1_CapturaDama</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4370591697663105">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2079233689295558" type="Mouse">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="8354270618082117" type="gotoJuegos">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2492888347919379">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="9284400398109245" type="Mouse">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="281676175746242" type="gotoJuegos">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Coliciones</comment>
+        <comment>Como Alfil</comment>
+        <event-block sid="1764524772598984">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8141978214417434" type="Touch">
+                    <param id="0" name="Object">Opcion1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="159155246053092" type="incorrecto" />
+                <action id="-9" name="Destroy" sid="1430521406121179" type="Sprite24" />
+                <action id="-9" name="Destroy" sid="2523668190957751" type="correcto" />
+                <action id="-9" name="Destroy" sid="4657615266018841" type="p_peon_negro" />
+                <action id="-9" name="Destroy" sid="4209760667231895" type="pieza_dama" />
+                <action id="-9" name="Destroy" sid="1376691905165111" type="marco_bot1" />
+                <action id="-9" name="Destroy" sid="8359663420999709" type="marco_top1" />
+                <action id="-3" name="Create object" sid="7907044154490227" type="System">
+                    <param id="0" name="Object to create">pieza_dama</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="1081418492785843" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">650</param>
+                    <param id="3" name="Y">89</param>
+                </action>
+                <action id="-3" name="Create object" sid="510190064016207" type="System">
+                    <param id="0" name="Object to create">marco_top1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">648</param>
+                    <param id="3" name="Y">49</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="2295954992620789" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="1204971414384933" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="9109288415229288" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4658644769321346" type="pieza_dama">
+                    <param id="0" name="Angle">-45</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="1457045850956538" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8001355885721334">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7521847365001251" type="pieza_dama">
+                    <param id="0" name="Object">p_peon_negro</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5096407963276942" type="p_peon_negro" />
+            </actions>
+        </event-block>
+        <event-block sid="5838702910453131">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9779291979619256" type="pieza_dama">
+                    <param id="0" name="Object">marco_top1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="7543076421339084" type="pieza_dama">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="4503262262338696" type="System">
+                    <param id="0" name="Object to create">correcto</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="607212415633956" type="correcto">
+                    <param id="0" name="X">pieza_dama.X + 60</param>
+                    <param id="1" name="Y">pieza_dama.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6971429081191534">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2271658264548713" type="Touch">
+                    <param id="0" name="Object">Opcion2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3149094204631264" type="incorrecto" />
+                <action id="-9" name="Destroy" sid="3319652781551619" type="correcto" />
+                <action id="-9" name="Destroy" sid="472248637339901" type="p_peon_negro" />
+                <action id="-9" name="Destroy" sid="1403609469291056" type="Sprite24" />
+                <action id="-9" name="Destroy" sid="2342174343588498" type="pieza_dama" />
+                <action id="-9" name="Destroy" sid="4727847995293368" type="marco_bot1" />
+                <action id="-9" name="Destroy" sid="546922048628141" type="marco_top1" />
+                <action id="-3" name="Create object" sid="550264821877704" type="System">
+                    <param id="0" name="Object to create">pieza_dama</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="7267917697358119" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">709</param>
+                    <param id="3" name="Y">509</param>
+                </action>
+                <action id="-3" name="Create object" sid="6246144436250873" type="System">
+                    <param id="0" name="Object to create">Sprite24</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">592</param>
+                    <param id="3" name="Y"> 390</param>
+                </action>
+                <action id="-3" name="Create object" sid="6246087743901503" type="System">
+                    <param id="0" name="Object to create">marco_bot1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">711</param>
+                    <param id="3" name="Y">547</param>
+                </action>
+                <action id="-7" name="Set size" sid="4474318361473315" type="marco_bot1">
+                    <param id="0" name="Width">126</param>
+                    <param id="1" name="Height">25</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="5904661306123006" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="6488414837243943" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="9697709713740493" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4035820444304261" type="pieza_dama">
+                    <param id="0" name="Angle">45</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="2246147836177371" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7052789479021809">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9088248963401379" type="pieza_dama">
+                    <param id="0" name="Object">marco_bot1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="3499968910710526" type="pieza_dama">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="5909374256194921" type="System">
+                    <param id="0" name="Object to create">incorrecto</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="796672615891357" type="incorrecto">
+                    <param id="0" name="X">pieza_dama.X + 60</param>
+                    <param id="1" name="Y">pieza_dama.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Como Torre</comment>
+        <event-block sid="9913250909975409">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2384050952177417" type="Touch">
+                    <param id="0" name="Object">Opcion3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="24512747227294" type="incorrecto" />
+                <action id="-9" name="Destroy" sid="6896561784860608" type="Sprite24" />
+                <action id="-9" name="Destroy" sid="9268704680464925" type="correcto" />
+                <action id="-9" name="Destroy" sid="3785724844089491" type="p_peon_negro" />
+                <action id="-9" name="Destroy" sid="9366700943762446" type="pieza_dama" />
+                <action id="-9" name="Destroy" sid="3893795253312769" type="marco_der1" />
+                <action id="-9" name="Destroy" sid="9535926121867035" type="marco_der2" />
+                <action id="-3" name="Create object" sid="4627312881003149" type="System">
+                    <param id="0" name="Object to create">pieza_dama</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="2907433314309982" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">651</param>
+                    <param id="3" name="Y">268</param>
+                </action>
+                <action id="-3" name="Create object" sid="2583326664976232" type="System">
+                    <param id="0" name="Object to create">marco_der1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">687</param>
+                    <param id="3" name="Y">269</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3069751381463039" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="4980091193178408" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="660904140050643" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7199477533295054" type="pieza_dama">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="1240681274646608" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5406697641176464">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6780714555754691" type="pieza_dama">
+                    <param id="0" name="Object">p_peon_negro</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7370351839207128" type="p_peon_negro" />
+            </actions>
+        </event-block>
+        <event-block sid="3536807625119484">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5596601988521124" type="pieza_dama">
+                    <param id="0" name="Object">marco_der1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="9361840601630616" type="pieza_dama">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="7302154445952591" type="System">
+                    <param id="0" name="Object to create">correcto</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="3698384563076941" type="correcto">
+                    <param id="0" name="X">pieza_dama.X + 60</param>
+                    <param id="1" name="Y">pieza_dama.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9324920258384655">
+            <conditions>
+                <condition id="3" name="On touched object" sid="964960084725181" type="Touch">
+                    <param id="0" name="Object">Opcion4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="92675386923699" type="incorrecto" />
+                <action id="-9" name="Destroy" sid="834164574508204" type="correcto" />
+                <action id="-9" name="Destroy" sid="4022633324971354" type="p_peon_negro" />
+                <action id="-9" name="Destroy" sid="184259622745338" type="Sprite24" />
+                <action id="-9" name="Destroy" sid="7793991413650519" type="pieza_dama" />
+                <action id="-9" name="Destroy" sid="5558660430289605" type="marco_der1" />
+                <action id="-9" name="Destroy" sid="475906192584843" type="marco_der2" />
+                <action id="-3" name="Create object" sid="8818751222526654" type="System">
+                    <param id="0" name="Object to create">pieza_dama</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="4477806793262133" type="System">
+                    <param id="0" name="Object to create">p_peon_negro</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">471</param>
+                    <param id="3" name="Y">507</param>
+                </action>
+                <action id="-3" name="Create object" sid="2183561593444815" type="System">
+                    <param id="0" name="Object to create">Sprite24</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">470</param>
+                    <param id="3" name="Y">389</param>
+                </action>
+                <action id="-3" name="Create object" sid="2727942540967611" type="System">
+                    <param id="0" name="Object to create">marco_der2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">468</param>
+                    <param id="3" name="Y">546</param>
+                </action>
+                <action id="-7" name="Set size" sid="6510362672219245" type="marco_der2">
+                    <param id="0" name="Width">47</param>
+                    <param id="1" name="Height">20</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="6852839114720798" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="3708795983301414" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4314933309166499" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7046714860083445" type="pieza_dama">
+                    <param id="0" name="Angle">-270</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="9541879752926435" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6572015800973463">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4055453867961375" type="pieza_dama">
+                    <param id="0" name="Object">marco_der2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="3174308627826811" type="pieza_dama">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="1718420252681346" type="System">
+                    <param id="0" name="Object to create">incorrecto</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="4191039324256902" type="incorrecto">
+                    <param id="0" name="X">pieza_dama.X + 60</param>
+                    <param id="1" name="Y">pieza_dama.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="8929699937651278">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="7232395725615716" type="Mouse">
+                    <param id="0" name="Object">Opcion1</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="2097838836154785" type="Mouse">
+                    <param id="0" name="Object">Opcion2</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="753782635647616" type="Mouse">
+                    <param id="0" name="Object">Opcion3</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="6868046205332644" type="Mouse">
+                    <param id="0" name="Object">Opcion4</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="1934550860040397" type="Mouse">
+                    <param id="0" name="Object">Volver</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="7206898223458791" type="Mouse">
+                    <param id="0" name="Object">btn_sig</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="8620397482620237" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

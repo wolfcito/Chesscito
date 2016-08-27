@@ -1,0 +1,2751 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Chesscito 11.0</name>
+    <description>Juego</description>
+    <version>1.13.0.0</version>
+    <author>Todos</author>
+    <author-email>h@y.es</author-email>
+    <author-website>http://mi</author-website>
+    <app-id>Ed01</app-id>
+    <unique-id>gxjwsub6uzq5</unique-id>
+    <saved-with-version>21700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Rex.Rainbow" id="rex_TagText" version="0.100000001">Tag Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Brad Larson" id="highlightshadow">Highlight shadow</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1024</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Inicio</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Percentage text</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="enemigos">
+            <object-type name="enemigo_torre" sid="8300354849733459">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pathfinding" sid="7794621216658529">
+                        <behavior id="Pathfinding" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9249809998112983" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="derecha" pingpong="0" repeatcount="1" repeatto="0" sid="2310074884599408" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="izquierda" pingpong="0" repeatcount="1" repeatto="0" sid="8105457622267224" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="arriba" pingpong="0" repeatcount="1" repeatto="0" sid="8182510070102759" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="abajo" pingpong="0" repeatcount="1" repeatto="0" sid="105529840256537" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="iconos">
+            <object-type name="premioG" sid="439969079990153">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3164905090874814" speed="5">
+                        <frame duration="1" hotspotX="0.505155" hotspotY="0.505155" original-source="C:\Users\CORE I5\Dropbox\Proyecto_Chesscito-v11\Recursos\Imagenes\premioChessito.png">
+                            <collision-poly>
+                                <point x="0.14433" y="0.14433" />
+                                <point x="0.494845" y="0" />
+                                <point x="0.85567" y="0.14433" />
+                                <point x="1" y="0.494845" />
+                                <point x="0.845361" y="0.845361" />
+                                <point x="0.494845" y="1" />
+                                <point x="0.14433" y="0.85567" />
+                                <point x="0" y="0.494845" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="vida1" sid="8032596496155102">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6000758940782817" speed="5">
+                        <frame duration="1" hotspotX="0.517241" hotspotY="0.52" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\vidas.png">
+                            <collision-poly>
+                                <point x="0.103448" y="0.12" />
+                                <point x="0.482759" y="0.24" />
+                                <point x="0.896552" y="0.12" />
+                                <point x="0.896552" y="0.48" />
+                                <point x="0.758621" y="0.72" />
+                                <point x="0.482759" y="0.96" />
+                                <point x="0.241379" y="0.72" />
+                                <point x="0.103448" y="0.48" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="vida2" sid="6357087797673707">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4692229455802647" speed="5">
+                        <frame duration="1" hotspotX="0.517241" hotspotY="0.52" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\vidas.png">
+                            <collision-poly>
+                                <point x="0.103448" y="0.12" />
+                                <point x="0.482759" y="0.24" />
+                                <point x="0.896552" y="0.12" />
+                                <point x="0.896552" y="0.48" />
+                                <point x="0.758621" y="0.72" />
+                                <point x="0.482759" y="0.96" />
+                                <point x="0.241379" y="0.72" />
+                                <point x="0.103448" y="0.48" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="vida3" sid="3047348977211826">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4440155785398309" speed="5">
+                        <frame duration="1" hotspotX="0.517241" hotspotY="0.52" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\vidas.png">
+                            <collision-poly>
+                                <point x="0.103448" y="0.12" />
+                                <point x="0.482759" y="0.24" />
+                                <point x="0.896552" y="0.12" />
+                                <point x="0.896552" y="0.48" />
+                                <point x="0.758621" y="0.72" />
+                                <point x="0.482759" y="0.96" />
+                                <point x="0.241379" y="0.72" />
+                                <point x="0.103448" y="0.48" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="reintentar" sid="6483412216911399">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="821809363421824" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jigoku\Dropbox (Hogar)\Proyecto_Chesscito-v11\Recursos\Imagenes\redo-151210_640.png">
+                            <collision-poly>
+                                <point x="0.209375" y="0.209375" />
+                                <point x="0.5" y="0.0875" />
+                                <point x="0.792188" y="0.207813" />
+                                <point x="0.9125" y="0.5" />
+                                <point x="0.790625" y="0.790625" />
+                                <point x="0.5" y="0.910937" />
+                                <point x="0.209375" y="0.790625" />
+                                <point x="0.0890625" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="label">
+            <object-type name="lblTemporizador" sid="5230920751367063">
+                <plugin id="rex_TagText" />
+            </object-type>
+            <object-type name="lblPuntos" sid="3393100341959077">
+                <plugin id="rex_TagText" />
+            </object-type>
+        </object-folder>
+        <object-folder name="texbox" />
+        <object-folder name="mensajes">
+            <object-type name="felicidades" sid="2678609899312815">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6049014934906011" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\Felicitaciones.png">
+                            <collision-poly>
+                                <point x="0.034375" y="0.176" />
+                                <point x="0.5" y="0.312" />
+                                <point x="0.970312" y="0.152" />
+                                <point x="0.95625" y="0.776" />
+                                <point x="0.5" y="0.88" />
+                                <point x="0.025" y="0.872" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="game_over" sid="1408439893339356">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4588705216938354" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\game-over.png">
+                            <collision-poly>
+                                <point x="0.03" y="0.214286" />
+                                <point x="0.976667" y="0.166667" />
+                                <point x="0.981667" y="0.869048" />
+                                <point x="0.0166667" y="0.880952" />
+                                <point x="0.00333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="estado_juego" sid="1963726350274532">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="datos_torre2" sid="954874935366973">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="datos_torre" sid="1753900371248386">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="piezas">
+            <object-type name="p_caballo_blanco" sid="7187958195330353">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="4953806729160668">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9259112416094584" speed="5">
+                        <frame duration="1" hotspotX="0.506173" hotspotY="0.5" original-source="C:\Users\Byron\Desktop\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Chesscito\images\btn_caballo-sheet0.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.488981" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.45495" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.446051" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="p_torre_blanco" sid="3386105446945237">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="6543006213653674">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4031432179292962" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="J:\Cazaesclavas\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\Proyecto-Chesscito-v9.0\Proyecto Chesscito v4.0\recursos\Imagenes\torre dibujo amarillo.png">
+                            <collision-poly>
+                                <point x="0.00158983" y="0.00141643" />
+                                <point x="0.511924" y="0.00141643" />
+                                <point x="0.99841" y="0.00141643" />
+                                <point x="0.99841" y="0.548159" />
+                                <point x="0.99841" y="0.998584" />
+                                <point x="0.499205" y="0.998584" />
+                                <point x="0.00158983" y="0.998584" />
+                                <point x="0.00158983" y="0.531161" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="p_peon_negro" sid="9318508945810923">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9784321420100519" speed="5">
+                        <frame duration="1" hotspotX="0.500931" hotspotY="0.503584" original-source="C:\Users\CORE I5\Documents\ESPE\Desarrollo de Sistemas\Proyecto Checcito\Proyecto Chesscito\peon dibujo.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.523776" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.500478" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="p_caballo_negro" sid="951261480051617">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2807014748451268" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500556" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\respaldo 15-02\Proyecto_Chesscito-v11\Recursos\Imagenes\caballo dibujo.png">
+                            <collision-poly>
+                                <point x="0.279614" y="0.225806" />
+                                <point x="0.5" y="0.0189099" />
+                                <point x="0.768595" y="0.186874" />
+                                <point x="0.730028" y="0.499444" />
+                                <point x="0.822314" y="0.856507" />
+                                <point x="0.5" y="1" />
+                                <point x="0.141873" y="0.885428" />
+                                <point x="0.249311" y="0.499444" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="p_peon_blanco" sid="4426478904558144">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1387937619297137" speed="5">
+                        <frame duration="1" hotspotX="0.500931" hotspotY="0.5" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\respaldo 15-02\Proyecto_Chesscito-v11\Recursos\Imagenes\peon_amarillo.png">
+                            <collision-poly>
+                                <point x="0.283054" y="0.272401" />
+                                <point x="0.499069" y="0" />
+                                <point x="0.705773" y="0.283154" />
+                                <point x="0.6946" y="0.5" />
+                                <point x="0.884544" y="0.888889" />
+                                <point x="0.499069" y="1" />
+                                <point x="0.0875233" y="0.915771" />
+                                <point x="0.297952" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="p_alfil_blanco" sid="4222007892873847">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5388193943214092" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\respaldo 15-02\Proyecto_Chesscito-v11\Recursos\Imagenes\alfil dibujo amarillo.png">
+                            <collision-poly>
+                                <point x="0.270134" y="0.215241" />
+                                <point x="0.5" y="0" />
+                                <point x="0.734899" y="0.21123" />
+                                <point x="0.721476" y="0.5" />
+                                <point x="0.885906" y="0.909091" />
+                                <point x="0.5" y="1" />
+                                <point x="0.120805" y="0.903743" />
+                                <point x="0.283557" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="p_alfil_negro" sid="649802843516114">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5847510306857777" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\respaldo 15-02\Proyecto_Chesscito-v11\Recursos\Imagenes\alfil dibujo.png">
+                            <collision-poly>
+                                <point x="0.270134" y="0.215241" />
+                                <point x="0.5" y="0" />
+                                <point x="0.734899" y="0.21123" />
+                                <point x="0.721476" y="0.5" />
+                                <point x="0.885906" y="0.909091" />
+                                <point x="0.5" y="1" />
+                                <point x="0.120805" y="0.903743" />
+                                <point x="0.283557" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="p_torre_negro" sid="6924341516171443">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5439895045047781" speed="5">
+                        <frame duration="1" hotspotX="0.500797" hotspotY="0.5" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\respaldo 15-02\Proyecto_Chesscito-v11\Recursos\Imagenes\torre dibujo.png">
+                            <collision-poly>
+                                <point x="0.236045" y="0.210227" />
+                                <point x="0.499203" y="0.106534" />
+                                <point x="0.763955" y="0.210227" />
+                                <point x="0.730462" y="0.5" />
+                                <point x="0.891547" y="0.903409" />
+                                <point x="0.499203" y="1" />
+                                <point x="0.108453" y="0.903409" />
+                                <point x="0.269537" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="p_dama_blanco" sid="4921868748854341">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6108955853325685" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500629" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\respaldo 15-02\Proyecto_Chesscito-v11\Recursos\Imagenes\dama dibujo amarillo.png">
+                            <collision-poly>
+                                <point x="0.0698529" y="0.0477987" />
+                                <point x="0.5" y="0.00125786" />
+                                <point x="0.935662" y="0.0440252" />
+                                <point x="0.729779" y="0.499371" />
+                                <point x="0.889706" y="0.924528" />
+                                <point x="0.5" y="1" />
+                                <point x="0.126838" y="0.913208" />
+                                <point x="0.28125" y="0.499371" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="buttonImagen">
+            <object-type name="btn_pause" sid="9847000654695264">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2568787125403194" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\btn_pausa.png">
+                            <collision-poly>
+                                <point x="0.183594" y="0.183594" />
+                                <point x="0.5" y="0.046875" />
+                                <point x="0.816406" y="0.183594" />
+                                <point x="0.933594" y="0.5" />
+                                <point x="0.796875" y="0.796875" />
+                                <point x="0.5" y="0.914063" />
+                                <point x="0.203125" y="0.796875" />
+                                <point x="0.0546875" y="0.464844" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_play" sid="5296755132885814">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4107517970859918" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\btn_play.png">
+                            <collision-poly>
+                                <point x="0.183594" y="0.183594" />
+                                <point x="0.5" y="0.046875" />
+                                <point x="0.816406" y="0.183594" />
+                                <point x="0.933594" y="0.5" />
+                                <point x="0.796875" y="0.796875" />
+                                <point x="0.5" y="0.914063" />
+                                <point x="0.203125" y="0.796875" />
+                                <point x="0.0664063" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_alfil" sid="243402848464344">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3902406742846875" speed="5">
+                        <frame duration="1" hotspotX="0.501678" hotspotY="0.502674" original-source="C:\Users\CORE I5\Downloads\Proyecto-Chesscito-v3\Proyecto Chesscito v3\recursos\Imagenes\alfil dibujo amarillo.png">
+                            <collision-poly>
+                                <point x="0.352273" y="0.181287" />
+                                <point x="0.5" y="0" />
+                                <point x="0.647727" y="0.181287" />
+                                <point x="0.693182" y="0.497076" />
+                                <point x="0.920455" y="0.959064" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0795455" y="0.959064" />
+                                <point x="0.318182" y="0.497076" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_caballo" sid="5493483428175443">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3197917479213227" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500556" original-source="C:\Users\CORE I5\Downloads\Proyecto-Chesscito-v3\Proyecto Chesscito v3\recursos\Imagenes\caballo dibujo amarillo.png">
+                            <collision-poly>
+                                <point x="0.190987" y="0.194323" />
+                                <point x="0.5" y="0.0917031" />
+                                <point x="0.766094" y="0.237991" />
+                                <point x="0.935622" y="0.5" />
+                                <point x="0.991416" y="0.991266" />
+                                <point x="0.5" y="0.997817" />
+                                <point x="0.197425" y="0.799127" />
+                                <point x="0.0472103" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_cerrar" sid="9486968900364453">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8346210634354336" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\pc\Desktop\Proyecto Chesscito v4.0\Proyecto Chesscito v4.0\recursos\Imagenes\salir.png">
+                            <collision-poly>
+                                <point x="0.12426" y="0.128049" />
+                                <point x="0.497041" y="0.0304878" />
+                                <point x="0.869823" y="0.134146" />
+                                <point x="0.95858" y="0.5" />
+                                <point x="0.87574" y="0.871951" />
+                                <point x="0.497041" y="0.969512" />
+                                <point x="0.118343" y="0.878049" />
+                                <point x="0.0473373" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_columnas" sid="1653143980350488">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="btn_reiniciar" sid="6899473458609666">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4477986087960471" speed="5">
+                        <frame duration="1" hotspotX="0.500971" hotspotY="0.504348" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\btn_Nuevo.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_menu" sid="7788291449094098">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="1392215799445254" speed="5">
+                        <frame duration="1" hotspotX="0.500971" hotspotY="0.504348" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\btn_Menú.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_tutorial" sid="5732705203461162">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8393096541101185" speed="5">
+                        <frame duration="1" hotspotX="0.500971" hotspotY="0.504348" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\btn_Tutorial.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="cursor">
+            <object-type name="cur_normal" sid="7586451348091773">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9172480364015161" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\jigoku\Videos\Juego\71616-OnionHead\Cursor_chesscito\Arrow.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.464844" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.488281" />
+                                <point x="1" y="1" />
+                                <point x="0.542969" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.457031" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cur_sobre" sid="3302339120910143">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7719975744456525" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\jigoku\Videos\Juego\71616-OnionHead\Cursor_chesscito\Link Select.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.382813" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.308594" />
+                                <point x="1" y="1" />
+                                <point x="0.511719" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cur_preg" sid="6786064175202896">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6533685141535932" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\jigoku\Videos\Juego\71616-OnionHead\Cursor_chesscito\Help Select.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.505859" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.535156" />
+                                <point x="1" y="1" />
+                                <point x="0.488281" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.480469" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cur_mover" sid="5602404408765253">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1736928878335605" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\jigoku\Videos\Juego\71616-OnionHead\Cursor_chesscito\Move.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.505859" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.496094" />
+                                <point x="1" y="1" />
+                                <point x="0.447266" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.460938" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="laberinto">
+            <object-type name="borde" sid="7568231673086367">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="613739771616873">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="30" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1601634153439792" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="paredes" sid="4866462697173609">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="5027160525326729">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="16" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4267384038377411" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="0.104167" />
+                                <point x="1" y="0.104167" />
+                                <point x="1" y="0.895833" />
+                                <point x="0" y="0.895833" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="0.104167" />
+                                <point x="1" y="0.104167" />
+                                <point x="1" y="0.895833" />
+                                <point x="0" y="0.895833" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Fondo1" sid="4008636536140226">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Byron\Documents\ESPE\SISTEMAS\QUINTO\Desarrollo de Sistemas\Chesscito\Imagenes\Chesscito_fondo_V006.png" />
+        </object-type>
+        <object-type name="Sprite" sid="1284967323316791">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6012764923674151" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504587" original-source="C:\Users\Byron\Desktop\imgInicio.gif">
+                        <collision-poly>
+                            <point x="0.0179487" y="0.0642202" />
+                            <point x="0.5" y="0" />
+                            <point x="0.982051" y="0.0642202" />
+                            <point x="0.994872" y="0.495413" />
+                            <point x="0.982051" y="0.93578" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0179487" y="0.93578" />
+                            <point x="0.00512821" y="0.495413" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Titulo" sid="2352010651900851">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7105947806370079" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1.17857" original-source="C:\Users\Byron\Documents\ESPE\SISTEMAS\QUINTO\Desarrollo de Sistemas\Chesscito\Imagenes\Titulo.png">
+                        <collision-poly>
+                            <point x="0.0118791" y="0.095238" />
+                            <point x="0.5" y="1" />
+                            <point x="0.957883" y="0.428572" />
+                            <point x="0.841253" y="0.630952" />
+                            <point x="0.5" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="4578618531474299">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Sprite2" sid="7693586763470212">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3292022608281305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501529" original-source="C:\Users\jigoku\Videos\Juego\logros\reii.png">
+                        <collision-poly>
+                            <point x="0.189349" y="0.516129" />
+                            <point x="0.5" y="0.217742" />
+                            <point x="0.801775" y="0.540323" />
+                            <point x="0.786982" y="0.5" />
+                            <point x="0.852071" y="0.596774" />
+                            <point x="0.5" y="0.935484" />
+                            <point x="0.139053" y="0.620968" />
+                            <point x="0.192308" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Introduccion" sid="9677066688624434">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6791143528414216" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="D:\BACKUP\Jigoku\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\Proyecto-Chesscito-v1\Proyecto Chesscito v\recursos\Imagenes\boton.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Opcion1" sid="2871704348642707">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5280261222448663" speed="5">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.503817" original-source="C:\Users\Byron\Documents\ESPE\SISTEMAS\QUINTO\Desarrollo de Sistemas\Chesscito\Imagenes\imgIconoMenu1.png">
+                        <collision-poly>
+                            <point x="0.0229008" y="0.0229008" />
+                            <point x="0.496183" y="0" />
+                            <point x="0.977099" y="0.0229008" />
+                            <point x="0.992366" y="0.496183" />
+                            <point x="0.977099" y="0.977099" />
+                            <point x="0.496183" y="0.992366" />
+                            <point x="0.0229008" y="0.977099" />
+                            <point x="0" y="0.496183" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Opcion2" sid="3629449220295015">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1216844318295328" speed="5">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.503817" original-source="C:\Users\Byron\Documents\ESPE\SISTEMAS\QUINTO\Desarrollo de Sistemas\Chesscito\Imagenes\imgIconoMenu2.png">
+                        <collision-poly>
+                            <point x="0.0229008" y="0.0229008" />
+                            <point x="0.496183" y="0" />
+                            <point x="0.977099" y="0.0229008" />
+                            <point x="0.992366" y="0.496183" />
+                            <point x="0.977099" y="0.977099" />
+                            <point x="0.496183" y="0.992366" />
+                            <point x="0.0229008" y="0.977099" />
+                            <point x="0" y="0.496183" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Opcion3" sid="2179217441136257">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1827942981358624" speed="5">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.503817" original-source="C:\Users\Byron\Documents\ESPE\SISTEMAS\QUINTO\Desarrollo de Sistemas\Chesscito\Imagenes\imgIconoMenu3.png">
+                        <collision-poly>
+                            <point x="0.0229008" y="0.0229008" />
+                            <point x="0.496183" y="0" />
+                            <point x="0.977099" y="0.0229008" />
+                            <point x="0.992366" y="0.496183" />
+                            <point x="0.977099" y="0.977099" />
+                            <point x="0.496183" y="0.992366" />
+                            <point x="0.0229008" y="0.977099" />
+                            <point x="0" y="0.496183" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Opcion4" sid="7028580338259503">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="457028266568031" speed="5">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.503817" original-source="C:\Users\Byron\Documents\ESPE\SISTEMAS\QUINTO\Desarrollo de Sistemas\Chesscito\Imagenes\imgIconoMenu4.png">
+                        <collision-poly>
+                            <point x="0.0229008" y="0.0229008" />
+                            <point x="0.496183" y="0" />
+                            <point x="0.977099" y="0.0229008" />
+                            <point x="0.992366" y="0.496183" />
+                            <point x="0.977099" y="0.977099" />
+                            <point x="0.496183" y="0.992366" />
+                            <point x="0.0229008" y="0.977099" />
+                            <point x="0" y="0.496183" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_volver" sid="4770256617687693">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1527466991969648" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Byron\Documents\ESPE\SISTEMAS\QUINTO\Desarrollo de Sistemas\Chesscito\Imagenes\imgVolver.gif">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.59" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.65" />
+                            <point x="1" y="1" />
+                            <point x="0.48" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="8961682428415904">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Function" sid="378383419578408">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="btn_inicio" sid="7208676966680103">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="pieza_alfil" sid="7149972950009319">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="7726340203098919">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="7319074565151261">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8828615556976885" speed="5">
+                    <frame duration="1" hotspotX="0.501678" hotspotY="0.502674" original-source="C:\Users\CORE I5\Downloads\Proyecto-Chesscito-v3\Proyecto Chesscito v3\recursos\Imagenes\alfil dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.352273" y="0.181287" />
+                            <point x="0.5" y="0" />
+                            <point x="0.647727" y="0.181287" />
+                            <point x="0.693182" y="0.497076" />
+                            <point x="0.920455" y="0.959064" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0795455" y="0.959064" />
+                            <point x="0.318182" y="0.497076" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tablero" sid="1191161089310388">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5265539034400498" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\BACKUP\Jigoku\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\Construct 2\recursos\Inkscape\tablero.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondo" sid="3752139777450739">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3412242025847824" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\BACKUP\Jigoku\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\PROYECTO CHESSCITO\recursos\Imagenes\Chesscito_fondo_V005.png">
+                        <collision-poly>
+                            <point x="0.000468165" y="0.000799361" />
+                            <point x="0.999532" y="0.000799361" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_der1" sid="6378919960930313">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9452436120382218" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pieza_torre" sid="9318875532964155">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="8125455742090017">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="6938042773677972">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3699902982454689" speed="5">
+                    <frame duration="1" hotspotX="0.500797" hotspotY="0.502841" original-source="C:\Users\CORE I5\Downloads\Proyecto-Chesscito-v3\Proyecto Chesscito v3\recursos\Imagenes\torre dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.097561" y="0.0503145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.890244" y="0.0566038" />
+                            <point x="0.731707" y="0.496855" />
+                            <point x="0.926829" y="0.962264" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0731707" y="0.962264" />
+                            <point x="0.268293" y="0.496855" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="posicion_inicial" sid="6363237525371394">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4638257928073802" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.408" y="0.548" />
+                            <point x="0.512" y="0.652" />
+                            <point x="0.396" y="0.776" />
+                            <point x="0.284" y="0.652" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_izq1" sid="3074051881152687">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8084296614152967" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_top1" sid="3670936898628783">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2862728630028101" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_bot1" sid="1743654790537856">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2279019359302743" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_dam" sid="8868302919884297">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8886388547027816" speed="5">
+                    <frame duration="1" hotspotX="0.505515" hotspotY="0.500629" original-source="C:\Users\CORE I5\Dropbox\Proyecto_Chesscito-v11\Recursos\Imagenes\dama dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.105634" />
+                            <point x="0.493333" y="0" />
+                            <point x="0.8" y="0.105634" />
+                            <point x="0.653333" y="0.5" />
+                            <point x="0.973333" y="0.985915" />
+                            <point x="0.493333" y="1" />
+                            <point x="0.0266667" y="0.985915" />
+                            <point x="0.346667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_torre" sid="1532034477245115">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3980046446031084" speed="5">
+                    <frame duration="1" hotspotX="0.500797" hotspotY="0.502841" original-source="C:\Users\CORE I5\Downloads\Proyecto-Chesscito-v3\Proyecto Chesscito v3\recursos\Imagenes\torre dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.097561" y="0.0503145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.890244" y="0.0566038" />
+                            <point x="0.731707" y="0.496855" />
+                            <point x="0.926829" y="0.962264" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0731707" y="0.962264" />
+                            <point x="0.268293" y="0.496855" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBox" sid="9671543352499273">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Text2" sid="4355309316791226">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="pieza_dama" sid="2490608436384859">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="2397430997740236">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="2455715502084328">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2001211791552397" speed="5">
+                    <frame duration="1" hotspotX="0.505515" hotspotY="0.500629" original-source="C:\Users\CORE I5\Dropbox\Proyecto_Chesscito-v11\Recursos\Imagenes\dama dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.105634" />
+                            <point x="0.493333" y="0" />
+                            <point x="0.8" y="0.105634" />
+                            <point x="0.653333" y="0.5" />
+                            <point x="0.973333" y="0.985915" />
+                            <point x="0.493333" y="1" />
+                            <point x="0.0266667" y="0.985915" />
+                            <point x="0.346667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_filas" sid="6527538189577574">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="btn_diagonales" sid="1709203655727871">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="txt_filas" sid="4558250595781047">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="img_fila" sid="4457184738592262">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2838961985408486" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_top2" sid="1734326379247335">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8950842452345569" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_bot2" sid="8408531132447891">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9963591106039954" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_der2" sid="8308297536987333">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649965518181833" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_izq2" sid="8364444015728404">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4986203594765362" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="flecha" sid="5363754265641858">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="4349186980494547">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3948262541651132" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503937" original-source="D:\BACKUP\Jigoku\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\Construct 2\recursos\Inkscape\flecha.png">
+                        <collision-poly>
+                            <point x="0.186992" y="0.362205" />
+                            <point x="0.5" y="0.370079" />
+                            <point x="0.837398" y="0.314961" />
+                            <point x="0.979675" y="0.496063" />
+                            <point x="0.845528" y="0.700787" />
+                            <point x="0.170732" y="0.669291" />
+                            <point x="0" y="0.496063" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_top3" sid="6866904210178265">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6633996857122188" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pieza_caballo" sid="2533866784840445">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="3737861100297413">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="6687066931554118">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6797955081762847" speed="5">
+                    <frame duration="1" format="png8" hotspotX="0.5" hotspotY="0.500556" original-source="C:\Users\CORE I5\Downloads\Proyecto-Chesscito-v3\Proyecto Chesscito v3\recursos\Imagenes\caballo dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.190987" y="0.194323" />
+                            <point x="0.5" y="0.0917031" />
+                            <point x="0.766094" y="0.237991" />
+                            <point x="0.935622" y="0.5" />
+                            <point x="0.991416" y="0.991266" />
+                            <point x="0.5" y="0.997817" />
+                            <point x="0.197425" y="0.799127" />
+                            <point x="0.0472103" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_bot3" sid="4413665768652806">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5380021011432344" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_der3" sid="591944343862301">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1701812801434617" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_der1_1" sid="5442690066958164">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7423800374235334" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_bot1_1" sid="4581652179732132">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3834458164266244" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_izq1_1" sid="7139099629434888">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7058003628845378" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_izq3" sid="6213375051063067">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6614789556479551" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="marco_top1_1" sid="2459687580252364">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8591069840702549" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="2737529057982315">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Sprite8" sid="6999540526430169">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3132269348272165" speed="5">
+                    <frame duration="1" hotspotX="0.500575" hotspotY="0.5" original-source="D:\BACKUP\Jigoku\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\Proyecto-Chesscito-v1\Proyecto Chesscito v\recursos\Imagenes\CHESSICTO.png">
+                        <collision-poly>
+                            <point x="0.0310492" y="0.140097" />
+                            <point x="0.5" y="0.0772947" />
+                            <point x="0.971092" y="0.130435" />
+                            <point x="1" y="0.497585" />
+                            <point x="0.971092" y="0.869565" />
+                            <point x="0.5" y="0.937198" />
+                            <point x="0.0310492" y="0.859903" />
+                            <point x="0.00214133" y="0.497585" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_salir" sid="1517465421440746">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="cerrar" sid="9758644138580108" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2275184647199655" speed="5">
+                    <frame duration="1" hotspotX="0.502959" hotspotY="0.5" original-source="D:\BACKUP\Jigoku\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\Proyecto-Chesscito-v1\Proyecto Chesscito v\recursos\Imagenes\salir.png">
+                        <collision-poly>
+                            <point x="0.12426" y="0.128049" />
+                            <point x="0.497041" y="0.0304878" />
+                            <point x="0.869823" y="0.134146" />
+                            <point x="0.95858" y="0.5" />
+                            <point x="0.87574" y="0.871951" />
+                            <point x="0.497041" y="0.969512" />
+                            <point x="0.118343" y="0.878049" />
+                            <point x="0.0473373" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="5493240721721919">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2873987287680621" speed="5">
+                    <frame duration="1" hotspotX="0.502959" hotspotY="0.5" original-source="D:\BACKUP\Jigoku\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\Proyecto-Chesscito-v1\Proyecto Chesscito v\recursos\Imagenes\configuracion.png">
+                        <collision-poly>
+                            <point x="0.12426" y="0.128049" />
+                            <point x="0.497041" y="0.0243902" />
+                            <point x="0.87574" y="0.128049" />
+                            <point x="0.946746" y="0.5" />
+                            <point x="0.87574" y="0.871951" />
+                            <point x="0.497041" y="0.963415" />
+                            <point x="0.12426" y="0.871951" />
+                            <point x="0.0532544" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="5901565143458805">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="puntoGuia" sid="2407073687691963">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9081157259138722" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="D:\BACKUP\Jigoku\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\Proyecto-Chesscito-v1\Proyecto Chesscito v\recursos\Imagenes\circulo.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.844444" y="0.155556" />
+                            <point x="1" y="0.488889" />
+                            <point x="0.844444" y="0.844444" />
+                            <point x="0.488889" y="1" />
+                            <point x="0.155556" y="0.844444" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Juegos" sid="2800174751165265">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6630879818827192" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CORE I5\Downloads\Proyecto-Chesscito-v3\Proyecto Chesscito v3\recursos\Imagenes\letrero juegos.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gotoJuegos" sid="1064145768401724">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4220349366480064" speed="5">
+                    <frame duration="1" hotspotX="0.504202" hotspotY="0.5" original-source="C:\Users\CORE I5\Documents\ESPE\Desarrollo de Sistemas\Proyecto Checcito\Proyecto Chesscito\letrero siguiente.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.498542" y="0.0104895" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.43617" />
+                            <point x="1" y="1" />
+                            <point x="0.456525" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.43617" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fondo2" sid="964988732403355">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4134492330593412" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\CORE I5\Downloads\Proyecto-Chesscito-v3\Proyecto Chesscito v3\recursos\Imagenes\Chesscito_fondo_V005.png">
+                        <collision-poly>
+                            <point x="0.000468165" y="0.000799361" />
+                            <point x="0.999532" y="0.000799361" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Volver" sid="3154264436471523">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2057649277261556" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\CORE I5\Downloads\Proyecto-Chesscito-v3\Proyecto Chesscito v3\recursos\Imagenes\letrero.png">
+                        <collision-poly>
+                            <point x="0.18" y="0.18" />
+                            <point x="0.5" y="0.05" />
+                            <point x="0.81" y="0.19" />
+                            <point x="0.95" y="0.5" />
+                            <point x="0.65" y="0.65" />
+                            <point x="0.5" y="0.93" />
+                            <point x="0.41" y="0.59" />
+                            <point x="0.17" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text3" sid="8401644617132115">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text4" sid="6183608571801515">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite12" sid="9846183981795724">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5720772089975196" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Desktop\Proyecto Chesscito v4.0\Proyecto Chesscito v4.0\recursos\Imagenes\texto.png">
+                        <collision-poly>
+                            <point x="0.0933333" y="0.0633334" />
+                            <point x="0.92" y="0.0533334" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13" sid="5917759883038271">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9022326852916484" speed="5">
+                    <frame duration="1" hotspotX="0.504202" hotspotY="0.5" original-source="C:\Users\pc\Desktop\Proyecto Chesscito v4.0\Proyecto Chesscito v4.0\recursos\Imagenes\letrero siguiente.png">
+                        <collision-poly>
+                            <point x="0.134454" y="0.170213" />
+                            <point x="0.495798" y="0.0106383" />
+                            <point x="0.865546" y="0.170213" />
+                            <point x="0.882353" y="0.5" />
+                            <point x="0.680672" y="0.595745" />
+                            <point x="0.495798" y="0.978723" />
+                            <point x="0.226891" y="0.712766" />
+                            <point x="0.0504202" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite14" sid="5483825063533699">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2231302462109932" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text5" sid="8184538304770376">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="correcto" sid="1319719230147553">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5330531973203176" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Downloads\Proyecto Chesscito v2\recursos\Bueno-verde.png">
+                        <collision-poly>
+                            <point x="0.472" y="0.460938" />
+                            <point x="0.5" y="0.389648" />
+                            <point x="0.861" y="0.135742" />
+                            <point x="0.629" y="0.5" />
+                            <point x="0.58" y="0.589844" />
+                            <point x="0.5" y="0.863281" />
+                            <point x="0.264" y="0.742188" />
+                            <point x="0.459" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="incorrecto" sid="9950271371314726">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7308822658445859" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Downloads\Proyecto Chesscito v2\recursos\DeleteRed.png">
+                        <collision-poly>
+                            <point x="0.136719" y="0.136719" />
+                            <point x="0.5" y="0.316406" />
+                            <point x="0.878906" y="0.121094" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="0.472656" />
+                            <point x="0.140625" y="0.859375" />
+                            <point x="0.304688" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite17" sid="4954557448404287">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1518378582489949" speed="5">
+                    <frame duration="1" hotspotX="0.500931" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite18" sid="236881700615784">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7968956194171821" speed="5">
+                    <frame duration="1" hotspotX="0.500931" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_sig" sid="8907665954093806">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1531244943013393" speed="5">
+                    <frame duration="1" hotspotX="0.504202" hotspotY="0.5" original-source="C:\Users\pc\Desktop\Proyecto Chesscito v5.0\Proyecto Chesscito v4.0\recursos\Imagenes\letrero siguiente.png">
+                        <collision-poly>
+                            <point x="0.134454" y="0.170213" />
+                            <point x="0.495798" y="0.0106383" />
+                            <point x="0.865546" y="0.170213" />
+                            <point x="0.882353" y="0.5" />
+                            <point x="0.680672" y="0.595745" />
+                            <point x="0.495798" y="0.978723" />
+                            <point x="0.226891" y="0.712766" />
+                            <point x="0.0504202" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite20" sid="9663090142646566">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5907221535607848" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite21" sid="4541659268076668">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="823243953711256" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite22" sid="8482999420845447">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726199002807148" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite23" sid="6146177288755261">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5363695060674913" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pieza_peon" sid="4798032470075104">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5437232644646608" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pieza_peon2" sid="7122003443277281">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2475503570057567">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2311461525284228" speed="5">
+                    <frame duration="1" hotspotX="0.500931" hotspotY="0.503584" original-source="C:\Users\pc\Desktop\Proyecto Chesscito v5.0\Proyecto Chesscito v4.0\recursos\Imagenes\peon.png">
+                        <collision-poly>
+                            <point x="0.2125" y="0.10559" />
+                            <point x="0.5" y="0" />
+                            <point x="0.7875" y="0.10559" />
+                            <point x="0.7" y="0.496894" />
+                            <point x="0.9125" y="0.956522" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0875" y="0.956522" />
+                            <point x="0.3" y="0.496894" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite24" sid="2497996729633571">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2625144693091656" speed="5">
+                    <frame duration="1" hotspotX="0.500931" hotspotY="0.503584" original-source="C:\Users\CORE I5\Documents\ESPE\Desarrollo de Sistemas\Proyecto Checcito\Proyecto Chesscito\peon dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.2125" y="0.10559" />
+                            <point x="0.5" y="0" />
+                            <point x="0.7875" y="0.10559" />
+                            <point x="0.7" y="0.496894" />
+                            <point x="0.9125" y="0.956522" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0875" y="0.956522" />
+                            <point x="0.3" y="0.496894" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enConstruccion" sid="5679929719477538">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7992798788014546" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\BACKUP\Jigoku\DESARROLLO\SEGUNDO PARCIAL\PROYECTO\Proyecto-Chesscito-v8.0\Proyecto Chesscito v8.0\recursos\Imagenes\PaginaConstruccion1.png">
+                        <collision-poly>
+                            <point x="0.14" y="0.307692" />
+                            <point x="0.5" y="0.0824176" />
+                            <point x="0.8525" y="0.324176" />
+                            <point x="0.52375" y="0.5" />
+                            <point x="0.74875" y="0.447802" />
+                            <point x="0.5" y="0.912088" />
+                            <point x="0.14625" y="0.678571" />
+                            <point x="0.47375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_peon" sid="3544598313938908">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="298947094314166" speed="5">
+                    <frame duration="1" hotspotX="0.500931" hotspotY="0.5" original-source="C:\Users\Byron\Desktop\Proyecto-Chesscito-v7.0\Proyecto Chesscito v7.0\Proyecto Chesscito v4.0\recursos\Imagenes\peon_amarillo.png">
+                        <collision-poly>
+                            <point x="0.283054" y="0.272401" />
+                            <point x="0.499069" y="0" />
+                            <point x="0.705773" y="0.283154" />
+                            <point x="0.6946" y="0.5" />
+                            <point x="0.884544" y="0.888889" />
+                            <point x="0.499069" y="1" />
+                            <point x="0.0875233" y="0.915771" />
+                            <point x="0.297952" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Selecciona" sid="6191590015020513">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="peon_amarillo" sid="6092189126816583">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="7399656218746635">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="7348012481442547">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7868494357666138" speed="5">
+                    <frame duration="1" hotspotX="0.500931" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="selector" sid="2140356339360479">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="825036271020523" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_posicion" sid="1910820403612272">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Button" sid="4833775547879559">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="estela" sid="1367112318452499">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5347008468492597" speed="5">
+                    <frame duration="1" hotspotX="0.508197" hotspotY="0.508197" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="4317156809011532">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8349764042330177" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="zonaJuego" sid="6013888661462399">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5912143764656565" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="estelaInicio" sid="1377439908096107">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6628719087602963" speed="5">
+                    <frame duration="1" hotspotX="0.508197" hotspotY="0.508197" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fnd_win" sid="1186592840285354">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9937757742725638" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="zona_no" sid="2444288172012235">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6059983434842077" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondoPuntuacion" sid="3113592953674176">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Byron\Desktop\fondoPuntaje.png" />
+        </object-type>
+        <object-type name="Keyboard" sid="1221193095662857">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Pause" sid="7850436146106084">
+            <plugin id="Rex_Pause" />
+        </object-type>
+        <object-type name="Sprite11" sid="2937395848640314">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8929888481876102">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="7850700984114359">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6987312737975488" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ESPE\5°\Desarrollo de Sistemas\3°parcial\Proyecto_Chesscito-v11\nave.gif">
+                        <image-point name="CreaPieza" x="0.493421" y="-1.32143" />
+                        <collision-poly>
+                            <point x="0.00515464" y="0.0192308" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994845" y="0.0192308" />
+                            <point x="0.994845" y="0.980769" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00515464" y="0.980769" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Space_continuar" sid="2504902828827398">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="tubo_derecho" sid="6747358618915877">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="4985013343545303">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9105374367005258" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="label_puntos" sid="2196937341865389">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="VidasJugador" sid="7973981981753884">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="VidasJugador" sid="772784952505676" type="number" />
+            </instance-variables>
+            <texture original-source="D:\ESPE\5°\Desarrollo de Sistemas\3°parcial\Proyecto_Chesscito-v11\vidas.png" />
+        </object-type>
+        <object-type name="puntaje" sid="5493899569078222">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="tubo_final" sid="7887636713642718">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7038120673587177" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pergamino" sid="6103796479056531">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1823169574551773" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ESPE\5°\Desarrollo de Sistemas\3°parcial\Proyecto_Chesscito-v11\pergamino.png">
+                        <collision-poly>
+                            <point x="0.021875" y="0.04" />
+                            <point x="0.5" y="0.0571429" />
+                            <point x="0.978125" y="0.04" />
+                            <point x="0.98125" y="0.965714" />
+                            <point x="0.5" y="1" />
+                            <point x="0.01875" y="0.965714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bala_alfil" sid="7312579432260234">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="1384259937168842">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="7869565691449498">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7734463993015942" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ESPE\5°\Desarrollo de Sistemas\3°parcial\Proyecto_Chesscito-v11\Animations\btn_alfil\Default\000.png">
+                        <collision-poly>
+                            <point x="0.270134" y="0.215241" />
+                            <point x="0.5" y="0" />
+                            <point x="0.734899" y="0.21123" />
+                            <point x="0.721476" y="0.5" />
+                            <point x="0.885906" y="0.909091" />
+                            <point x="0.5" y="1" />
+                            <point x="0.120805" y="0.903743" />
+                            <point x="0.283557" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gameOver" sid="2929044370528731">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1990388499899826" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ESPE\5°\Desarrollo de Sistemas\3°parcial\Proyecto_Chesscito-v11\game-over.png">
+                        <collision-poly>
+                            <point x="0.03" y="0.214286" />
+                            <point x="0.976667" y="0.166667" />
+                            <point x="0.981667" y="0.869048" />
+                            <point x="0.0166667" y="0.880952" />
+                            <point x="0.00333333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Felicitaciones" sid="7307299215262077">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7533234568809438" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" original-source="D:\ESPE\5°\Desarrollo de Sistemas\3°parcial\Proyecto_Chesscito-v11\Felicitaciones.png">
+                        <collision-poly>
+                            <point x="0.034375" y="0.176" />
+                            <point x="0.5" y="0.312" />
+                            <point x="0.970312" y="0.152" />
+                            <point x="0.95625" y="0.776" />
+                            <point x="0.5" y="0.88" />
+                            <point x="0.025" y="0.872" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="JuegoAlfil" sid="3688512826221789">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="DemoAlfil" sid="6152038449922502">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4930490273125907" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Byron\Desktop\Proyecto-Chesscito-v7.0\Proyecto Chesscito v4.0\recursos\Imagenes\alfil dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.270134" y="0.215241" />
+                            <point x="0.5" y="0" />
+                            <point x="0.734899" y="0.21123" />
+                            <point x="0.721476" y="0.5" />
+                            <point x="0.885906" y="0.909091" />
+                            <point x="0.5" y="1" />
+                            <point x="0.120805" y="0.903743" />
+                            <point x="0.283557" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Democaballo" sid="6506308965100162">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3338468667190382" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500556" original-source="C:\Users\Byron\Desktop\Proyecto-Chesscito-v7.0\Proyecto Chesscito v4.0\recursos\Imagenes\caballo dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.279614" y="0.225806" />
+                            <point x="0.5" y="0.0189099" />
+                            <point x="0.768595" y="0.186874" />
+                            <point x="0.730028" y="0.499444" />
+                            <point x="0.822314" y="0.856507" />
+                            <point x="0.5" y="1" />
+                            <point x="0.141873" y="0.885428" />
+                            <point x="0.249311" y="0.499444" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Demodama" sid="9195728412545238">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8626068758977478" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500629" original-source="C:\Users\Byron\Desktop\Proyecto-Chesscito-v7.0\Proyecto Chesscito v4.0\recursos\Imagenes\dama dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.301471" y="0.244048" />
+                            <point x="0.5" y="0" />
+                            <point x="0.707721" y="0.236607" />
+                            <point x="0.738971" y="0.5" />
+                            <point x="0.889706" y="0.910714" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.89881" />
+                            <point x="0.273897" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Demotorre" sid="4359058438695796">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2195273719626219" speed="5">
+                    <frame duration="1" hotspotX="0.500797" hotspotY="0.5" original-source="C:\Users\Byron\Desktop\Proyecto-Chesscito-v7.0\Proyecto Chesscito v4.0\recursos\Imagenes\torre dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.236045" y="0.210227" />
+                            <point x="0.499203" y="0.106534" />
+                            <point x="0.763955" y="0.210227" />
+                            <point x="0.730462" y="0.5" />
+                            <point x="0.891547" y="0.903409" />
+                            <point x="0.499203" y="1" />
+                            <point x="0.108453" y="0.903409" />
+                            <point x="0.269537" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite27" sid="174364734652192">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="19" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8997982577283364" speed="5">
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_playPause" sid="5405648116891175">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="pausa" pingpong="0" repeatcount="1" repeatto="0" sid="6411416794988119" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\btn_pausa.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.046875" />
+                            <point x="0.820313" y="0.179688" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.796875" y="0.796875" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="play" pingpong="0" repeatcount="1" repeatto="0" sid="5790317707182611" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Byron\Dropbox\Sistemas\Desarrollo\Proyecto\Proyecto_Chesscito-v11\Proyecto_Chesscito-v11\Recursos\Imagenes\btn_play.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.046875" />
+                            <point x="0.820313" y="0.179688" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.796875" y="0.796875" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="titulos_mensajes" sid="3424411869353361">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\jigoku\Videos\Juego\SpriteFont_GlobalMonospace_Regular_(36)_[0,0,0]_30x45.png" />
+        </object-type>
+        <object-type name="txt_puntosTorre" sid="1339025475575806">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Audio" sid="6777657801544676">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="fnd_reint" sid="711360334882811">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5059056700014407" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite25" sid="5236677067470933">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7502642605444624" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500629" original-source="C:\Users\CORE I5\Dropbox\Proyecto_Chesscito-v11\Recursos\Imagenes\dama dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.0698529" y="0.0477987" />
+                            <point x="0.5" y="0.00125786" />
+                            <point x="0.935662" y="0.0440252" />
+                            <point x="0.729779" y="0.499371" />
+                            <point x="0.889706" y="0.924528" />
+                            <point x="0.5" y="1" />
+                            <point x="0.126838" y="0.913208" />
+                            <point x="0.28125" y="0.499371" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sinVidas" sid="2809285297989893">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6057775232676125" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jigoku\Pictures\sinVidas.png">
+                        <collision-poly>
+                            <point x="0.146512" y="0.146512" />
+                            <point x="0.5" y="0" />
+                            <point x="0.853488" y="0.146512" />
+                            <point x="1" y="0.5" />
+                            <point x="0.853488" y="0.853488" />
+                            <point x="0.5" y="1" />
+                            <point x="0.146512" y="0.853488" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite26" sid="6979811957650982">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4028682164998078" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Reint_alfil" sid="8356097091479097">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4549527950503223" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\respaldo chess\Proyecto_Chesscito-v11\Recursos\Imagenes\redo-151210_640.png">
+                        <collision-poly>
+                            <point x="0.209375" y="0.209375" />
+                            <point x="0.5" y="0.0875" />
+                            <point x="0.792188" y="0.207813" />
+                            <point x="0.9125" y="0.5" />
+                            <point x="0.790625" y="0.790625" />
+                            <point x="0.5" y="0.910937" />
+                            <point x="0.209375" y="0.790625" />
+                            <point x="0.0890625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Jugar_nuevo_alfil" sid="4244034644184267">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="nave2" sid="9192256957193359">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="3860291666022641">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="2580560389479346">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7978962054475603" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ESPE\5°\Desarrollo de Sistemas\3°parcial\Proyecto_Chesscito-v12\nave.gif">
+                        <image-point name="CrearPieza2" x="0.809211" y="-0.660714" />
+                        <collision-poly>
+                            <point x="0.0855263" y="0.232143" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.868421" y="0.357143" />
+                            <point x="0.921053" y="0.5" />
+                            <point x="0.947368" y="0.857143" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.125" y="0.660714" />
+                            <point x="0.0328947" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sig_nivel" sid="8852836304819391">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9876425541852745" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Dropbox\Proyecto_Chesscito-v11\Recursos\Imagenes\btn_play.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.046875" />
+                            <point x="0.820313" y="0.179688" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.796875" y="0.796875" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bala2_alfil" sid="2908579737982004">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="7287877615740809">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="2989564245721683">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8274889172195832" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Dropbox\Proyecto_Chesscito-v11\Recursos\Imagenes\alfil dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.270134" y="0.215241" />
+                            <point x="0.5" y="0" />
+                            <point x="0.734899" y="0.21123" />
+                            <point x="0.721476" y="0.5" />
+                            <point x="0.885906" y="0.909091" />
+                            <point x="0.5" y="1" />
+                            <point x="0.120805" y="0.903743" />
+                            <point x="0.283557" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Nivel_Alfil" sid="7732421340385289">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sig_niv_alfil" sid="1868341373600677">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="btn_fila" sid="5985094506518816">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3741203334443178" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\filas_columnas_diagonales\f.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.4775" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.572368" />
+                            <point x="1" y="1" />
+                            <point x="0.5025" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_col" sid="5789753972904355">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2945964523674473" speed="5">
+                    <frame duration="1" hotspotX="0.502203" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\filas_columnas_diagonales\c.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.607929" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.631579" />
+                            <point x="1" y="1" />
+                            <point x="0.484581" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_diag" sid="1525276856663831">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1180319023850191" speed="5">
+                    <frame duration="1" hotspotX="0.501916" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\filas_columnas_diagonales\d.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.509579" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.479167" />
+                            <point x="1" y="1" />
+                            <point x="0.51341" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.479167" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_titulos" sid="2769919047133085">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\jigoku\Videos\Juego\SpriteFont_BanlieueDisco_Normal_(28)_[0,0,0]_36x34.png" />
+        </object-type>
+        <object-type name="Sprite5" sid="6862795292733578">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7654232580666253" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\logros\836.PNG">
+                        <collision-poly>
+                            <point x="0.225" y="0.409091" />
+                            <point x="0.5" y="0.136364" />
+                            <point x="0.775" y="0.409091" />
+                            <point x="0.74375" y="0.5" />
+                            <point x="0.740625" y="0.528409" />
+                            <point x="0.5" y="0.857955" />
+                            <point x="0.259375" y="0.528409" />
+                            <point x="0.25625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ico_select" sid="472888846525927">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486523052575144" speed="5">
+                    <frame duration="1" hotspotX="0.502674" hotspotY="0.52" original-source="C:\Users\jigoku\Videos\Juego\logros\text4140.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.962567" y="0.72" />
+                            <point x="0.0320856" y="0.76" />
+                            <point x="0.0534759" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_juegos" sid="4302858372151362">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2397080521421444" speed="5">
+                    <frame duration="1" hotspotX="0.499086" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\logros\Ajedrez.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.542962" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.565192" />
+                            <point x="1" y="1" />
+                            <point x="0.510055" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.587311" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_tutoriales" sid="250583209788337">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3528486799090077" speed="5">
+                    <frame duration="1" hotspotX="0.500673" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\logros\rey.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.489233" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.482659" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBox2" sid="1337548791702859">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Text6" sid="9413127939052011">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="colision" sid="4048561001044337">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="9778860608926875">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3690536207721039" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501484" original-source="C:\Users\jigoku\Videos\Juego\logros\boom.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.515" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.531157" />
+                            <point x="1" y="1" />
+                            <point x="0.51" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.489614" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ico_trofeos" sid="3716627653612364">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5194486738778714" speed="5">
+                    <frame duration="0" hotspotX="0.497585" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.497738" hotspotY="0.498516" />
+                    <frame duration="1" hotspotX="0.497326" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.497959" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.49763" hotspotY="0.498442" />
+                    <frame duration="1" hotspotX="0.497462" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ico_medallas" sid="8280836198863668">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8306333400733558" speed="5">
+                    <frame duration="0" hotspotX="0.503185" hotspotY="0.501945" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501742" />
+                    <frame duration="1" hotspotX="0.50211" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pieza_capt" sid="1247420562134009">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6512272195808449" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="6927341110565745">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4189438044371676" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jigoku\Dropbox (Hogar)\Proyecto_Chesscito-v11\Textures\fondoPuntuacion.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_continuar" sid="4787986632004889">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3699596802541569" speed="5">
+                    <frame duration="1" hotspotX="0.50365" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\logros\continue-for-guide.gif" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text7" sid="2665685121786195">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_records" sid="3911035832715573">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_prueba" sid="3774773078521758">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="LocalStorage" sid="7648840526359389">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="btn_reset_score" sid="2754730693374967">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="937406418542306" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\logros\630_256x256.png">
+                        <collision-poly>
+                            <point x="0.105469" y="0.105469" />
+                            <point x="0.5" y="0.0664063" />
+                            <point x="0.894531" y="0.105469" />
+                            <point x="0.914063" y="0.5" />
+                            <point x="0.894531" y="0.894531" />
+                            <point x="0.5" y="0.933594" />
+                            <point x="0.105469" y="0.894531" />
+                            <point x="0.0859375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_score_max" sid="8739777097370122">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\jigoku\Videos\Juego\SpriteFont_RockinRecord__G_Regular_(24)_[0,0,0]_31x33.png" />
+        </object-type>
+        <object-type name="txt_ready" sid="8774069911773062">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Fade" sid="5664765665965313">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\jigoku\Videos\Juego\SpriteFont_SSF4ABUKET_BoldOblique_(26)_[0,0,0]_42x65.png" />
+        </object-type>
+        <object-type name="Sprite4" sid="5644754887045058">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3544826830665865" speed="5">
+                    <frame duration="1" hotspotX="0.500373" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\logros\Circular-templates-pack\intro_void.png">
+                        <collision-poly>
+                            <point x="0.0991797" y="0.10489" />
+                            <point x="0.922446" y="0.0820189" />
+                            <point x="0.90082" y="0.89511" />
+                            <point x="0.0805369" y="0.914827" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_seleccion" sid="8539446653812082">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\jigoku\Videos\Juego\SpriteFont_Roboto_Black_(28)_[0,0,0]_31x36.png" />
+        </object-type>
+        <object-type name="ico_trofeo" sid="6185661530232332">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2585837788991747" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\logros\trofeo-calpe.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.44898" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.49187" />
+                            <point x="1" y="1" />
+                            <point x="0.486395" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.49187" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ico_line" sid="6280890995918729">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7715017669778623" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_score_max2" sid="9799112485667101">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\jigoku\Videos\Juego\SpriteFont_RockinRecord__G_Regular_(24)_[0,0,0]_31x33.png" />
+        </object-type>
+        <object-type name="btn_puntuaciones" sid="5502454247699062">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1499070388521956" speed="5">
+                    <frame duration="1" hotspotX="0.502857" hotspotY="0.5" original-source="C:\Users\jigoku\Videos\Juego\logros\Medalla_1.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.44" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.56" />
+                            <point x="1" y="1" />
+                            <point x="0.537143" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.56" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="8622310463916054">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7954824908287729" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_nivel_alfil" sid="7359443409285613">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6635594331695576" speed="5">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.503817" original-source="C:\Users\pc\Dropbox\Proyecto_Chesscito-v11\Recursos\Imagenes\sprite3-sheet0.png">
+                        <collision-poly>
+                            <point x="0.0229008" y="0.0229008" />
+                            <point x="0.496183" y="0" />
+                            <point x="0.977099" y="0.0229008" />
+                            <point x="0.992366" y="0.496183" />
+                            <point x="0.977099" y="0.977099" />
+                            <point x="0.496183" y="0.992366" />
+                            <point x="0.0229008" y="0.977099" />
+                            <point x="0" y="0.496183" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Como_jugar_alfil" sid="8236003084438374">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6526972040198776" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\respaldo chess\games_folder_256.png">
+                        <collision-poly>
+                            <point x="0.179688" y="0.179688" />
+                            <point x="0.5" y="0.210938" />
+                            <point x="0.800781" y="0.199219" />
+                            <point x="0.863281" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="0.867188" />
+                            <point x="0.171875" y="0.828125" />
+                            <point x="0.152344" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondo_como_jugar" sid="863162992722994">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8617112954185403" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\respaldo chess\Proyecto_Chesscito-v11\playstation_controller.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="teclado_como_jugar" sid="5370956866078874">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7201875986074919" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501433" original-source="C:\Users\pc\respaldo chess\Proyecto_Chesscito-v11\tecladopequeES.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="salir_como_jugar" sid="8753952057412303">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9035114123792478" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ESPE\5°\Inteligencia Artificial 1\Sistema Experto Proyecto\deconnection.png">
+                        <collision-poly>
+                            <point x="0.234375" y="0.234375" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.929688" y="0.0703125" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.914063" y="0.914063" />
+                            <point x="0.5" y="0.96875" />
+                            <point x="0.265625" y="0.734375" />
+                            <point x="0.117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_como_jugar" sid="7792591813569875">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite9" sid="455328245864202">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1272302588967791" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501433" original-source="C:\Users\pc\Dropbox\Proyecto_Chesscito-v11\Recursos\Imagenes\botonPlayDifuminacion.png">
+                        <collision-poly>
+                            <point x="0.301724" y="0.30086" />
+                            <point x="0.5" y="0.22063" />
+                            <point x="0.695402" y="0.303725" />
+                            <point x="0.775862" y="0.498567" />
+                            <point x="0.695402" y="0.696275" />
+                            <point x="0.5" y="0.77937" />
+                            <point x="0.304598" y="0.696275" />
+                            <point x="0.221264" y="0.498567" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite15" sid="5295264541025411">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5418060772461973" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Dropbox\Proyecto_Chesscito-v11\Recursos\Imagenes\alfil dibujo amarillo.png">
+                        <collision-poly>
+                            <point x="0.270134" y="0.215241" />
+                            <point x="0.5" y="0" />
+                            <point x="0.734899" y="0.21123" />
+                            <point x="0.721476" y="0.5" />
+                            <point x="0.885906" y="0.909091" />
+                            <point x="0.5" y="1" />
+                            <point x="0.120805" y="0.903743" />
+                            <point x="0.283557" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout-folder name="Modulos tutor">
+            <layout>Introduccion.xml</layout>
+            <layout>Modulo1_Tutorial.xml</layout>
+            <layout>Modulo1_CapturaTorre.xml</layout>
+            <layout>Modulo1_CapturaAlfil.xml</layout>
+            <layout>Modulo1_CapturaDama.xml</layout>
+            <layout>Modulo2_CapturaCaballo.xml</layout>
+            <layout>Modulo2.xml</layout>
+            <layout>Modulo3.xml</layout>
+            <layout>Modulo4_tutorial.xml</layout>
+            <layout>Modulo4_Captura.xml</layout>
+        </layout-folder>
+        <layout-folder name="Inicio">
+            <layout>Inicio.xml</layout>
+            <layout>Inicio_menu.xml</layout>
+            <layout>cursor.xml</layout>
+            <layout>Submenu.xml</layout>
+            <layout>Menu_tutor_practica.xml</layout>
+        </layout-folder>
+        <layout-folder name="Modulos juego">
+            <layout>Modulo_torrelvl1.xml</layout>
+            <layout>Modulo_torrelvl2.xml</layout>
+            <layout>Modulo_caballo.xml</layout>
+            <layout>Modulo_Alfil_lvl1.xml</layout>
+            <layout>Modulo_Alfil_lvl2.xml</layout>
+            <layout>Como_Jugar_Alfil.xml</layout>
+        </layout-folder>
+        <layout-folder name="Records">
+            <layout>record.xml</layout>
+        </layout-folder>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="Modulos tutor">
+            <event-sheet>Captura_Alfil.xml</event-sheet>
+            <event-sheet>Captura_Dama.xml</event-sheet>
+            <event-sheet>Captura_Torre.xml</event-sheet>
+            <event-sheet>Event Introduccion.xml</event-sheet>
+            <event-sheet>Event Modulo1.xml</event-sheet>
+            <event-sheet>Event Modulo2.xml</event-sheet>
+            <event-sheet>Captura_Caballo.xml</event-sheet>
+            <event-sheet>Event sheet 3.xml</event-sheet>
+            <event-sheet>Modulo3.xml</event-sheet>
+            <event-sheet>Modulo4_Captura.xml</event-sheet>
+            <event-sheet>Modulo4_tutorial.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Inicio">
+            <event-sheet>Event Inicio.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Modulos juego">
+            <event-sheet>Modulo_torrelvl2.xml</event-sheet>
+            <event-sheet>Modulo_caballo.xml</event-sheet>
+            <event-sheet>Modulo_torre_lvl1.xml</event-sheet>
+            <event-sheet>Modulo_alfil_lvl2.xml</event-sheet>
+            <event-sheet>Modulo_Alfil_lvl1.xml</event-sheet>
+        </event-folder>
+        <event-sheet>sub_menu.xml</event-sheet>
+        <event-sheet>cursor.xml</event-sheet>
+        <event-sheet>Event sheet 4.xml</event-sheet>
+        <event-sheet>record.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="4">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="14" />
+        <global-instance type="Mouse" uid="101" />
+        <global-instance type="Browser" uid="44" />
+        <global-instance type="Keyboard" uid="237" />
+        <global-instance type="Pause" uid="238" />
+        <global-instance type="Audio" uid="397">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="LocalStorage" uid="247" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="Moneda.ogg" />
+        <file name="Bandera.ogg" />
+        <file name="Pierde.ogg" />
+        <file name="positivo1.ogg" />
+        <file name="bayVida.ogg" />
+        <file name="Golpe_nave.ogg" />
+        <file name="Golpe_obj.ogg" />
+        <file name="gana.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

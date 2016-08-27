@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>cursor</include>
+        <event-block sid="9751219880929374">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7535401098571062" type="Touch">
+                    <param id="0" name="Object">salir_como_jugar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8620377343416938" type="System">
+                    <param id="0" name="Layout">Modulo_Alfil_lvl1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7491439445036734">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="3072720822925264" type="Mouse">
+                    <param id="0" name="Object">salir_como_jugar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="4016201924992526" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

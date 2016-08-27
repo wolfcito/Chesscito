@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Modulo3</name>
+    <events>
+        <include>cursor</include>
+        <event-block sid="3899466000353632">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7251656216685597" type="Touch">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5403102125640335" type="System">
+                    <param id="0" name="Layout">Inicio_menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9013102566657505">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="7377095918875772" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="401055618842017" type="btn_volver">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="150987387249052">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="305541349249129" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="3574309479671754" type="btn_volver">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="1903810777322505">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="983073855246725" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="5376015889054894" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

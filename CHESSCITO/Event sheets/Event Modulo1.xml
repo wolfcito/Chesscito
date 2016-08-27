@@ -1,0 +1,1367 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Modulo1</name>
+    <events>
+        <variable constant="0" name="btn_habilitado" sid="7834860672834074" static="0" type="number">0</variable>
+        <variable constant="0" name="mov_arriba" sid="6040608573323896" static="0" type="number">3</variable>
+        <variable constant="0" name="mov_diag1" sid="3060168681464822" static="0" type="number">3</variable>
+        <variable constant="0" name="mov_diag2" sid="3744459549300727" static="0" type="number">3</variable>
+        <variable constant="0" name="mov_diag3" sid="2654625399632392" static="0" type="number">3</variable>
+        <variable constant="0" name="mov_diag4" sid="4959396563892389" static="0" type="number">4</variable>
+        <variable constant="0" name="mov_izq" sid="9442680741861347" static="0" type="number">3</variable>
+        <variable constant="0" name="mov_dere" sid="2705601040575985" static="0" type="number">4</variable>
+        <variable constant="0" name="mov_abajo" sid="7309649319170421" static="0" type="number">4</variable>
+        <include>cursor</include>
+        <comment>Escenario inicial</comment>
+        <event-block sid="9244697622066424">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1160752197866067" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="83966513733152" type="flecha" />
+                <action id="-9" name="Destroy" sid="6483491302295453" type="pieza_alfil" />
+                <action id="-9" name="Destroy" sid="6660778773925648" type="pieza_torre" />
+                <action id="-9" name="Destroy" sid="2505830400725867" type="pieza_dama" />
+                <action id="-9" name="Destroy" sid="9192628892007816" type="puntoGuia" />
+                <action id="-4" name="Set layer visible" sid="6639314994549095" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="2504807101570981" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="412164205662939" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="8427637252149067" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="5508394004223127" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="2436451138309077">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2553582513625113" type="Touch">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7528429898395127" type="System">
+                    <param id="0" name="Layout">Inicio_menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Propiedades Alfil</comment>
+        <event-block sid="8564443828532334">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2410671137642139" type="Touch">
+                    <param id="0" name="Object">btn_alfil</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2584662224357148" type="System">
+                    <param id="0" name="Variable">btn_habilitado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6551699635165873" type="flecha" />
+                <action id="-9" name="Destroy" sid="2356479765661945" type="pieza_alfil" />
+                <action id="-9" name="Destroy" sid="8123716917216307" type="puntoGuia" />
+                <action id="-3" name="Create object" sid="8225904117272139" type="System">
+                    <param id="0" name="Object to create">pieza_alfil</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">479</param>
+                    <param id="3" name="Y">266</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="815217269878356" type="pieza_alfil">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="8666089495376655" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="7755983184236216" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="8591325782882905" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="5305032439604971" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9060202051876818" type="pieza_alfil">
+                    <param id="0" name="Angle">-45</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="7292566494956695" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3764621291979397" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="5018146893242604" type="System" />
+                <action id="-9" name="Set value" sid="2144483132195929" type="System">
+                    <param id="0" name="Variable">btn_habilitado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7749006180450433" type="pieza_alfil">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="507267779441388">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8886830467418109" type="pieza_alfil">
+                    <param id="0" name="Object">marco_top1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3147290800741561" type="pieza_alfil">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="9789619503962172" type="pieza_alfil">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="3719140674542349" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="514120217458986" type="pieza_alfil">
+                    <param id="0" name="Angle">-135</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8094889668970523" type="pieza_alfil">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="2053695105827752" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">576</param>
+                    <param id="3" name="Y">174</param>
+                </action>
+                <action id="-8" name="Set angle" sid="4602869798101712" type="flecha">
+                    <param id="0" name="Angle">-45</param>
+                </action>
+                <action id="-16" name="Wait" sid="709364515469653" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="1074212261635003">
+                    <conditions>
+                        <condition id="-10" name="For" sid="2239916696176034" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_diag1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5549991840349776" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">posicion_inicial.X + 60*mov_diag1</param>
+                            <param id="3" name="Y">posicion_inicial.Y - 60*mov_diag1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="9690283046024082" type="System">
+                            <param id="0" name="Variable">mov_diag1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="592723614542199">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4672721578462147" type="pieza_alfil">
+                    <param id="0" name="Object">marco_top2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="4295589885620407" type="pieza_alfil">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="3693889151261628" type="pieza_alfil">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="8234705877511692" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2861758095584842" type="pieza_alfil">
+                    <param id="0" name="Angle">45</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8546738136189453" type="pieza_alfil">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="2208323365240431" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">382</param>
+                    <param id="3" name="Y">174</param>
+                </action>
+                <action id="-8" name="Set angle" sid="8170665123562985" type="flecha">
+                    <param id="0" name="Angle">-135</param>
+                </action>
+                <action id="-16" name="Wait" sid="6898590968193874" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6310701371770514">
+                    <conditions>
+                        <condition id="-10" name="For" sid="5858325730767096" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_diag2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7741052714759483" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">posicion_inicial.X - 60*mov_diag2</param>
+                            <param id="3" name="Y">posicion_inicial.Y - 60*mov_diag2</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="2707753257316445" type="System">
+                            <param id="0" name="Variable">mov_diag2</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1308182454666758">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6511731778022484" type="pieza_alfil">
+                    <param id="0" name="Object">marco_bot1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="2111618439376768" type="pieza_alfil">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="5073551499252595" type="pieza_alfil">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="1599081291559599" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9115095553516387" type="pieza_alfil">
+                    <param id="0" name="Angle">135</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="550185532038387" type="pieza_alfil">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="1974882877199898" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">576</param>
+                    <param id="3" name="Y">358</param>
+                </action>
+                <action id="-8" name="Set angle" sid="7792732618228246" type="flecha">
+                    <param id="0" name="Angle">45</param>
+                </action>
+                <action id="-16" name="Wait" sid="5901265520293373" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2179687669013382">
+                    <conditions>
+                        <condition id="-10" name="For" sid="440398932875808" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_diag4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5480324529260478" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">posicion_inicial.X + 60*mov_diag4</param>
+                            <param id="3" name="Y">posicion_inicial.Y + 60*mov_diag4</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="5944040778023007" type="System">
+                            <param id="0" name="Variable">mov_diag4</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4659292503445398">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1270212504586984" type="pieza_alfil">
+                    <param id="0" name="Object">marco_izq2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="1812668285600795" type="pieza_alfil">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="7767989337198704" type="pieza_alfil">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="6037100380240695" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="5877365278903202" type="pieza_alfil">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="5317669786681349" type="pieza_alfil">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="2033618954387589" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">388</param>
+                    <param id="3" name="Y">358</param>
+                </action>
+                <action id="-8" name="Set angle" sid="7929258405560039" type="flecha">
+                    <param id="0" name="Angle">135</param>
+                </action>
+                <action id="-16" name="Wait" sid="1799393604886747" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3123521878751192">
+                    <conditions>
+                        <condition id="-10" name="For" sid="2723128227035649" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_diag3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7823342113383195" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">posicion_inicial.X - 60*mov_diag3</param>
+                            <param id="3" name="Y">posicion_inicial.Y + 60*mov_diag3</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="9081364431061528" type="System">
+                            <param id="0" name="Variable">mov_diag3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6779790333391039" type="System">
+                            <param id="0" name="Variable">btn_habilitado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Propiedades Torre</comment>
+        <event-block sid="7534312880148026">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4154398072468446" type="Touch">
+                    <param id="0" name="Object">btn_torre</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6105691345567006" type="System">
+                    <param id="0" name="Variable">btn_habilitado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8925652414057855" type="flecha" />
+                <action id="-9" name="Destroy" sid="2509571699407821" type="pieza_torre" />
+                <action id="-9" name="Destroy" sid="9385314204431498" type="puntoGuia" />
+                <action id="-3" name="Create object" sid="4521410068243027" type="System">
+                    <param id="0" name="Object to create">pieza_torre</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">479</param>
+                    <param id="3" name="Y">266</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="7999369905433178" type="pieza_torre">
+                    <param id="0" name="Speed">80</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="6301687061818042" type="pieza_torre">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="4311375492542557" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3347167231769238" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="9050551787370505" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="7956777014939498" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2849738266637081" type="pieza_torre">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="5951411166302287" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="702381462066709" type="System" />
+                <action id="-9" name="Set value" sid="1629990692863241" type="System">
+                    <param id="0" name="Variable">btn_habilitado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3038247001837515" type="pieza_torre">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5197166996152543">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1456673222537318" type="pieza_torre">
+                    <param id="0" name="Object">marco_der1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="6412931348802539" type="pieza_torre">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="2550613148392177" type="pieza_torre">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="109784973592555" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2206072087051948" type="pieza_torre">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8122783938704846" type="pieza_torre">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="2767536552577169" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">589</param>
+                    <param id="3" name="Y"> 267</param>
+                </action>
+                <action id="-8" name="Set angle" sid="5926304603845546" type="flecha">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4744080211325871" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5108584806521962">
+                    <conditions>
+                        <condition id="-10" name="For" sid="1250374762174499" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_dere</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7592766376432381" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">posicion_inicial.X + 60*mov_dere</param>
+                            <param id="3" name="Y">posicion_inicial.Y</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="2995207101496899" type="System">
+                            <param id="0" name="Variable">mov_dere</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="131261673361117">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1314543709129788" type="pieza_torre">
+                    <param id="0" name="Object">marco_top2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8532295726280683" type="pieza_torre">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="7329598654334037" type="pieza_torre">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="3475714621650982" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="261968487672586" type="pieza_torre">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7700187813135974" type="pieza_torre">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="9891239270097223" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">479</param>
+                    <param id="3" name="Y">156</param>
+                </action>
+                <action id="-8" name="Set angle" sid="8289487922246574" type="flecha">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+                <action id="-16" name="Wait" sid="2801172813634008" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6951258133750489">
+                    <conditions>
+                        <condition id="-10" name="For" sid="9424142746983499" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_arriba</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="3851203695387156" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">posicion_inicial.X </param>
+                            <param id="3" name="Y">posicion_inicial.Y - 60*mov_arriba</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="3031524465270121" type="System">
+                            <param id="0" name="Variable">mov_arriba</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6319534350160581">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6005614700591437" type="pieza_torre">
+                    <param id="0" name="Object">marco_izq1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="1220680334476076" type="pieza_torre">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="3823530877032988" type="pieza_torre">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="5352520626023689" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7101948593424206" type="pieza_torre">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8319313237712592" type="pieza_torre">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="7493371858605806" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">372</param>
+                    <param id="3" name="Y">267</param>
+                </action>
+                <action id="-8" name="Set angle" sid="6888135623188452" type="flecha">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+                <action id="-16" name="Wait" sid="5089276197481827" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3730418292985763">
+                    <conditions>
+                        <condition id="-10" name="For" sid="6678261696850927" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_izq</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7787152667424002" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">posicion_inicial.X - 60*mov_izq</param>
+                            <param id="3" name="Y">posicion_inicial.Y </param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="781951118574837" type="System">
+                            <param id="0" name="Variable">mov_izq</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6862966788915049">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9138244678981479" type="pieza_torre">
+                    <param id="0" name="Object">marco_bot2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="5041911455042889" type="pieza_torre">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="5263653254387121" type="pieza_torre">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4963028773217742" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="4306356132854117" type="pieza_torre">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8797213073306005" type="pieza_torre">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="1358110672978161" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">480</param>
+                    <param id="3" name="Y"> 376</param>
+                </action>
+                <action id="-8" name="Set angle" sid="4725728936557635" type="flecha">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action id="-16" name="Wait" sid="9555091747750884" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2638128127285746">
+                    <conditions>
+                        <condition id="-10" name="For" sid="2496528975822921" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_abajo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2829932531988879" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">posicion_inicial.X </param>
+                            <param id="3" name="Y">posicion_inicial.Y + 60*mov_abajo</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="3313045293725847" type="System">
+                            <param id="0" name="Variable">mov_abajo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1734340974567256" type="System">
+                            <param id="0" name="Variable">btn_habilitado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Propiedades Dama</comment>
+        <event-block sid="3344852851463765">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6863451196322404" type="Touch">
+                    <param id="0" name="Object">btn_dam</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8822685869360181" type="System">
+                    <param id="0" name="Variable">btn_habilitado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8523994759115998" type="flecha" />
+                <action id="-9" name="Destroy" sid="9206121071144063" type="pieza_dama" />
+                <action id="-9" name="Destroy" sid="2230350436627913" type="puntoGuia" />
+                <action id="-3" name="Create object" sid="4523532432805775" type="System">
+                    <param id="0" name="Object to create">pieza_dama</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">479</param>
+                    <param id="3" name="Y">266</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="403482307442272" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="9386677500965672" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1483367239590493" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="530606822293433" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="5829610854353057" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1692598863841318" type="pieza_dama">
+                    <param id="0" name="Angle">-45</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3739541563795523" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="6736386316323835" type="System" />
+                <action id="-9" name="Set value" sid="5334127475318315" type="System">
+                    <param id="0" name="Variable">btn_habilitado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="5287279793748261" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4013501909557354">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="223615442930695" type="pieza_dama">
+                    <param id="0" name="Object">marco_top1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8535392995398977" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="5634265345586069" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="1459725280467273" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3894454953824535" type="pieza_dama">
+                    <param id="0" name="Angle">-135</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="2889178406323832" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="226033900575387" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">576</param>
+                    <param id="3" name="Y">174</param>
+                </action>
+                <action id="-8" name="Set angle" sid="142093079625364" type="flecha">
+                    <param id="0" name="Angle">-45</param>
+                </action>
+                <action id="-16" name="Wait" sid="3823187576586301" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3357027586303401">
+                    <conditions>
+                        <condition id="-10" name="For" sid="4459368475387148" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_diag1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2591516831203086" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">posicion_inicial.X + 60*mov_diag1</param>
+                            <param id="3" name="Y">posicion_inicial.Y - 60*mov_diag1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="2103737536982431" type="System">
+                            <param id="0" name="Variable">mov_diag1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8753960864331008">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4946592345178231" type="pieza_dama">
+                    <param id="0" name="Object">marco_top2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8296449544591091" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="6988172309962564" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4264177418258291" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9090675778328191" type="pieza_dama">
+                    <param id="0" name="Angle">45</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="2009840125216633" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="7497419585565316" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">382</param>
+                    <param id="3" name="Y">174</param>
+                </action>
+                <action id="-8" name="Set angle" sid="9338667569391882" type="flecha">
+                    <param id="0" name="Angle">-135</param>
+                </action>
+                <action id="-16" name="Wait" sid="569737596776459" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8001739020437321">
+                    <conditions>
+                        <condition id="-10" name="For" sid="5536746417627886" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_diag2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6595428814984506" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">posicion_inicial.X - 60*mov_diag2</param>
+                            <param id="3" name="Y">posicion_inicial.Y - 60*mov_diag2</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="9938128298535102" type="System">
+                            <param id="0" name="Variable">mov_diag2</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7017965970715852">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2610114254384926" type="pieza_dama">
+                    <param id="0" name="Object">marco_bot1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="799657743614034" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="1366986010732391" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="9046640639930465" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8882810712100972" type="pieza_dama">
+                    <param id="0" name="Angle">135</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3280271025550069" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="3493249745390233" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">576</param>
+                    <param id="3" name="Y">358</param>
+                </action>
+                <action id="-8" name="Set angle" sid="9803159092915262" type="flecha">
+                    <param id="0" name="Angle">45</param>
+                </action>
+                <action id="-16" name="Wait" sid="148111676550733" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2622816704064531">
+                    <conditions>
+                        <condition id="-10" name="For" sid="1591303562603727" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_diag4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="3283396250575078" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">posicion_inicial.X + 60*mov_diag4</param>
+                            <param id="3" name="Y">posicion_inicial.Y + 60*mov_diag4</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="8570411544716836" type="System">
+                            <param id="0" name="Variable">mov_diag4</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8012336090697108">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2511589484648615" type="pieza_dama">
+                    <param id="0" name="Object">marco_izq2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="761718192969619" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="4253504474589712" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="6113773271210524" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4047789071442913" type="pieza_dama">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="9739833514443756" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="263458781194962" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">388</param>
+                    <param id="3" name="Y">358</param>
+                </action>
+                <action id="-8" name="Set angle" sid="2522677559148849" type="flecha">
+                    <param id="0" name="Angle">135</param>
+                </action>
+                <action id="-16" name="Wait" sid="3259552029839773" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7523589249846127">
+                    <conditions>
+                        <condition id="-10" name="For" sid="2321717962093309" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_diag3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6679532930832567" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">posicion_inicial.X - 60*mov_diag3</param>
+                            <param id="3" name="Y">posicion_inicial.Y + 60*mov_diag3</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="9170207513309634" type="System">
+                            <param id="0" name="Variable">mov_diag3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8303684879420117">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8998898682482154" type="pieza_dama">
+                    <param id="0" name="Object">marco_der1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="1803729169419464" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="9393134453451242" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4180954612365224" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3644900406067959" type="pieza_dama">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="2608413840777134" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="1906316956900601" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">589</param>
+                    <param id="3" name="Y"> 267</param>
+                </action>
+                <action id="-8" name="Set angle" sid="3439212402117449" type="flecha">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="2087387898451159" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4024627532272299">
+                    <conditions>
+                        <condition id="-10" name="For" sid="1456765721557304" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_dere</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="641451793579111" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">posicion_inicial.X + 60*mov_dere</param>
+                            <param id="3" name="Y">posicion_inicial.Y</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="3515913343929177" type="System">
+                            <param id="0" name="Variable">mov_dere</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3429325566410652">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4376575664952976" type="pieza_dama">
+                    <param id="0" name="Object">marco_top3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3734821701333368" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="668122202486327" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="1078839295465252" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3779547724835959" type="pieza_dama">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="6967062158018473" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="5752406027348575" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">479</param>
+                    <param id="3" name="Y">156</param>
+                </action>
+                <action id="-8" name="Set angle" sid="8513486349777323" type="flecha">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+                <action id="-16" name="Wait" sid="2551241967144258" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9810601758701534">
+                    <conditions>
+                        <condition id="-10" name="For" sid="1272693694311647" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_arriba</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5910705577159454" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">posicion_inicial.X </param>
+                            <param id="3" name="Y">posicion_inicial.Y - 60*mov_arriba</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="8862054049466018" type="System">
+                            <param id="0" name="Variable">mov_arriba</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8270567249507657">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4208026055445329" type="pieza_dama">
+                    <param id="0" name="Object">marco_izq1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="705065694981679" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="9356183145644322" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="2229177312240377" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9767221178516411" type="pieza_dama">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="6626460194866593" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="4682458692258888" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">372</param>
+                    <param id="3" name="Y">267</param>
+                </action>
+                <action id="-8" name="Set angle" sid="8435247699729191" type="flecha">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+                <action id="-16" name="Wait" sid="7556574128723549" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5092910992552312">
+                    <conditions>
+                        <condition id="-10" name="For" sid="2861469389559183" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_izq</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="3053839145699829" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">posicion_inicial.X - 60*mov_izq</param>
+                            <param id="3" name="Y">posicion_inicial.Y </param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="6538510559557448" type="System">
+                            <param id="0" name="Variable">mov_izq</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4609832222187817">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3228118015488071" type="pieza_dama">
+                    <param id="0" name="Object">marco_bot2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="1225564940242417" type="pieza_dama">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="8729680440248102" type="pieza_dama">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="5522364470872649" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="7005951841121594" type="pieza_dama">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="2998256154815291" type="pieza_dama">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="6276396741279326" type="System">
+                    <param id="0" name="Object to create">flecha</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">480</param>
+                    <param id="3" name="Y"> 376</param>
+                </action>
+                <action id="-8" name="Set angle" sid="5942210987972703" type="flecha">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action id="-16" name="Wait" sid="1975341978783384" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="636363445046573">
+                    <conditions>
+                        <condition id="-10" name="For" sid="9799974666371696" type="System">
+                            <param id="0" name="Name">&quot;x&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">mov_abajo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2626233286017341" type="System">
+                            <param id="0" name="Object to create">puntoGuia</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">posicion_inicial.X </param>
+                            <param id="3" name="Y">posicion_inicial.Y + 60*mov_abajo</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="6237702728498197" type="System">
+                            <param id="0" name="Variable">mov_abajo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3501380627392685" type="System">
+                            <param id="0" name="Variable">btn_habilitado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Efectos</comment>
+        <event-block sid="8125877009053668">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="3321110153039068" type="Mouse">
+                    <param id="0" name="Object">btn_torre</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="8099521732757426" type="btn_torre">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1425058694647416">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="9681556860362236" type="Mouse">
+                    <param id="0" name="Object">btn_torre</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="7714230813054598" type="btn_torre">
+                    <param id="0" name="Opacity">70</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7501969502273235">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8742204162621011" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="3059925026464351" type="btn_volver">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8144902575505385">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="899503742785373" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="736228999651211" type="btn_volver">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6624401283743586">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5348191553269527" type="Mouse">
+                    <param id="0" name="Object">btn_alfil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="3302244098758213" type="btn_alfil">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9956711945263308">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="5643567290812635" type="Mouse">
+                    <param id="0" name="Object">btn_alfil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="2364407499988622" type="btn_alfil">
+                    <param id="0" name="Opacity">70</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1856149321918833">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="6849489135848608" type="Mouse">
+                    <param id="0" name="Object">btn_dam</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="2348265966426771" type="btn_dam">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5899579575803487">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="6300420782088493" type="Mouse">
+                    <param id="0" name="Object">btn_dam</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1440943481067719" type="btn_dam">
+                    <param id="0" name="Opacity">70</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4632179951752868">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1452331568112133" type="Touch">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6336752889304433" type="System">
+                    <param id="0" name="Layout">Modulo1_CapturaTorre</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7536904649999964">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8144029511526012" type="Mouse">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="2796916238716102" type="gotoJuegos">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2142295179515697">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="6365357588560629" type="Mouse">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="8208813283224651" type="gotoJuegos">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Mouse</comment>
+        <event-block any="1" sid="3097409331978297">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="522509459819441" type="Mouse">
+                    <param id="0" name="Object">btn_torre</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="5582754450470364" type="Mouse">
+                    <param id="0" name="Object">btn_alfil</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="4100556073777551" type="Mouse">
+                    <param id="0" name="Object">btn_dam</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="8911200658690925" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="5926336932859243" type="Mouse">
+                    <param id="0" name="Object">gotoJuegos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="1330849522216641" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

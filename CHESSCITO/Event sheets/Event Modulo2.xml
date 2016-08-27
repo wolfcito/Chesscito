@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Modulo2</name>
+    <events>
+        <include>cursor</include>
+        <event-block sid="6618966722338877">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1894956406471147" type="Touch">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4089253851049574" type="System">
+                    <param id="0" name="Layout">Inicio_menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9276245909060939">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9815375629174114" type="Touch">
+                    <param id="0" name="Object">btn_sig</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6664014588701524" type="System">
+                    <param id="0" name="Layout">Modulo2_CapturaCaballo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5283344315497195">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1845676128933922" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="163589604341423" type="pieza_caballo" />
+                <action id="-3" name="Create object" sid="191407697321878" type="System">
+                    <param id="0" name="Object to create">pieza_caballo</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">480</param>
+                    <param id="3" name="Y">266</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="4723905801135814" type="pieza_caballo">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5951862436849407">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3549326790605466" type="Touch">
+                    <param id="0" name="Object">btn_caballo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3737759742052984" type="puntoGuia" />
+                <action id="-9" name="Destroy" sid="3652734544094924" type="pieza_caballo" />
+                <action id="-9" name="Destroy" sid="9118450670578027" type="estelaInicio" />
+                <action id="-3" name="Create object" sid="7781409255159759" type="System">
+                    <param id="0" name="Object to create">pieza_caballo</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">480</param>
+                    <param id="3" name="Y">266</param>
+                </action>
+                <action id="-3" name="Create object" sid="3226603208835231" type="System">
+                    <param id="0" name="Object to create">marco_der1</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">627</param>
+                    <param id="3" name="Y">267</param>
+                </action>
+                <action id="-3" name="Create object" sid="7430452784038843" type="System">
+                    <param id="0" name="Object to create">estelaInicio</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">480</param>
+                    <param id="3" name="Y">266</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="592000278990583" type="pieza_caballo">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="3747766844222274" type="pieza_caballo">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="812522550689673" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="1669194625551796" type="pieza_caballo">
+                    <param id="0" name="Speed">100</param>
+                </action>
+                <action id="-7" name="Set size" sid="4303584438567121" type="marco_der1">
+                    <param id="0" name="Width">18</param>
+                    <param id="1" name="Height">53</param>
+                </action>
+                <action id="-3" name="Create object" sid="8320996025928901" type="System">
+                    <param id="0" name="Object to create">marco_top1</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">480</param>
+                    <param id="3" name="Y">118</param>
+                </action>
+                <action id="-7" name="Set size" sid="5816259542167321" type="marco_top1">
+                    <param id="0" name="Width">49</param>
+                    <param id="1" name="Height">17</param>
+                </action>
+                <action id="-3" name="Create object" sid="2144180155845271" type="System">
+                    <param id="0" name="Object to create">marco_izq1</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">331</param>
+                    <param id="3" name="Y">266</param>
+                </action>
+                <action id="-7" name="Set size" sid="8881507531315232" type="marco_izq1">
+                    <param id="0" name="Width">16</param>
+                    <param id="1" name="Height">51</param>
+                </action>
+                <action id="-3" name="Create object" sid="7997109516836912" type="System">
+                    <param id="0" name="Object to create">marco_bot1</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">481</param>
+                    <param id="3" name="Y">419</param>
+                </action>
+                <action id="-7" name="Set size" sid="4957241495881509" type="marco_bot1">
+                    <param id="0" name="Width">60</param>
+                    <param id="1" name="Height">25</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Derecha</comment>
+        <event-block sid="4595802323441393">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2787826514737472" type="pieza_caballo">
+                    <param id="0" name="Object">marco_der1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="588774142242312" type="pieza_caballo">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6069076047083738" type="marco_der1" />
+            </actions>
+        </event-block>
+        <event-block sid="5375199307787837">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9768550356847755" type="pieza_caballo">
+                    <param id="0" name="Object">marco_der2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="3155267735429736" type="pieza_caballo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="6674296076864058" type="System">
+                    <param id="0" name="Object to create">puntoGuia</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">599</param>
+                    <param id="3" name="Y">207</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="2559407854262674" type="pieza_caballo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="8013008240552353" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4296650094216141" type="pieza_caballo">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3263476605323763" type="pieza_caballo">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="699442071381839">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6131242461950651" type="pieza_caballo">
+                    <param id="0" name="Object">marco_der1_1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="287843436601822" type="pieza_caballo">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4475323254909318">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9531375766850589" type="pieza_caballo">
+                    <param id="0" name="Object">marco_der3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="3559925578360745" type="pieza_caballo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="3640706572535692" type="System">
+                    <param id="0" name="Object to create">puntoGuia</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">599</param>
+                    <param id="3" name="Y">328</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="5478061192510735" type="pieza_caballo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4672658607610421" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="716228938445106" type="pieza_caballo">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="1893997379552489" type="pieza_caballo">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Arriba</comment>
+        <event-block sid="6650038514225538">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2216513128490131" type="pieza_caballo">
+                    <param id="0" name="Object">marco_top1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="764243106572958" type="pieza_caballo">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="860587549312757" type="marco_top1" />
+            </actions>
+        </event-block>
+        <event-block sid="577041832219361">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6320123392800807" type="pieza_caballo">
+                    <param id="0" name="Object">marco_top2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="5136626355989589" type="pieza_caballo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="9876052549672462" type="System">
+                    <param id="0" name="Object to create">puntoGuia</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">540</param>
+                    <param id="3" name="Y">148</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="5793167236883662" type="pieza_caballo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="9104442984615866" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9894746090902094" type="pieza_caballo">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8157596391964483" type="pieza_caballo">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9059977636656723">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1279224243022112" type="pieza_caballo">
+                    <param id="0" name="Object">marco_top1_1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="637691992737539" type="pieza_caballo">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3416674728889949">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="547973910960187" type="pieza_caballo">
+                    <param id="0" name="Object">marco_top3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="9418532791240369" type="pieza_caballo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="9959438512814563" type="System">
+                    <param id="0" name="Object to create">puntoGuia</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">420</param>
+                    <param id="3" name="Y">148</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7856200551628629" type="pieza_caballo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="9699467474330359" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="37934938954598" type="pieza_caballo">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7907821116303538" type="pieza_caballo">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Izquierda</comment>
+        <event-block sid="3325717456072468">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2653495451308255" type="pieza_caballo">
+                    <param id="0" name="Object">marco_izq1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2625846846259635" type="pieza_caballo">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+                <action id="-9" name="Destroy" sid="4544370558799077" type="marco_izq1" />
+            </actions>
+        </event-block>
+        <event-block sid="6548308600995146">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7742249212339228" type="pieza_caballo">
+                    <param id="0" name="Object">marco_izq2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="540950346285273" type="pieza_caballo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="5153081207160161" type="System">
+                    <param id="0" name="Object to create">puntoGuia</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">359</param>
+                    <param id="3" name="Y">208</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="852348708048113" type="pieza_caballo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="1180166993696735" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1443607421690418" type="pieza_caballo">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="2645688159457595" type="pieza_caballo">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2081634533980399">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2670460620537459" type="pieza_caballo">
+                    <param id="0" name="Object">marco_izq1_1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7468565212862319" type="pieza_caballo">
+                    <param id="0" name="Angle">-270</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1708554662677194">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7962187680363679" type="pieza_caballo">
+                    <param id="0" name="Object">marco_izq3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="6023697898489486" type="pieza_caballo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="980917360251046" type="System">
+                    <param id="0" name="Object to create">puntoGuia</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">359</param>
+                    <param id="3" name="Y">328</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="9612242718375353" type="pieza_caballo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="3830401981849316" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1053816540107443" type="pieza_caballo">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7356674356239749" type="pieza_caballo">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>hacia abajo</comment>
+        <event-block sid="8487612382442587">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1248784151933686" type="pieza_caballo">
+                    <param id="0" name="Object">marco_bot1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7353768636022601" type="pieza_caballo">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+                <action id="-9" name="Destroy" sid="5719940889664705" type="marco_bot1" />
+            </actions>
+        </event-block>
+        <event-block sid="2972901766785486">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5438333743867262" type="pieza_caballo">
+                    <param id="0" name="Object">marco_bot3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="5567958421906026" type="pieza_caballo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="2327145895461096" type="System">
+                    <param id="0" name="Object to create">puntoGuia</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">420</param>
+                    <param id="3" name="Y">388</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="9545266642800624" type="pieza_caballo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="5940448740260237" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9753642713760485" type="pieza_caballo">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7161241829710784" type="pieza_caballo">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9479376162748564">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8483869571531378" type="pieza_caballo">
+                    <param id="0" name="Object">marco_bot1_1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7736216514408191" type="pieza_caballo">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3597958765121239">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="881937566686988" type="pieza_caballo">
+                    <param id="0" name="Object">marco_bot2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="6213751782301621" type="pieza_caballo">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="2972675209903733" type="pieza_caballo">
+                    <param id="0" name="Object">posicion_inicial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="2760463514593856" type="System">
+                    <param id="0" name="Object to create">puntoGuia</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">540</param>
+                    <param id="3" name="Y">388</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="6681687506302922" type="pieza_caballo">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="3735678434690834" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3724427236722291" type="pieza_caballo">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Efecto</comment>
+        <event-block sid="9266622201826685">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5503369559250466" type="Mouse">
+                    <param id="0" name="Object">btn_caballo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1092817921065237" type="btn_caballo">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5529856226575786">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="4196122016583719" type="Mouse">
+                    <param id="0" name="Object">btn_caballo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="3724228656139496" type="btn_caballo">
+                    <param id="0" name="Opacity">70</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5159175392292119">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="720264360313669" type="Mouse">
+                    <param id="0" name="Object">btn_sig</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="5695598079052677" type="btn_sig">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7835459350207645">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="2837251869589726" type="Mouse">
+                    <param id="0" name="Object">btn_sig</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="1879798987779687" type="btn_sig">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7421258233089091">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="6975204112050577" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="6879628526510007" type="btn_volver">
+                    <param id="0" name="Scale">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8601510410068126">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="4901366128204651" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="3276379322164178" type="btn_volver">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="8671535492751265">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="7591866660563707" type="Mouse">
+                    <param id="0" name="Object">btn_caballo</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="6798327466640713" type="Mouse">
+                    <param id="0" name="Object">btn_volver</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="6044806469048621" type="Mouse">
+                    <param id="0" name="Object">btn_sig</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="5077475986737524" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
