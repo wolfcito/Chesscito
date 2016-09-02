@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>260.101</position-x>
-        <position-y>646.373</position-y>
+        <position-x>445.659</position-x>
+        <position-y>303.53</position-y>
         <position-z>146.41</position-z>
-        <lookat-x>260.101</lookat-x>
-        <lookat-y>646.373</lookat-y>
+        <lookat-x>445.659</lookat-x>
+        <lookat-y>303.53</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -26,10 +26,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <active-layer name="elementos" />
     <layers>
         <layer locked="0" name="fondo" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="zonas" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="elementos" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="laberintos" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="reintentar" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="pantalla_ini_fin" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="zonas" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="elementos" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="laberintos" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="reintentar" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="pantalla_ini_fin" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

@@ -727,7 +727,7 @@
         </object-folder>
         <object-type name="Fondo1" sid="4008636536140226">
             <plugin id="TiledBg" />
-            <texture original-source="C:\Users\Byron\Documents\ESPE\SISTEMAS\QUINTO\Desarrollo de Sistemas\Chesscito\Imagenes\Chesscito_fondo_V006.png" />
+            <texture original-source="E:\Proyecto Chesscito\Chesscito\CHESSCITO\Animations\fondo\Default\000.png" />
         </object-type>
         <object-type name="Sprite" sid="1284967323316791">
             <plugin id="Sprite" />
