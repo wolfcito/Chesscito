@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Modulo_torre_lvl1</name>
     <events>
+        <comment>Variables Módulo Torre 1</comment>
         <variable constant="0" name="puntos_torre1" sid="2906016757643378" static="0" type="number">0</variable>
         <variable constant="0" name="score_max_torre1" sid="1500779421693108" static="0" type="number">0</variable>
         <variable constant="0" name="peon_capturad" sid="4737810400396282" static="0" type="number">0</variable>
@@ -857,7 +858,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Play" sid="406269046835042" type="Audio">
-                            <param id="0" name="Audio file">Moneda</param>
+                            <param id="0" name="Audio file">positivo1</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -897,6 +898,26 @@
                         <action id="-11" name="Subtract from" sid="9787155878210011" type="System">
                             <param id="0" name="Variable">n_objetivos</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5186897098224921" type="obj_numero">
+                            <param id="0" name="Text">&quot;Objetivos: &quot;&amp;n_objetivos</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8763048551773946">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9863883507741625" type="p_peon_negro">
+                            <param id="0" name="Object">p_peon_negro</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5627810701250936" type="p_peon_negro" />
+                        <action id="-11" name="Subtract from" sid="6019409044884574" type="System">
+                            <param id="0" name="Variable">n_objetivos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4504244279880074" type="obj_numero">
+                            <param id="0" name="Text">&quot;Objetivos: &quot;&amp;n_objetivos</param>
                         </action>
                     </actions>
                 </event-block>
@@ -940,7 +961,7 @@
                     <param id="0" name="State">0</param>
                 </action>
                 <action id="0" name="Play" sid="5458851891898949" type="Audio">
-                    <param id="0" name="Audio file">Bandera</param>
+                    <param id="0" name="Audio file">gana</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -986,6 +1007,9 @@
                 </condition>
                 <condition id="7" name="Cursor is over object" sid="3861765256712359" type="Mouse">
                     <param id="0" name="Object">btn_continuar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="9053230454503774" type="Mouse">
+                    <param id="0" name="Object">selector</param>
                 </condition>
             </conditions>
             <actions>

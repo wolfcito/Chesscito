@@ -29,10 +29,12 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Fondo1" uid="301">
+                <instance type="fondo_game" uid="301">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -563,7 +565,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="398">
+                <instance type="obj_numero" uid="398">
                     <properties>
                         <text>PUNTAJE</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -590,7 +592,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="399">
+                <instance type="obj_numero" uid="399">
                     <properties>
                         <text>VIDAS</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -777,7 +779,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="540">
+                <instance type="obj_numero" uid="540">
                     <properties>
                         <text>PEONES</text>
                         <initial-visibility>Visible</initial-visibility>

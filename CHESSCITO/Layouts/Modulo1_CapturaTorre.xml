@@ -139,7 +139,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="140">
+                <instance type="obj_numero" uid="140">
                     <properties>
                         <text>Movimientos Permitidos</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -451,7 +451,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="110">
+                <instance type="obj_numero" uid="110">
                     <properties>
                         <text>TORRE</text>
                         <initial-visibility>Visible</initial-visibility>

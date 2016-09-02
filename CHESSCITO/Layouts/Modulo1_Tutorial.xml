@@ -543,7 +543,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="68">
+                <instance type="obj_numero" uid="68">
                     <properties>
                         <text>ALFIL</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -616,7 +616,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="70">
+                <instance type="obj_numero" uid="70">
                     <properties>
                         <text>DAMA</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -689,7 +689,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="66">
+                <instance type="obj_numero" uid="66">
                     <properties>
                         <text>TORRE</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -949,7 +949,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="114">
+                <instance type="obj_numero" uid="114">
                     <properties>
                         <text>INICIO</text>
                         <initial-visibility>Visible</initial-visibility>

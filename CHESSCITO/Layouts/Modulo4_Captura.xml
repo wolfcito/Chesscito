@@ -315,7 +315,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="201">
+                <instance type="obj_numero" uid="201">
                     <properties>
                         <text>CONTENIDO</text>
                         <initial-visibility>Visible</initial-visibility>

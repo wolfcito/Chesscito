@@ -95,7 +95,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="188">
+                <instance type="obj_numero" uid="188">
                     <properties>
                         <text>PEÓN</text>
                         <initial-visibility>Visible</initial-visibility>

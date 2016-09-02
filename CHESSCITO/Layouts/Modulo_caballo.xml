@@ -152,7 +152,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Text" uid="215">
+                <instance type="obj_numero" uid="215">
                     <properties>
                         <text>PUNTAJE</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -263,7 +263,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="230">
+                <instance type="obj_numero" uid="230">
                     <properties>
                         <text>VIDAS</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -386,7 +386,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="282">
+                <instance type="obj_numero" uid="282">
                     <properties>
                         <text>TIEMPO</text>
                         <initial-visibility>Visible</initial-visibility>

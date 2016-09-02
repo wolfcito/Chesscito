@@ -727,7 +727,7 @@
         </object-folder>
         <object-type name="Fondo1" sid="4008636536140226">
             <plugin id="TiledBg" />
-            <texture original-source="E:\Proyecto Chesscito\Chesscito\CHESSCITO\Animations\fondo\Default\000.png" />
+            <texture original-source="E:\Proyecto Chesscito\Chesscito\CHESSCITO\Animations\fondo_game\Default\000.png" />
         </object-type>
         <object-type name="Sprite" sid="1284967323316791">
             <plugin id="Sprite" />
@@ -889,7 +889,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text" sid="8961682428415904">
+        <object-type name="obj_numero" sid="8961682428415904">
             <plugin id="Text" />
         </object-type>
         <object-type name="Function" sid="378383419578408">
@@ -2389,7 +2389,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4189438044371676" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\jigoku\Dropbox (Hogar)\Proyecto_Chesscito-v11\Textures\fondoPuntuacion.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Proyecto Chesscito\Chesscito\CHESSCITO\Animations\Sprite6\Default\000.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -2631,6 +2631,36 @@
                             <point x="0.5" y="1" />
                             <point x="0.120805" y="0.903743" />
                             <point x="0.283557" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondo_game" sid="2481587280463593">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6113209403585426" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Proyecto Chesscito\Chesscito\CHESSCITO\Animations\fondo\Default\000.png">
+                        <collision-poly>
+                            <point x="0.000976563" y="0.00166667" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondo0" sid="4171464029917635">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6758669856019577" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Proyecto Chesscito\Chesscito\CHESSCITO\Animations\fondo_game\Default\000.png">
+                        <collision-poly>
+                            <point x="0.000976563" y="0.00166667" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>

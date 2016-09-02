@@ -871,7 +871,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Play" sid="6295047990589591" type="Audio">
-                            <param id="0" name="Audio file">Moneda</param>
+                            <param id="0" name="Audio file">positivo1</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -1011,7 +1011,7 @@
                     <param id="0" name="State">0</param>
                 </action>
                 <action id="0" name="Play" sid="9850856987053857" type="Audio">
-                    <param id="0" name="Audio file">Bandera</param>
+                    <param id="0" name="Audio file">gana</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
