@@ -10,12 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Modulo_Alfil_lvl1</layout>
-        <layout order="1">Modulo_Alfil_lvl2</layout>
-        <layout order="2">Modulo_Alfil_lvl3</layout>
-        <event-sheet active="1" order="3">Modulo_Alfil_lvl1</event-sheet>
-        <event-sheet order="4">Event_Alfil_lvl3</event-sheet>
-        <event-sheet order="5">Modulo_alfil_lvl2</event-sheet>
+        <layout order="1">Modulo_Alfil_lvl1</layout>
+        <layout order="2">Modulo_Alfil_lvl2</layout>
+        <layout order="3">Modulo_Alfil_lvl3</layout>
+        <layout active="1" order="7">Modulo_Peon</layout>
+        <event-sheet order="4">Modulo_Alfil_lvl1</event-sheet>
+        <event-sheet order="5">Event_Alfil_lvl3</event-sheet>
+        <event-sheet order="6">Modulo_alfil_lvl2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -197,5 +198,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite15/" />
         <folder expanded="1" path="animation-folder/fondo_game/" />
         <folder expanded="1" path="animation-folder/fondo0/" />
+        <folder expanded="1" path="animation-folder/Sprite16/" />
+        <folder expanded="1" path="animation-folder/Sprite19/" />
     </folders-expanded>
 </c2uistate>
