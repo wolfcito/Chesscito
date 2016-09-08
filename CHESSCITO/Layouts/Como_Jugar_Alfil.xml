@@ -173,7 +173,7 @@
                 </instance>
                 <instance type="txt_como_jugar" uid="572">
                     <properties>
-                        <text>Mueve de la nave de izquiera a derecha para evitar que el alfil caiga</text>
+                        <text>Mueve la nave de izquiera a derecha para evitar que el alfil caiga</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Comic Sans MS,-21,400,1</font>
                         <color>255,255,0</color>
@@ -189,7 +189,7 @@
                         <x>198</x>
                         <y>259</y>
                         <z>0</z>
-                        <width>269</width>
+                        <width>251</width>
                         <height>126</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

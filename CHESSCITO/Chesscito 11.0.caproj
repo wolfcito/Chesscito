@@ -2693,8 +2693,9 @@
             <layout>Modulo_torrelvl2.xml</layout>
             <layout>Modulo_caballo.xml</layout>
             <layout>Modulo_Alfil_lvl1.xml</layout>
-            <layout>Modulo_Alfil_lvl2.xml</layout>
             <layout>Como_Jugar_Alfil.xml</layout>
+            <layout>Modulo_Alfil_lvl2.xml</layout>
+            <layout>Modulo_Alfil_lvl3.xml</layout>
         </layout-folder>
         <layout-folder name="Records">
             <layout>record.xml</layout>
@@ -2723,6 +2724,7 @@
             <event-sheet>Modulo_torre_lvl1.xml</event-sheet>
             <event-sheet>Modulo_alfil_lvl2.xml</event-sheet>
             <event-sheet>Modulo_Alfil_lvl1.xml</event-sheet>
+            <event-sheet>Event_Alfil_lvl3.xml</event-sheet>
         </event-folder>
         <event-sheet>sub_menu.xml</event-sheet>
         <event-sheet>cursor.xml</event-sheet>
