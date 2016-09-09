@@ -1184,6 +1184,9 @@
                         <initial-frame>4</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <vidaObstaculo>2</vidaObstaculo>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>

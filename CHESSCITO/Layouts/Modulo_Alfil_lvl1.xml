@@ -1001,7 +1001,7 @@
                     <properties>
                         <text>Como Jugar</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Comic Sans MS,-32,700,1</font>
+                        <font>Comic Sans MS,-27,700,1</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -1012,8 +1012,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>818</x>
-                        <y>372</y>
+                        <x>852</x>
+                        <y>431</y>
                         <z>0</z>
                         <width>212</width>
                         <height>57</height>
@@ -1034,14 +1034,58 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>916</x>
-                        <y>455</y>
+                        <x>919</x>
+                        <y>500</y>
                         <z>0</z>
                         <width>84</width>
                         <height>84</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btn_reiniciar" uid="643">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>919</x>
+                        <y>328</y>
+                        <z>0</z>
+                        <width>110</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5009709</hotspotX>
+                        <hotspotY>0.504347801</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btn_menu" uid="644">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>919</x>
+                        <y>374</y>
+                        <z>0</z>
+                        <width>110</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5009709</hotspotX>
+                        <hotspotY>0.504347801</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

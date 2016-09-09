@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="score_max_alfil3" sid="8484965611175241" static="0" type="number">0</variable>
         <include>cursor</include>
-        <variable constant="0" name="objetivos4" sid="44417400452847" static="0" type="number">2</variable>
+        <variable constant="0" name="objetivos4" sid="44417400452847" static="0" type="number">6</variable>
         <variable constant="0" name="Puntaje4" sid="1524417699679147" static="0" type="number">0</variable>
         <event-block sid="9683320810977989">
             <conditions>
@@ -303,6 +303,55 @@
                 <action id="0" name="Set item" sid="7340876649871746" type="LocalStorage">
                     <param id="0" name="Key">&quot;score_alfil3&quot;</param>
                     <param id="1" name="Value">puntos_caballo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4031555560147919">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8061657301643561" type="bala_alfil">
+                    <param id="0" name="Object">paredes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="7248323433057298" type="paredes">
+                    <param id="0" name="Instance variable">vidaObstaculo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="4352100175121912" type="Audio">
+                    <param id="0" name="Audio file">Golpe_obj</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7562469809078156">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8594778968318361" type="paredes">
+                    <param id="0" name="Instance variable">vidaObstaculo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8247924143059819" type="paredes" />
+                <action id="0" name="Play" sid="957634656441636" type="Audio">
+                    <param id="0" name="Audio file">Ladrillo_roto</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9885902851437878">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8265011144835922" type="Touch">
+                    <param id="0" name="Object">btn_reiniciar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9103335377124679" type="System">
+                    <param id="0" name="Layout">Modulo_Alfil_lvl3</param>
                 </action>
             </actions>
         </event-block>

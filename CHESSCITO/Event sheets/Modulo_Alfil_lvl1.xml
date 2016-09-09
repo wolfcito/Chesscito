@@ -330,5 +330,29 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="3294823362036223">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4453435683571914" type="Touch">
+                    <param id="0" name="Object">btn_reiniciar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2708960595293687" type="System">
+                    <param id="0" name="Layout">Modulo_Alfil_lvl1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5148286958149472">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3424430394219914" type="Touch">
+                    <param id="0" name="Object">btn_menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8766803259606534" type="System">
+                    <param id="0" name="Layout">Menu_tutor_practica</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

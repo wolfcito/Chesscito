@@ -10,11 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Modulo_Peon</layout>
-        <layout order="2">Menu_tutor_practica</layout>
-        <layout order="3">Submenu</layout>
-        <event-sheet order="1">Event sheet 2</event-sheet>
-        <event-sheet active="1" order="4">sub_menu</event-sheet>
+        <layout order="0">Submenu</layout>
+        <layout active="1" order="1">Modulo_Alfil_lvl3</layout>
+        <layout order="2">Modulo_Alfil_lvl2</layout>
+        <layout order="3">Modulo_Alfil_lvl1</layout>
+        <event-sheet order="4">Modulo_alfil_lvl2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,10 +30,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/label/" />
         <folder expanded="1" path="object-folder/texbox/" />
         <folder expanded="0" path="object-folder/mensajes/" />
-        <folder expanded="1" path="object-folder/piezas/" />
+        <folder expanded="0" path="object-folder/piezas/" />
         <folder expanded="0" path="object-folder/buttonImagen/" />
         <folder expanded="0" path="object-folder/cursor/" />
-        <folder expanded="1" path="object-folder/laberinto/" />
+        <folder expanded="0" path="object-folder/laberinto/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="0" path="layout-folder/Modulos tutor/" />
         <folder expanded="1" path="layout-folder/Inicio/" />

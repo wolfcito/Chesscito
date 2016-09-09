@@ -684,6 +684,9 @@
             </object-type>
             <object-type name="paredes" sid="4866462697173609">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="vidaObstaculo" sid="876858001945182" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="5027160525326729">
                         <behavior id="solid" />
@@ -2885,6 +2888,7 @@
         <file name="Golpe_nave.ogg" />
         <file name="Golpe_obj.ogg" />
         <file name="gana.ogg" />
+        <file name="Ladrillo_roto.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
