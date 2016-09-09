@@ -2,5 +2,342 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 2</name>
-    <events />
+    <events>
+        <variable constant="0" name="vidas_peon" sid="740628140693031" static="0" type="number">4</variable>
+        <variable constant="0" name="puntos" sid="5543491455847213" static="0" type="number">0</variable>
+        <variable constant="0" name="PASO" sid="5455301662353004" static="0" type="number">60</variable>
+        <variable constant="0" name="Velocidad" sid="827544339255888" static="0" type="number">50</variable>
+        <variable constant="0" name="LLEFT" sid="8356968227048704" static="0" type="number">798</variable>
+        <variable constant="0" name="LRIGHT" sid="3984044988937152" static="0" type="number">377</variable>
+        <variable constant="0" name="DOWN" sid="1682632901869205" static="0" type="number">508</variable>
+        <variable constant="0" name="TOP" sid="8116736258926254" static="0" type="number">87</variable>
+        <event-block sid="5365245106606647">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1408821905158361" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="3408832708123966" type="torre_negro">
+                    <param id="0" name="X">torre_negro.X-Velocidad*dt</param>
+                </action>
+                <action id="-1" name="Set X" sid="1589964456405374" type="torre_negro1">
+                    <param id="0" name="X">torre_negro1.X+Velocidad*dt</param>
+                </action>
+                <action id="-1" name="Set X" sid="4890193604277466" type="torre_negro2">
+                    <param id="0" name="X">torre_negro2.X-Velocidad*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8853101258355078">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="4664644940573667" type="torre_negro">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">LRIGHT</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="9876469420418967" type="torre_negro">
+                    <param id="0" name="X">LLEFT</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4149477885806615">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="1924861901458692" type="torre_negro1">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">LLEFT</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="5193703778747093" type="torre_negro1">
+                    <param id="0" name="X">LRIGHT</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1687248052494118">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="397734295818365" type="torre_negro2">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">LRIGHT</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="4051157163352591" type="torre_negro2">
+                    <param id="0" name="X">LLEFT</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5277214002710308">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2495372829403017" type="torre_negro">
+                    <param id="0" name="Object">peon_blanco</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="323640437623801" type="peon_blanco">
+                    <param id="0" name="X">678</param>
+                    <param id="1" name="Y">504</param>
+                </action>
+                <action id="-5" name="Set width" sid="1580621795948867" type="VidasJugador">
+                    <param id="0" name="Width">VidasJugador.Width-29</param>
+                </action>
+                <action id="0" name="Play" sid="5313557805432454" type="Audio">
+                    <param id="0" name="Audio file">Golpe_nave</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">3</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="4860500426616191" type="System">
+                    <param id="0" name="Variable">vidas_peon</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8856574514932289">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4544077290096691" type="torre_negro1">
+                    <param id="0" name="Object">peon_blanco</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="6116321924377699" type="peon_blanco">
+                    <param id="0" name="X">678</param>
+                    <param id="1" name="Y">504</param>
+                </action>
+                <action id="-5" name="Set width" sid="7455926070956406" type="VidasJugador">
+                    <param id="0" name="Width">VidasJugador.Width-29</param>
+                </action>
+                <action id="0" name="Play" sid="2883439174728243" type="Audio">
+                    <param id="0" name="Audio file">Golpe_nave</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">3</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="8292886928682646" type="System">
+                    <param id="0" name="Variable">vidas_peon</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1294338085363566">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7863173876690006" type="torre_negro2">
+                    <param id="0" name="Object">peon_blanco</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3883403559706838" type="peon_blanco">
+                    <param id="0" name="X">678</param>
+                    <param id="1" name="Y">504</param>
+                </action>
+                <action id="-5" name="Set width" sid="7962000028101941" type="VidasJugador">
+                    <param id="0" name="Width">VidasJugador.Width-29</param>
+                </action>
+                <action id="0" name="Play" sid="8662930569459001" type="Audio">
+                    <param id="0" name="Audio file">Golpe_nave</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">3</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="687033707552859" type="System">
+                    <param id="0" name="Variable">vidas_peon</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1449134726627784">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9812742912622691" type="coin">
+                    <param id="0" name="Object">peon_blanco</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8635568083807316" type="coin" />
+                <action id="-10" name="Add to" sid="2198796527584067" type="System">
+                    <param id="0" name="Variable">puntos</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="8333432870461498" type="Audio">
+                    <param id="0" name="Audio file">Moneda</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">3</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7982985579962012">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="2974484640636996" type="peon_blanco">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">LRIGHT</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="4314201771137257" type="peon_blanco">
+                    <param id="0" name="X">LRIGHT</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7490350512390154">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="3328892891699891" type="peon_blanco">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">LLEFT</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="8158690771195774" type="peon_blanco">
+                    <param id="0" name="X">LLEFT</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9062675724511266">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="8592118045186355" type="peon_blanco">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">TOP</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="8300354812064745" type="peon_blanco">
+                    <param id="0" name="Y">TOP</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="266472709699966">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="8561111604793793" type="peon_blanco">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">DOWN</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="874057776123984" type="peon_blanco">
+                    <param id="0" name="Y">DOWN</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1174295251035192">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6195784969216939" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="3901657322143209" type="peon_blanco">
+                    <param id="0" name="Y">peon_blanco.Y-PASO</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6777107407598051">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1385773448585931" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="4010126981002929" type="peon_blanco">
+                    <param id="0" name="Y">peon_blanco.Y-PASO</param>
+                </action>
+                <action id="-1" name="Set X" sid="2445042006128158" type="peon_blanco">
+                    <param id="0" name="X">peon_blanco.X-PASO</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3159594497202353">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="520998041555758" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="9073998043559186" type="peon_blanco">
+                    <param id="0" name="Y">peon_blanco.Y-PASO</param>
+                </action>
+                <action id="-1" name="Set X" sid="43922660695174" type="peon_blanco">
+                    <param id="0" name="X">peon_blanco.X+PASO</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6471506652535648">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2247476698527476" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2659965427775461" type="puntaje">
+                    <param id="0" name="Text">&quot;&quot;&amp;puntos</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9139940894391804">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2873339321640251" type="Touch">
+                    <param id="0" name="Object">btn_reiniciar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="138684031787071" type="peon_blanco">
+                    <param id="0" name="X">678</param>
+                    <param id="1" name="Y">504</param>
+                </action>
+                <action id="-3" name="Create object" sid="5893634686296959" type="System">
+                    <param id="0" name="Object to create">coin</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">440.546</param>
+                    <param id="3" name="Y">86.031</param>
+                </action>
+                <action id="-9" name="Set value" sid="6153798224017698" type="System">
+                    <param id="0" name="Variable">puntos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4917553651752374">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9803762636317914" type="Touch">
+                    <param id="0" name="Object">btn_menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2382901363225106" type="System">
+                    <param id="0" name="Layout">Menu_tutor_practica</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1568173062624605">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3960591619541594" type="System">
+                    <param id="0" name="Variable">vidas_peon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="4503549363775907" type="Audio">
+                    <param id="0" name="Audio file">Pierde</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">3</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="9896733937887417" type="System">
+                    <param id="0" name="Variable">puntos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="6971474705851932" type="System">
+                    <param id="0" name="Variable">vidas_peon</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-3" name="Set position" sid="4892943530025493" type="peon_blanco">
+                    <param id="0" name="X">678</param>
+                    <param id="1" name="Y">504</param>
+                </action>
+                <action id="-9" name="Destroy" sid="7459935925073575" type="coin" />
+                <action id="-3" name="Create object" sid="7715577244306723" type="System">
+                    <param id="0" name="Object to create">coin</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">440.546</param>
+                    <param id="3" name="Y">86.031</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

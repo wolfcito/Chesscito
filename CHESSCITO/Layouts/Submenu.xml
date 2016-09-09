@@ -235,6 +235,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="peon" uid="626">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>786</x>
+                        <y>462</y>
+                        <z>0</z>
+                        <width>142</width>
+                        <height>187</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500931084</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -264,8 +286,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>277</x>
-                        <y>331</y>
+                        <x>274</x>
+                        <y>266</y>
                         <z>0</z>
                         <width>115</width>
                         <height>150</height>
@@ -286,8 +308,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>531</x>
-                        <y>484</y>
+                        <x>326</x>
+                        <y>476</y>
                         <z>0</z>
                         <width>131</width>
                         <height>150</height>
@@ -330,8 +352,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>792</x>
-                        <y>325</y>
+                        <x>787</x>
+                        <y>244</y>
                         <z>0</z>
                         <width>115</width>
                         <height>150</height>

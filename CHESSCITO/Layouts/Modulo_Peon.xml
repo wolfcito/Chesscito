@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite16" uid="611">
+                <instance type="peon_blanco" uid="611">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -61,8 +61,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>619</x>
-                        <y>503</y>
+                        <x>680</x>
+                        <y>505</y>
                         <z>0</z>
                         <width>59</width>
                         <height>56</height>
@@ -73,7 +73,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite19" uid="612">
+                <instance type="torre_negro" uid="612">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -92,6 +92,313 @@
                         <hotspotX>0.500797451</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="torre_negro1" uid="613">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>380.508728027</x>
+                        <y>265.5</y>
+                        <z>0</z>
+                        <width>52</width>
+                        <height>51</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500797451</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="torre_negro2" uid="614">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>797.489624023</x>
+                        <y>144.5</y>
+                        <z>0</z>
+                        <width>54</width>
+                        <height>59</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500797451</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="coin" uid="615">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>440.546417236</x>
+                        <y>86.030921936</y>
+                        <z>0</z>
+                        <width>55</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.50515461</hotspotX>
+                        <hotspotY>0.50515461</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pergamino" uid="616">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>157</x>
+                        <y>212</y>
+                        <z>0</z>
+                        <width>209</width>
+                        <height>304</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.649999976</opacity>
+                    </world>
+                </instance>
+                <instance type="label_puntos" uid="617">
+                    <properties>
+                        <text>VIDAS</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Comic Sans MS,-21,700,1</font>
+                        <color>0,0,153</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>104</x>
+                        <y>116</y>
+                        <z>0</z>
+                        <width>101</width>
+                        <height>31</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="VidasJugador" uid="618">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <VidasJugador>4</VidasJugador>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>100</x>
+                        <y>156</y>
+                        <z>0</z>
+                        <width>116</width>
+                        <height>23</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="label_puntos" uid="619">
+                    <properties>
+                        <text>PUNTAJE</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Comic Sans MS,-21,700,1</font>
+                        <color>0,0,153</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>101</x>
+                        <y>187</y>
+                        <z>0</z>
+                        <width>115</width>
+                        <height>34</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="puntaje" uid="620">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Comic Sans MS,-21,700,1</font>
+                        <color>0,0,153</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>119</x>
+                        <y>228</y>
+                        <z>0</z>
+                        <width>72</width>
+                        <height>43</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Nivel_Alfil" uid="621">
+                    <properties>
+                        <text>NIVEL</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Comic Sans MS,-32,700,1</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>905</x>
+                        <y>35</y>
+                        <z>0</z>
+                        <width>117</width>
+                        <height>90</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="txt_nivel_alfil" uid="622">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>954</x>
+                        <y>133</y>
+                        <z>0</z>
+                        <width>83</width>
+                        <height>77</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503816783</hotspotX>
+                        <hotspotY>0.503816783</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btn_volver" uid="623">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>117</x>
+                        <y>532</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btn_menu" uid="624">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>941</x>
+                        <y>256</y>
+                        <z>0</z>
+                        <width>151</width>
+                        <height>42</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5009709</hotspotX>
+                        <hotspotY>0.504347801</hotspotY>
+                        <angle>0.018520208</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btn_reiniciar" uid="625">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>943</x>
+                        <y>314</y>
+                        <z>0</z>
+                        <width>142</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5009709</hotspotX>
+                        <hotspotY>0.504347801</hotspotY>
+                        <angle>-0.029622722</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

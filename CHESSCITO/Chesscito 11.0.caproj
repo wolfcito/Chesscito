@@ -2666,7 +2666,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite16" sid="8338429282932759">
+        <object-type name="peon_blanco" sid="8338429282932759">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9180024462889803" speed="5">
@@ -2685,7 +2685,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite19" sid="2287657908301907">
+        <object-type name="torre_negro" sid="2287657908301907">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4061035260672691" speed="5">
@@ -2699,6 +2699,82 @@
                             <point x="0.499203" y="1" />
                             <point x="0.108453" y="0.903409" />
                             <point x="0.269537" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="torre_negro1" sid="1959243094688521">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1923402126265714" speed="5">
+                    <frame duration="1" hotspotX="0.500797" hotspotY="0.5" original-source="C:\Users\david\Documents\Desarrollo\CHESSITO\Chesscito\CHESSCITO\Recursos\Imagenes\torre dibujo.png">
+                        <collision-poly>
+                            <point x="0.236045" y="0.210227" />
+                            <point x="0.499203" y="0.106534" />
+                            <point x="0.763955" y="0.210227" />
+                            <point x="0.730462" y="0.5" />
+                            <point x="0.891547" y="0.903409" />
+                            <point x="0.499203" y="1" />
+                            <point x="0.108453" y="0.903409" />
+                            <point x="0.269537" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="torre_negro2" sid="1146450603187397">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4339993659896644" speed="5">
+                    <frame duration="1" hotspotX="0.500797" hotspotY="0.5" original-source="C:\Users\david\Documents\Desarrollo\CHESSITO\Chesscito\CHESSCITO\Recursos\Imagenes\torre dibujo.png">
+                        <collision-poly>
+                            <point x="0.236045" y="0.210227" />
+                            <point x="0.499203" y="0.106534" />
+                            <point x="0.763955" y="0.210227" />
+                            <point x="0.730462" y="0.5" />
+                            <point x="0.891547" y="0.903409" />
+                            <point x="0.499203" y="1" />
+                            <point x="0.108453" y="0.903409" />
+                            <point x="0.269537" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="coin" sid="848117241929679">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3141961714053284" speed="5">
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.505155" original-source="C:\Users\david\Documents\Desarrollo\CHESSITO\Chesscito\CHESSCITO\Recursos\Imagenes\premioChessito.png">
+                        <collision-poly>
+                            <point x="0.14433" y="0.14433" />
+                            <point x="0.494845" y="0" />
+                            <point x="0.85567" y="0.14433" />
+                            <point x="1" y="0.494845" />
+                            <point x="0.845361" y="0.845361" />
+                            <point x="0.494845" y="1" />
+                            <point x="0.14433" y="0.85567" />
+                            <point x="0" y="0.494845" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="peon" sid="5784546501218944">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2436713188525096" speed="5">
+                    <frame duration="1" hotspotX="0.500931" hotspotY="0.5" original-source="C:\Users\david\Documents\Desarrollo\CHESSITO\Chesscito\CHESSCITO\Recursos\Imagenes\peon_amarillo.png">
+                        <collision-poly>
+                            <point x="0.283054" y="0.272401" />
+                            <point x="0.499069" y="0" />
+                            <point x="0.705773" y="0.283154" />
+                            <point x="0.6946" y="0.5" />
+                            <point x="0.884544" y="0.888889" />
+                            <point x="0.499069" y="1" />
+                            <point x="0.0875233" y="0.915771" />
+                            <point x="0.297952" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

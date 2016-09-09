@@ -243,5 +243,44 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="1594863978422243">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5376983799348963" type="Mouse">
+                    <param id="0" name="Object">peon</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3189490714746713" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8441321547484912">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="8045362385696767" type="System">
+                    <param id="0" name="Variable">auxBoton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2419023755681558" type="txt_seleccion">
+                    <param id="0" name="Text">&quot;JUGAR CON EL PEON&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9252227908065934">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4353404151833166" type="Touch">
+                    <param id="0" name="Object">peon</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2626187662174456" type="System">
+                    <param id="0" name="Layout">Modulo_Peon</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
