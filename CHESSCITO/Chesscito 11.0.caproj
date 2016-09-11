@@ -31,7 +31,9 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Brad Larson" id="highlightshadow">Highlight shadow</effect>
@@ -2783,6 +2785,176 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite16" sid="8499020873444564">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="8626947659794822">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="75285241404313">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="1700340563567132">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="1314759493087513">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5277415307337542" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Documents\GitHub\Chesscito\CHESSCITO\Animations\enemigo_torre\Default\000.png">
+                        <collision-poly>
+                            <point x="0.3" y="0.3" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.68" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.22" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Documents\GitHub\Chesscito\CHESSCITO\Animations\enemigo_torre\Default\001.png">
+                        <collision-poly>
+                            <point x="0.3" y="0.3" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.68" y="0.68" />
+                            <point x="0.5" y="0.68" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.22" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Documents\GitHub\Chesscito\CHESSCITO\Animations\enemigo_torre\Default\002.png">
+                        <collision-poly>
+                            <point x="0.3" y="0.3" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.68" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.22" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Documents\GitHub\Chesscito\CHESSCITO\Animations\enemigo_torre\Default\003.png">
+                        <collision-poly>
+                            <point x="0.3" y="0.3" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.68" />
+                            <point x="0.32" y="0.68" />
+                            <point x="0.22" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="iz" pingpong="0" repeatcount="1" repeatto="0" sid="5539327195422595" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Documents\GitHub\Chesscito\CHESSCITO\Animations\enemigo_torre\izquierda\000.png">
+                        <collision-poly>
+                            <point x="0.3" y="0.3" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.68" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.22" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3" y="0.3" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.68" y="0.68" />
+                            <point x="0.5" y="0.68" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.22" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3" y="0.3" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.68" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.22" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3" y="0.3" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.68" />
+                            <point x="0.32" y="0.68" />
+                            <point x="0.22" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="peon_A" sid="1849704621603978">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1540981280403503">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9127649308411445" speed="5">
+                    <frame duration="1" hotspotX="0.500931" hotspotY="0.5" original-source="C:\Users\pc\Documents\GitHub\Chesscito\CHESSCITO\Animations\peon\Default\000.png">
+                        <collision-poly>
+                            <point x="0.283054" y="0.272401" />
+                            <point x="0.499069" y="0" />
+                            <point x="0.705773" y="0.283154" />
+                            <point x="0.6946" y="0.5" />
+                            <point x="0.884544" y="0.888889" />
+                            <point x="0.499069" y="1" />
+                            <point x="0.0875233" y="0.915771" />
+                            <point x="0.297952" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bala_Alfil_C" sid="2267290217002095">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="8987618521640839">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="6458781302460508">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6835437663808148" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pc\Documents\GitHub\Chesscito\CHESSCITO\Animations\p_alfil_negro\Default\000.png">
+                        <collision-poly>
+                            <point x="0.270134" y="0.215241" />
+                            <point x="0.5" y="0" />
+                            <point x="0.734899" y="0.21123" />
+                            <point x="0.721476" y="0.5" />
+                            <point x="0.885906" y="0.909091" />
+                            <point x="0.5" y="1" />
+                            <point x="0.120805" y="0.903743" />
+                            <point x="0.283557" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -2889,6 +3061,7 @@
         <file name="Golpe_obj.ogg" />
         <file name="gana.ogg" />
         <file name="Ladrillo_roto.ogg" />
+        <file name="bayMontruo.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

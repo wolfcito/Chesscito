@@ -20,11 +20,11 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="6352978934234273" type="Sprite11">
-                    <param id="0" name="Object">bala_alfil</param>
+                    <param id="0" name="Object">bala_Alfil_C</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">&quot;CreaPieza&quot;</param>
                 </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8509048777181513" type="bala_alfil">
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8509048777181513" type="bala_Alfil_C">
                     <param id="0" name="Angle">-45</param>
                 </action>
             </actions>
@@ -37,8 +37,8 @@
                 <action id="0" name="Set text" sid="7256874803769906" type="puntaje">
                     <param id="0" name="Text">&quot;&quot;&amp;puntos_caballo</param>
                 </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="7692012593577415" type="bala_alfil">
-                    <param id="0" name="Speed">200</param>
+                <action behavior="Bullet" id="0" name="Set speed" sid="7692012593577415" type="bala_Alfil_C">
+                    <param id="0" name="Speed">185</param>
                 </action>
             </actions>
         </event-block>
@@ -49,7 +49,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-18" name="Rotate clockwise" sid="8597128130770777" type="bala_alfil">
+                <action id="-18" name="Rotate clockwise" sid="8597128130770777" type="bala_Alfil_C">
                     <param id="0" name="Degrees">0</param>
                 </action>
                 <action id="-13" name="Set time scale" sid="5919609924711543" type="System">
@@ -62,12 +62,12 @@
         </event-block>
         <event-block sid="6919296203911407">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="9118258284924551" type="bala_alfil">
-                    <param id="0" name="Object">pieza_peon2</param>
+                <condition id="0" name="On collision with another object" sid="9118258284924551" type="bala_Alfil_C">
+                    <param id="0" name="Object">peon_A</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="3495436863025966" type="pieza_peon2" />
+                <action id="-9" name="Destroy" sid="3495436863025966" type="peon_A" />
                 <action id="0" name="Play" sid="8802133791730963" type="Audio">
                     <param id="0" name="Audio file">Golpe_obj</param>
                     <param id="2" name="Loop">0</param>
@@ -78,7 +78,7 @@
         </event-block>
         <event-block sid="9096733372502359">
             <conditions>
-                <condition id="-19" name="On destroyed" sid="4324262707271741" type="pieza_peon2" />
+                <condition id="-19" name="On destroyed" sid="4324262707271741" type="peon_A" />
             </conditions>
             <actions>
                 <action id="-10" name="Add to" sid="8350609022500296" type="System">
@@ -93,7 +93,7 @@
         </event-block>
         <event-block sid="953500982557033">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="2179191536741021" type="bala_alfil">
+                <condition id="0" name="On collision with another object" sid="2179191536741021" type="bala_Alfil_C">
                     <param id="0" name="Object">Sprite11</param>
                 </condition>
             </conditions>
@@ -108,12 +108,12 @@
         </event-block>
         <event-block sid="4976856783820781">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="4913599058161531" type="bala_alfil">
+                <condition id="0" name="On collision with another object" sid="4913599058161531" type="bala_Alfil_C">
                     <param id="0" name="Object">tubo_final</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="4094092491962714" type="bala_alfil" />
+                <action id="-9" name="Destroy" sid="4094092491962714" type="bala_Alfil_C" />
                 <action id="0" name="Play" sid="904899902140637" type="Audio">
                     <param id="0" name="Audio file">bayVida</param>
                     <param id="2" name="Loop">0</param>
@@ -121,11 +121,11 @@
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="1704539140036219" type="Sprite11">
-                    <param id="0" name="Object">bala_alfil</param>
+                    <param id="0" name="Object">bala_Alfil_C</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">1</param>
                 </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4150635921479245" type="bala_alfil">
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4150635921479245" type="bala_Alfil_C">
                     <param id="0" name="Angle">-45</param>
                 </action>
                 <action id="-13" name="Set time scale" sid="7915900055581942" type="System">
@@ -308,7 +308,7 @@
         </event-block>
         <event-block sid="4031555560147919">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="8061657301643561" type="bala_alfil">
+                <condition id="0" name="On collision with another object" sid="8061657301643561" type="bala_Alfil_C">
                     <param id="0" name="Object">paredes</param>
                 </condition>
             </conditions>
@@ -352,6 +352,92 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="9103335377124679" type="System">
                     <param id="0" name="Layout">Modulo_Alfil_lvl3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5375279399598095">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6396119364400164" type="bala_Alfil_C">
+                    <param id="0" name="Object">Sprite16</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="1736118507627969" type="Audio">
+                    <param id="0" name="Audio file">bayMontruo</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3838375237814654" type="Sprite16" />
+            </actions>
+        </event-block>
+        <event-block sid="7199495095064017">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3517636954012202" type="Sprite16">
+                    <param id="0" name="Object">tubo_final</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9317694433637123" type="Sprite16" />
+            </actions>
+        </event-block>
+        <event-block sid="4066130781042644">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2350628543472857" type="Sprite16">
+                    <param id="0" name="Object">Sprite11</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="7379736742140514" type="VidasJugador">
+                    <param id="0" name="Width">VidasJugador.Width-29</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5384378716756335">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="1832191680038062" type="Mouse">
+                    <param id="0" name="Object">btn_reiniciar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="7663367610284978" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9628884301002828">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="9651786437735291" type="Mouse">
+                    <param id="0" name="Object">btn_menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="7018792730468248" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4330779038094569">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="875569105901671" type="Mouse">
+                    <param id="0" name="Object">Reint_alfil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="4553785386006562" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9262479399704508">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8499113949415966" type="Mouse">
+                    <param id="0" name="Object">btn_tutorial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="6683006525984779" type="Mouse">
+                    <param id="0" name="Sprite">cur_sobre</param>
                 </action>
             </actions>
         </event-block>

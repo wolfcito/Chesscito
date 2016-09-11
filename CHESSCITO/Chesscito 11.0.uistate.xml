@@ -11,10 +11,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Submenu</layout>
-        <layout active="1" order="1">Modulo_Alfil_lvl3</layout>
+        <layout order="1">Modulo_Alfil_lvl3</layout>
         <layout order="2">Modulo_Alfil_lvl2</layout>
         <layout order="3">Modulo_Alfil_lvl1</layout>
-        <event-sheet order="4">Modulo_alfil_lvl2</event-sheet>
+        <event-sheet active="1" order="4">Event_Alfil_lvl3</event-sheet>
+        <event-sheet order="5">Modulo_alfil_lvl2</event-sheet>
+        <event-sheet order="6">Modulo_Alfil_lvl1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -202,5 +204,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/torre_negro2/" />
         <folder expanded="1" path="animation-folder/coin/" />
         <folder expanded="1" path="animation-folder/peon/" />
+        <folder expanded="1" path="animation-folder/Sprite16/" />
+        <folder expanded="1" path="animation-folder/peon_A/" />
+        <folder expanded="1" path="animation-folder/bala_Alfil_C/" />
     </folders-expanded>
 </c2uistate>
